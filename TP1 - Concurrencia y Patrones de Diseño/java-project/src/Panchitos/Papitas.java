@@ -2,7 +2,7 @@ package Panchitos;
 
 public class Papitas extends Extra{
 
-    private double precio = 3.50;
+    private double precio = 1.50;
 
     public Papitas(Venta unaVenta) {
         super(unaVenta);

@@ -12,10 +12,13 @@ public class ControlPancheria {
         final Runnable panchero = new Panchero();
 
         final ScheduledFuture<?> pancheriaAbierta =
-                scheduler.scheduleAtFixedRate(panchero, 1, 3, SECONDS);
+                scheduler.scheduleWithFixedDelay(panchero, 0, 3, SECONDS);
 
         scheduler.schedule(new Runnable() {
-            public void run() { pancheriaAbierta.cancel(true); }
+            public void run() { pancheriaAbierta.cancel(true);
+                System.out.println("Pancheria cerrada");
+                scheduler.shutdown();
+            }
         }, 30, SECONDS);
     }
 

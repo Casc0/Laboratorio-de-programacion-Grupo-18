@@ -10,7 +10,7 @@ public class Panchero implements Runnable{
         Venta pancho = new Pancho(3, "Cliente");
         System.out.println("Panchero: Preparando un panchito...");
 
-        while(random.nextInt() % 4 != 0){
+        while(random.nextInt() % 3 != 0){
             pancho = elegirTopping(pancho);
             try {
                 Thread.sleep(400);
