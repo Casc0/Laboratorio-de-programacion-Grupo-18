@@ -10,7 +10,7 @@ public class Pancho implements Venta{
     public Pancho(double valorBase, String comprador){
         this.valorBase = valorBase;
         ticket = "Ticket de la venta:"+
-                "Realizada  el \n" + LocalDateTime.now() +
+                "\nRealizada  el " + LocalDateTime.now() +
                 "\nComprador: " + comprador +
                 "\nValor Base: " + valorBase;
     }
