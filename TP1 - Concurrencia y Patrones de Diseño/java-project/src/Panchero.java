@@ -1,32 +1,43 @@
 import Panchitos.*;
-
 import java.util.Random;
+import java.util.concurrent.BlockingQueue;
 
 public class Panchero implements Runnable{
+    private final Random random = new Random();
+    private final BlockingQueue<String> colaClientes;
+
+    public Panchero(BlockingQueue<String> colaClientes) { //Cada panchero tiene acceso a la cola de clientes
+        this.colaClientes = colaClientes;
+    }
 
     @Override
     public void run() {
-        Random random = new Random();
-        Venta pancho = new Pancho(3, "Cliente");
-        System.out.println("Panchero: Preparando un panchito...");
+        try {
+            String comprador;
+            while((comprador = colaClientes.poll())!=null){
+                Venta pancho = new Pancho(3,comprador);
+                System.out.println("Panchero: Preparando un panchito para " + comprador + "...");
 
-        while(random.nextInt() % 3 != 0){
-            pancho = elegirTopping(pancho);
-            try {
-                Thread.sleep(400);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                while (random.nextInt(3) != 0) { // Agrego toppings aleatorios
+                    pancho = elegirTopping(pancho);
+                    Thread.sleep(400);
+                }
+
+                System.out.println("Panchero: Panchito listo!\n");
+                System.out.println("----------------------------");
+                System.out.println(pancho.getTicket());
+                System.out.println("Precio Final: " + pancho.getValor());
+                System.out.println("---------------------------");
             }
+        } catch (Exception e) {
+            Thread.currentThread().interrupt();
         }
-        System.out.println("Panchero: Panchito listo!\n");
-        System.out.println("----------------------------");
-        System.out.println(pancho.getTicket());
-        System.out.println("Precio Final: " + pancho.getValor());
-        System.out.println("---------------------------");
+       
     }
 
     public Venta elegirTopping(Venta pancho){
-        int ingrediente = new Random().nextInt(3);
+        int ingrediente = random.nextInt(3); //Reutilizo el mismo random final 
+
         switch(ingrediente) {
             case 0:
                 pancho = new Ketchup(pancho);

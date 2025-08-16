@@ -1,11 +1,9 @@
 package Panchitos;
 // Componente. La interfaz a usar
 
-import java.time.LocalDateTime;
-
 public interface Venta {
-
+    //Todo objeto Venta tiene los métodos getValor() y getTicket()
+    //Toda clase que lo implemente debe definirlos 
     public double getValor();
     public String getTicket();
-
 }

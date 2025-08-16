@@ -15,10 +15,12 @@ public class Pancho implements Venta{
                 "\nValor Base: " + valorBase;
     }
 
+    @Override
     public double getValor(){
         return valorBase;
     }
-
+    
+    @Override
     public String getTicket() {
         return ticket;
     }
