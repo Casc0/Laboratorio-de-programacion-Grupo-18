@@ -1,0 +1,62 @@
+.container{
+    display: flex;
+}
+
+header{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.Titulo{
+    align-self: center;
+}
+
+.Herramientas{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+}
+
+.NavElement{
+    flex-shrink: 3;
+    flex-basis: auto;
+}
+
+.navList{
+    display: flex;
+    flex-flow: row nowrap ;
+    justify-content: safe flex-start;
+    align-items: baseline;
+    column-gap: 2em;
+}
+
+nav{
+    flex-grow: 3;
+}
+
+search{
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+}
+
+#barraBusqueda{
+    inline-size: 80%;
+}
+
+body{
+    background-color: red;
+}
+
+main{
+    display: flex;
+    margin-inline: 20% ;
+    background-color: aqua;
+}
+
+.Destacado{
+    display: flex;
+}
