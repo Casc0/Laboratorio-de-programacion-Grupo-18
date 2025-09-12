@@ -79,13 +79,33 @@ main{
     flex-direction: column;
     margin-inline: 15% ;
     height: auto;
-    border : 2px solid black;
 }
 
-/* Receta destacada*/
+/* Receta destacada con estructura centrada */
 .Destacado{
     flex-grow: 5;
-    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+
+.EnlaceRecetaDestacada:hover{
+    transform: scale(1.02);
+}
+
+/* Texto de receta destacada */
+.TextoDestacado{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em;
+    color: #333;
+    line-height: 1.3;
 }
 
 /* ========================================
@@ -99,8 +119,7 @@ main{
     overflow-x: auto;
     width: 100%;
     max-width: 100%;
-    height: 16em; /* Altura fija para el contenedor - aumenta para acomodar texto */
-    border: 2px solid black;
+    height: 15em; /* Altura fija para el contenedor - ajustada para eliminar espacio extra */
     box-sizing: border-box;
     padding: 0.5em;
     scrollbar-width: thin;
@@ -136,6 +155,19 @@ main{
         max-height: 80%; /* Reducido para dejar espacio al texto */
         object-fit: contain;
         margin-bottom: 0.5em; /* Espacio entre imagen y texto */
+}
+
+/* Enlaces de recetas clickeables */
+.EnlaceReceta{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.EnlaceReceta:hover{
+    transform: scale(1.05);
 }
 
 /* Texto descriptivo de las alternativas */
