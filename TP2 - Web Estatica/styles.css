@@ -1,17 +1,29 @@
-.container{
+/* ========================================
+   ESTILOS GENERALES Y LAYOUT
+   ======================================== */
+
+/* Contenedor principal flexible */
+container{
     display: flex;
 }
 
+/* ========================================
+   HEADER Y NAVEGACIÓN
+   ======================================== */
+
+/* Header con layout vertical */
 header{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
+/* Título centrado horizontalmente */
 .Titulo{
     align-self: center;
 }
 
+/* Contenedor de herramientas de navegación */
 .Herramientas{
     display: flex;
     flex-flow: row wrap;
@@ -20,10 +32,13 @@ header{
     font-size: 1em;
 }
 
+/* Elementos de navegación con capacidad de compresión */
 .NavElement{
     flex-shrink: 3;
     flex-basis: auto;
 }
+
+/* Lista de navegación horizontal */
 
 .navList{
     display: flex;
@@ -33,30 +48,105 @@ header{
     column-gap: 2em;
 }
 
+/* Navegación con crecimiento flexible */
 nav{
     flex-grow: 3;
 }
 
+/* Barra de búsqueda */
 search{
     display: flex;
     flex-grow: 2;
     justify-content: center;
 }
 
+/* Input de búsqueda con ancho relativo */
 #barraBusqueda{
     inline-size: 80%;
 }
 
+/* ========================================
+   CONTENIDO PRINCIPAL
+   ======================================== */
+
+/* Estilos del cuerpo del documento */
 body{
-    background-color: red;
 }
 
+/* Contenedor principal con layout vertical */
 main{
     display: flex;
-    margin-inline: 20% ;
-    background-color: aqua;
+    flex-direction: column;
+    margin-inline: 15% ;
+    height: auto;
+    border : 2px solid black;
 }
 
+/* Receta destacada*/
 .Destacado{
+    flex-grow: 5;
+    border: 2px solid black;
+}
+
+/* ========================================
+   LISTA DE OTRAS RECETAS ALTERNATIVAS
+   ======================================== */
+
+/* Contenedor de alternativas con scroll horizontal */
+.AlternativasDestacado{
     display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 16em; /* Altura fija para el contenedor - aumenta para acomodar texto */
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 0.5em;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+
+
+/* Elementos individuales de alternativas */
+.Alternativa{
+    flex-shrink: 0; /* Evita que se compriman */
+    flex-grow: 0; /* No crecen para llenar el espacio */
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column; /* Cambio a columna para apilar imagen y texto */
+    justify-content: flex-start;
+    align-items: center;
+    width: 12em; /* Ancho fijo para cada alternativa */
+    min-width: 12em; /* Ancho mínimo fijo */
+    height: 14em; /* Aumenta la altura para acomodar el texto */
+    margin-right: 0.5em; /* Espacio entre elementos */
+    padding: 0.5em; /* Padding interno */
+    box-sizing: border-box;
+}
+
+/* ========================================
+   IMÁGENES Y TEXTO
+   ======================================== */
+
+/* Imágenes destacadas con dimensiones controladas */
+.ImagenDestacada{
+        max-width: 90%;
+        max-height: 80%; /* Reducido para dejar espacio al texto */
+        object-fit: contain;
+        margin-bottom: 0.5em; /* Espacio entre imagen y texto */
+}
+
+/* Texto descriptivo de las alternativas */
+.TextoAlternativa{
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0.2em;
+    color: #333;
+    line-height: 1.2;
+    word-wrap: break-word;
+    max-width: 100%;
 }
