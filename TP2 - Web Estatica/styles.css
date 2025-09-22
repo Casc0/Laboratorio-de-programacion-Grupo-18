@@ -19,6 +19,16 @@ header{
 }
 
 /* Título centrado horizontalmente */
+.TituloPrincipal{
+    font-family: 'Ferro Rosso', sans-serif; 
+    font-size: 3rem;        /* Tamaño grande */
+    color: #b33a2f;         /* Color rojo italiano */
+    text-align: center;     /* Centrado */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra suave */
+    margin: 20px 0;         /* Espacio arriba y abajo */
+    letter-spacing: 2px;    /* Espaciado entre letras */
+}
+
 .Titulo{
     align-self: center;
 }
@@ -41,11 +51,28 @@ header{
 /* Lista de navegación horizontal */
 
 .navList{
+    text-decoration: none;
+    list-style: none;
     display: flex;
     flex-flow: row nowrap ;
     justify-content: safe flex-start;
     align-items: baseline;
     column-gap: 2em;
+}
+
+/*Modificar letra y estilo de las herramientas*/
+.navList a {
+    text-decoration: none;
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/*Colorear herramientas al pasar con el mouse*/
+.navList a:hover {
+    background-color:rgb(228, 161, 136);
+    color: white; /*Cambia el color de la letra*/
 }
 
 /* Navegación con crecimiento flexible */
