@@ -10,9 +10,11 @@
     <body>
 
     <header>
-        <div class="TituloPrincipal">
-            <h1>Cocina Italiana</h1>
-        </div>
+        <h1 class="TituloPrincipal">
+            <span class="textoTitulo" style="color: #008C45">Cocin</span>
+            <span class="textoTitulo" style="color: #F4F9FF">a Ita</span>
+            <span class="textoTitulo" style="color: #CD212A">liana</span>
+        </h1>
 
         <div class="Herramientas">
             <nav>
@@ -31,38 +33,146 @@
     </header>
 
     <main>
-        <article class="Destacado">
-            <a href="receta-lasagna.html" class="EnlaceReceta">
-                <img class="ImagenDestacada" src="images/lasagna.jpg" alt="Lasagna" />
-            </a>
-            <p class="TextoDestacado">Lasagna Tradicional</p>
+        <article class="Destacado-Card" >
+            <section class="Destacado-Card-Inner">
+                <section class="Destacado-Card-Front">
+                    <img class="ImagenDestacada" src="Images/lasagna.jpg" alt="Lasagna" />
+                    <!-- Capa inferior con degradado para mejorar legibilidad del texto -->
+                    <div class="Destacado-Overlay">
+                        <!-- Etiqueta tipo "pill" en la esquina inferior -->
+                        <span class="Destacado-Tag">Destacado-</span>
+                        <!-- Título grande y llamativo -->
+                        <h2 class="Destacado-Titulo">Lasagna Tradicional</h2>
+                        <!-- Descripción breve/subtítulo -->
+                        <p class="Destacado-Subtitulo">Con salsa boloñesa y queso gratinado</p>
+                    </div>
+                </section>
+                <section class="Destacado-Card-Back">
+                    <div class="Destacado-Overlay">
+                        <h2 class="Destacado-Titulo">Lasagna Tradicional</h2>
+                        <!-- Descripción breve/subtítulo -->
+                        <p class="Destacado-Subtitulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci amet aspernatur atque autem cumque ea eius et harum hic incidunt minus nesciunt pariatur quasi ratione, repellendus sit temporibus ullam!</p>
+                    </div>
+                </section>
+            </section>
+
         </article>
-        <ul class="AlternativasDestacado">
-            <li class="Alternativa"> 
-                <a href="receta-pizza.html" class="EnlaceReceta">
-                    <img class="ImagenDestacada" src="images/pizza.jpg" alt="Pizza" />
-                </a>
-                <p class="TextoAlternativa">Pizza Margherita</p>
-            </li>
-            <li class="Alternativa"> 
-                <a href="receta-pesto.html" class="EnlaceReceta">
-                    <img class="ImagenDestacada" src="images/pesto.jpg" alt="Pesto" />
-                </a>
-                <p class="TextoAlternativa">Pesto Genovese</p>
-            </li>
-            <li class="Alternativa"> 
-                <a href="receta-ravioli.html" class="EnlaceReceta">
-                    <img class="ImagenDestacada" src="images/ravioli.jpg" alt="Ravioli" />
-                </a>
-                <p class="TextoAlternativa">Ravioli de Ricotta</p>
-            </li>
-            <li class="Alternativa"> 
-                <a href="receta-tiramisu.html" class="EnlaceReceta">
-                    <img class="ImagenDestacada" src="images/tiramisu.jpg" alt="Tiramisu" />
-                </a>
-                <p class="TextoAlternativa">Tiramisu Clásico</p>
-            </li>
-        </ul>
+
+        <div class="mini-flip-card-grid">
+
+
+            <article class="mini-flip-card">
+                        <h3 class="mini-flip-card-title">
+                            Pesto alla Genovese
+                        </h3>
+                        <img class="mini-flip-card-img" src="Images/pesto.jpg" alt="pesto" />
+                        <div class="mini-flip-card-lista-categoria">
+                            <p class="mini-flip-card-categoria" >
+                                Pasta
+                            </p>
+
+                            <p class="mini-flip-card-categoria">
+                                Picante
+                            </p>
+
+                            <p class="mini-flip-card-categoria">
+                                Fresco
+                            </p>
+                        </div>
+
+
+            </article>
+
+            <article class="mini-flip-card">
+                <h3 class="mini-flip-card-title">
+                    Pesto alla Genovese
+                </h3>
+                <img class="mini-flip-card-img" src="Images/pesto.jpg" alt="pesto" />
+                <div class="mini-flip-card-lista-categoria">
+                    <p class="mini-flip-card-categoria" >
+                        Pasta
+                    </p>
+
+                    <p class="mini-flip-card-categoria">
+                        Picante
+                    </p>
+
+                    <p class="mini-flip-card-categoria">
+                        Fresco
+                    </p>
+                </div>
+
+
+            </article>
+
+            <article class="mini-flip-card">
+                <h3 class="mini-flip-card-title">
+                    Pesto alla Genovese
+                </h3>
+                <img class="mini-flip-card-img" src="Images/pesto.jpg" alt="pesto" />
+                <div class="mini-flip-card-lista-categoria">
+                    <p class="mini-flip-card-categoria" >
+                        Pasta
+                    </p>
+
+                    <p class="mini-flip-card-categoria">
+                        Picante
+                    </p>
+
+                    <p class="mini-flip-card-categoria">
+                        Fresco
+                    </p>
+                </div>
+
+
+            </article>
+
+            <article class="mini-flip-card">
+                <h3 class="mini-flip-card-title">
+                    Pesto alla Genovese
+                </h3>
+                <img class="mini-flip-card-img" src="Images/pesto.jpg" alt="pesto" />
+                <div class="mini-flip-card-lista-categoria">
+                    <p class="mini-flip-card-categoria" >
+                        Pasta
+                    </p>
+
+                    <p class="mini-flip-card-categoria">
+                        Picante
+                    </p>
+
+                    <p class="mini-flip-card-categoria">
+                        Fresco
+                    </p>
+                </div>
+
+
+            </article>
+
+            <article class="mini-flip-card">
+                <h3 class="mini-flip-card-title">
+                    Pesto alla Genovese
+                </h3>
+                <img class="mini-flip-card-img" src="Images/pesto.jpg" alt="pesto" />
+                <div class="mini-flip-card-lista-categoria">
+                    <p class="mini-flip-card-categoria" >
+                        Pasta
+                    </p>
+
+                    <p class="mini-flip-card-categoria">
+                        Picante
+                    </p>
+
+                    <p class="mini-flip-card-categoria">
+                        Fresco
+                    </p>
+                </div>
+
+
+            </article>
+        </div>
+
+
     </main>
 
 

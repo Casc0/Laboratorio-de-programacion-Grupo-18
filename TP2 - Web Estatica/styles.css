@@ -20,13 +20,22 @@ header{
 
 /* Título centrado horizontalmente */
 .TituloPrincipal{
-    font-family: 'Ferro Rosso', sans-serif; 
-    font-size: 3rem;        /* Tamaño grande */
-    color: #b33a2f;         /* Color rojo italiano */
+    font-family: 'Ferro Rosso', sans-serif;
     text-align: center;     /* Centrado */
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra suave */
     margin: 20px 0;         /* Espacio arriba y abajo */
     letter-spacing: 2px;    /* Espaciado entre letras */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0em;
+}
+
+.textoTitulo{
+    flex-basis: auto;
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .Titulo{
@@ -39,7 +48,7 @@ header{
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    font-size: 1em;
+    font-size: 1.8vw;
 }
 
 /* Elementos de navegación con capacidad de compresión */
@@ -83,7 +92,7 @@ nav{
 /* Barra de búsqueda */
 search{
     display: flex;
-    flex-grow: 2;
+    flex-grow: 5;
     justify-content: center;
 }
 
@@ -97,7 +106,39 @@ search{
    ======================================== */
 
 /* Estilos del cuerpo del documento */
-body{
+body {
+    /*
+    background-image: url("images/tabla1.webp");
+    background-size: cover;
+    background-position: top center;
+    */
+    background-color: #888888;
+    font-family: 'Italiana-Regular', serif;
+    font-size: 2vw;
+}
+
+@font-face {
+    font-family: Italiana-Regular;
+    src: url("fonts/Italiana-Regular.ttf") format("opentype");
+}
+
+h1{
+    font-size: 5.9vw;
+}
+
+h2 {
+    font-size: 3.0vh;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: .03rem;
+}
+
+p {
+    font-size: 2vmin;
 }
 
 /* Contenedor principal con layout vertical */
@@ -109,103 +150,246 @@ main{
 }
 
 /* Receta destacada con estructura centrada */
-.Destacado{
+.Destacado-Card{
     flex-grow: 5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 2em;
     box-sizing: border-box;
+    background-color: transparent;
+    perspective: 1000px;
+    width: 100%;
+    height: clamp(220px, 45vw, 520px);
+    cursor: pointer;
+
 }
 
-
-.EnlaceRecetaDestacada:hover{
-    transform: scale(1.02);
+.Destacado-Card-Inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
 }
 
-/* Texto de receta destacada */
-.TextoDestacado{
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-    padding: 0.5em;
-    color: #333;
-    line-height: 1.3;
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.Destacado-Card:hover .Destacado-Card-Inner {
+    transform: rotateY(180deg);
 }
 
-/* ========================================
-   LISTA DE OTRAS RECETAS ALTERNATIVAS
-   ======================================== */
-
-/* Contenedor de alternativas con scroll horizontal */
-.AlternativasDestacado{
-    display: flex;
-    flex-flow: row nowrap;
-    overflow-x: auto;
+.Destacado-Card-Front, .Destacado-Card-Back{
+    /* Contenedor principal de la tarjeta destacada */
+    position: absolute;
     width: 100%;
     max-width: 100%;
-    height: 15em; /* Altura fija para el contenedor - ajustada para eliminar espacio extra */
-    box-sizing: border-box;
-    padding: 0.5em;
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    backface-visibility: hidden;
+}
+
+.Destacado-Card-Front{
+    background-color: transparent;
 }
 
 
-
-/* Elementos individuales de alternativas */
-.Alternativa{
-    flex-shrink: 0; /* Evita que se compriman */
-    flex-grow: 0; /* No crecen para llenar el espacio */
-    flex-basis: auto;
+.Destacado-Card-Back{
+    background: linear-gradient(135deg, #434343, #262626);
+    transform: rotateY(180deg);
     display: flex;
-    flex-direction: column; /* Cambio a columna para apilar imagen y texto */
-    justify-content: flex-start;
     align-items: center;
-    width: 12em; /* Ancho fijo para cada alternativa */
-    min-width: 12em; /* Ancho mínimo fijo */
-    height: 14em; /* Aumenta la altura para acomodar el texto */
-    margin-right: 0.5em; /* Espacio entre elementos */
-    padding: 0.5em; /* Padding interno */
+    justify-content: center;
+    padding: 2rem;
     box-sizing: border-box;
 }
 
-/* ========================================
-   IMÁGENES Y TEXTO
-   ======================================== */
+.Destacado-Card-Back .Destacado-Overlay{
+    position: static;
+    background: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Destacado-Card-Back .Destacado-Titulo{
+    font-size: clamp(18px, 4vw, 32px);
+    margin-bottom: 1rem;
+}
 
 /* Imágenes destacadas con dimensiones controladas */
 .ImagenDestacada{
-        max-width: 90%;
-        max-height: 80%; /* Reducido para dejar espacio al texto */
-        object-fit: contain;
-        margin-bottom: 0.5em; /* Espacio entre imagen y texto */
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+    height: clamp(220px, 38vw, 520px);
+    width: 100%;
 }
 
 /* Enlaces de recetas clickeables */
 .EnlaceReceta{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
     color: inherit;
-    transition: transform 0.2s ease;
+    transition: transform 0.4s ease;
+    border-radius: 5px;
+
 }
 
 .EnlaceReceta:hover{
     transform: scale(1.05);
 }
 
-/* Texto descriptivo de las alternativas */
-.TextoAlternativa{
-    font-size: 0.9em;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-    padding: 0.2em;
-    color: #333;
-    line-height: 1.2;
-    word-wrap: break-word;
+img{
+    border-style: none;
     max-width: 100%;
 }
+
+
+.Destacado-Overlay{
+    /* Capa superpuesta con degradado para legibilidad del texto */
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(12px, 4vw, 32px);
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.15) 40%,
+        rgba(0,0,0,0.55) 100%
+    );
+    color: #ffffff;
+}
+
+.Destacado-Tag{
+    /* Etiqueta pequeña en forma de píldora */
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #111;
+    font-size: 1.6vmin;
+    line-height: 1;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+.Destacado-Titulo{
+    /* Título con sombra para contraste */
+    margin: 0;
+    font-family: 'Italiana-Regular', sans-serif;
+    font-weight: 800;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    font-size: 5vw;
+}
+
+.Destacado-Subtitulo{
+    /* Línea descriptiva debajo del título */
+    margin: 6px 0 0 0;
+    font-size: clamp(12px, 2.4vw, 18px);
+    opacity: 0.95;
+}
+
+.Destacado-Card-Front .Destacado-Overlay .Destacado-Titulo, .Destacado-Card-Front .Destacado-Overlay .Destacado-Subtitulo{
+    background-color: rgba(0,0,0,0.5);
+    width: fit-content;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.mini-flip-card-grid {
+    scrollbar-color:#666 #201c29;
+    scrollbar-gutter: stable both-edges;
+    padding:3rem 0 3rem 2rem;
+    margin:0;
+    display:flex;
+    overflow-x:scroll;
+    -webkit-overflow-scrolling:touch;
+    gap:1rem;
+    position:relative
+}
+.mini-flip-card-grid::-webkit-scrollbar {
+    width:10px;
+    height:10px
+}
+.mini-flip-card-grid::-webkit-scrollbar-thumb {
+    background:#434343;
+    border-radius:10px;
+    box-shadow:inset 2px 2px 2px hsla(0,0%,100%,.25),inset -2px -2px 2px rgba(0,0,0,.25)
+}
+.mini-flip-card-grid::-webkit-scrollbar-track {
+    background:linear-gradient(90deg,#434343,#434343 1px,#262626 0,#262626)
+}
+
+
+.mini-flip-card{
+    padding: 1rem;
+    border-radius: 16px;
+    background: linear-gradient(85deg, #434343, #262626);
+    color: #fff;
+    margin: 0;
+    max-width: 300px;
+    max-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    transition: 0.2s;
+}
+
+.mini-flip-card:focus-within,
+.mini-flip-card:hover {
+    transform:translateY(-1rem) rotate(3deg)
+}
+
+.mini-flip-card:focus-within~.mini-flip-card,
+.mini-flip-card:hover~.mini-flip-card {
+    transform:translateX(130px)
+}
+
+.mini-flip-card:first-child:focus-within,
+.mini-flip-card:first-child:hover {
+    transform:translate(-.5rem,-1rem) rotate(3deg);
+}
+
+.mini-flip-card:not(:first-child) {
+    margin-left:-130px;
+    box-shadow:-3rem 0 3rem -2rem #000
+}
+
+.mini-flip-card :hover{
+    transform: translate(-.5rem,-1rem) rotate(3deg);
+}
+
+.mini-flip-card-title{
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+}
+
+.mini-flip-card-img{
+    width: 100%;
+    border-radius: 16px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.mini-flip-card-lista-categoria{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.mini-flip-card-categoria{
+    /* Etiqueta pequeña en forma de píldora */
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #111;
+    font-size:max(16px, 1.7vmin);
+    line-height: 1;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 999px;
+    margin-top: 5px;
+    text-decoration: 0;
+}
+
