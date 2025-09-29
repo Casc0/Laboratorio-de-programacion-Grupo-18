@@ -24,7 +24,6 @@ header{
     text-align: center;     /* Centrado */
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra suave */
     margin: 20px 0;         /* Espacio arriba y abajo */
-    letter-spacing: 2px;    /* Espaciado entre letras */
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -391,5 +390,66 @@ img{
     border-radius: 999px;
     margin-top: 5px;
     text-decoration: 0;
+}
+
+/* ========================================
+   ESTILOS RECETAS
+   ======================================== */
+
+.header-receta{
+    display : flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 1em;
+}
+
+.titulo-receta{
+    font-family: 'Ferro Rosso', sans-serif;
+    text-align: center;     /* Centrado */
+    margin: 20px 0;         /* Espacio arriba y abajo */
+    color: #4e3969;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+
+.main-receta{
+
+}
+
+.info-receta{
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.info-icon{
+
+}
+
+.info-text{
+    width: calc(100% - 30px);
+    letter-spacing: 0.5px;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 1px 0 0 0;
+    margin-left: auto;
+}
+
+.info-receta ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.info-receta li{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    min-height: 20px;
 }
 
