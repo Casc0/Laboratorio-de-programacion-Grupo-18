@@ -79,8 +79,8 @@ header{
 
 /*Colorear herramientas al pasar con el mouse*/
 .navList a:hover {
-    background-color:rgb(228, 161, 136);
-    color: white; /*Cambia el color de la letra*/
+    background-color:rgba(165, 168, 164, 0.973);
+    color: rgb(12, 1, 1); /*Cambia el color de la letra*/
 }
 
 /* Navegación con crecimiento flexible */
@@ -322,7 +322,7 @@ img{
 
 
 .mini-flip-card{
-    padding: 1rem;
+   padding: 1rem;
     border-radius: 16px;
     background: linear-gradient(85deg, #434343, #262626);
     color: #fff;
@@ -331,7 +331,7 @@ img{
     max-height: 280px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* <--- cambiar de flex-start a center */
     justify-content: space-evenly;
     transition: 0.2s;
 }
@@ -374,8 +374,10 @@ img{
 
 .mini-flip-card-lista-categoria{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap; /* permite que pasen a la siguiente línea */
+    justify-content: center; /* centra horizontalmente las píldoras */
     gap: 1rem;
+    width: 100%; /* para que ocupe todo el ancho de la tarjeta */
 }
 
 .mini-flip-card-categoria{
