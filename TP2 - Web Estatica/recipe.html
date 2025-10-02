@@ -43,7 +43,21 @@
 
       <article class="main-receta">
         <section class="foto-receta">
-             <img src="Images/pesto.jpg" alt="Pappardelle con Salchicha" class="imagen-principal">
+          <img
+            src="Images/pesto.jpg"
+            alt="Pappardelle con Salchicha"
+            class="imagen-principal"
+          />
+        </section>
+
+        <section class="descripcion-receta">
+          <p>
+            <strong
+              >El Pesto alla Genovese es un clásico de la región de Liguria,
+              Italia, famoso por su frescura y aroma gracias a la albahaca y el
+              aceite de oliva extra virgen.</strong
+            >
+          </p>
         </section>
 
         <section class="grid-items">
@@ -54,7 +68,7 @@
 
           <article class="grid-item">
             <h4>🎯 Dificultad</h4>
-            <p>Media</p>
+            <p>Fácil</p>
           </article>
 
           <article class="grid-item">
@@ -69,30 +83,150 @@
         </section>
 
         <section class="contenido-receta">
-             <article class="seccion-receta">
-                <h2>📝 Ingredientes</h2>
-                <ul>
-                    <li>400g de pappardelle fresco</li>
-                    <li>300g de salchicha italiana</li>
-                    <li>2 puerros medianos</li>
-                    <li>200ml de crema de leche</li>
-                    <li>50g de queso parmesano</li>
-                    <li>Aceite de oliva, sal y pimienta</li>
-                </ul>
-            </article>
+          <article class="Receta-Flip-Card">
+            <section class="Receta-Flip-Card-Inner">
+              <!-- Frente -->
+              <section
+                class="Receta-Flip-Card-Front"
+                style="background-image: url('Images/ingredientes.jpg')"
+              >
+                <div class="Receta-Flip-Card-Overlay">
+                  <h2>Ingredientes</h2>
+                  <p>
+                    400g pappardelle, 300g salchicha, 2 puerros, crema,
+                    parmesano, aceite, sal y pimienta
+                  </p>
+                </div>
+              </section>
 
-            <article class="seccion-receta">
-                <h2>👨‍🍳 Preparación</h2>
-                <ol>
-                    <li>Cocinar la pasta en agua con sal hasta que esté al dente</li>
-                    <li>En una sartén, dorar la salchicha desmenuzada</li>
-                    <li>Agregar los puerros picados y saltear 5 minutos</li>
-                    <li>Incorporar la crema y reducir 3 minutos</li>
-                    <li>Mezclar la pasta con la salsa y servir con parmesano</li>
-                </ol>
-            </article>
+              <!-- Reverso -->
+              <section class="Receta-Flip-Card-Back">
+                <p>
+                  - 400g de pappardelle fresco<br />
+                  - 300g de salchicha italiana<br />
+                  - 2 puerros medianos<br />
+                  - 200ml de crema de leche<br />
+                  - 50g de queso parmesano<br />
+                  - Aceite de oliva, sal y pimienta
+                </p>
+              </section>
+            </section>
+          </article>
+
+          <article class="Receta-Flip-Card">
+            <section class="Receta-Flip-Card-Inner">
+              <!-- Frente -->
+              <section
+                class="Receta-Flip-Card-Front"
+                style="background-image: url('Images/preparacion.jpg')"
+              >
+                <div class="Receta-Flip-Card-Overlay">
+                  <h2>Preparación</h2>
+                  <p>Saltear ingredientes y mezclar con pasta al dente</p>
+                </div>
+              </section>
+
+              <!-- Reverso -->
+              <section class="Receta-Flip-Card-Back">
+                <p>
+                  1. Cocinar la pasta al dente<br />
+                  2. Dorar la salchicha desmenuzada<br />
+                  3. Saltear los puerros 5 minutos<br />
+                  4. Añadir la crema y reducir 3 minutos<br />
+                  5. Mezclar la pasta con la salsa y servir con parmesano
+                </p>
+              </section>
+            </section>
+          </article>
+
+          <article class="seccion-receta-detal">
+            <h2>Descripción Detallada de la Preparación</h2>
+            <p>
+              Esta receta combina sabores frescos y tradicionales de Liguria.
+              Comenzamos cocinando la pasta pappardelle hasta alcanzar un punto
+              al dente perfecto. Mientras la pasta se cocina, doramos la
+              salchicha italiana desmenuzada para liberar sus aromas, luego
+              incorporamos los puerros finamente picados y los salteamos hasta
+              que estén tiernos y fragantes. Agregamos la crema de leche y
+              reducimos ligeramente para concentrar los sabores, mezclando
+              cuidadosamente para que no se corte. Finalmente, unimos la pasta
+              con la salsa, asegurándonos de que cada hebra esté perfectamente
+              impregnada de la mezcla cremosa y aromática. Servimos caliente con
+              una generosa porción de queso parmesano rallado por encima,
+              decorando con unas hojas de albahaca fresca para realzar el color
+              y aroma. Ideal para una comida familiar o para impresionar a tus
+              invitados con un plato clásico italiano.
+            </p>
+          </article>
         </section>
       </article>
+
+      <h2 class="titulo-similares">Recetas Similares</h2>
+
+      <div class="mini-card-grid">
+        <article
+          class="mini-card"
+          onclick="window.location.href = 'recipe.html'"
+        >
+          <h3 class="mini-card-title">Pesto alla Genovese</h3>
+          <img class="mini-card-img" src="Images/pesto.jpg" alt="pesto" />
+          <div class="mini-card-lista-categoria">
+            <p class="mini-card-categoria">Pasta</p>
+
+            <p class="mini-card-categoria">Picante</p>
+
+            <p class="mini-card-categoria">Fresco</p>
+          </div>
+        </article>
+
+        <article class="mini-card">
+          <h3 class="mini-card-title">Risotto cremoso de cebada</h3>
+          <img class="mini-card-img" src="Images/Risotto.jpg" alt="pesto" />
+          <div class="mini-card-lista-categoria">
+            <p class="mini-card-categoria">Risotto</p>
+
+            <p class="mini-card-categoria">Umami</p>
+
+            <p class="mini-card-categoria">Nutritivo</p>
+          </div>
+        </article>
+
+        <article class="mini-card">
+          <h3 class="mini-card-title">Frittata de salchicha italiana</h3>
+          <img class="mini-card-img" src="Images/Frittata.jpg" alt="pesto" />
+          <div class="mini-card-lista-categoria">
+            <p class="mini-card-categoria">Frittata</p>
+
+            <p class="mini-card-categoria">Salado</p>
+
+            <p class="mini-card-categoria">Equilibrado</p>
+          </div>
+        </article>
+
+        <article class="mini-card">
+          <h3 class="mini-card-title">Piccata de pollo</h3>
+          <img class="mini-card-img" src="Images/piccata.jpg" alt="pesto" />
+          <div class="mini-card-lista-categoria">
+            <p class="mini-card-categoria">Pollo</p>
+
+            <p class="mini-card-categoria">Cítrico</p>
+
+            <p class="mini-card-categoria">Ligero</p>
+          </div>
+        </article>
+
+        <article class="mini-card">
+          <h3 class="mini-card-title">Cavatelli</h3>
+          <img class="mini-card-img" src="Images/cavatelli.jpg" alt="pesto" />
+          <div class="mini-card-lista-categoria">
+            <p class="mini-card-categoria">Pasta</p>
+
+            <p class="mini-card-categoria">Suave</p>
+
+            <p class="mini-card-categoria">Energético</p>
+          </div>
+        </article>
+      </div>
     </main>
 
     <footer></footer>

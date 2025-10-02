@@ -405,24 +405,43 @@ img {
    ESTILOS RECETAS
    ======================================== */
 
-   .header-receta {
+.header-receta {
   text-align: center; /* Esto centra todo el contenido */
   padding: 1rem 0;
 }
 
 .titulo-receta {
-    font-family: "Italiana-Regular", sans-serif;
-    color: #ffffff;
-    font-weight: 400;
-    padding: 1.5rem 3rem;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    display: inline-block; /* Importante para que se centre */
-    margin: 0 auto; /* Centrado automático */
+  font-family: "Italiana-Regular", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 1.5rem 3rem;
+  background: #00000099;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: inline-block; /* Importante para que se centre */
+  margin: 0 auto; /* Centrado automático */
+}
+
+.descripcion-receta {
+  max-width: 800px;              /* ancho limitado  */
+  margin: 2rem auto;             /* centrado */
+  padding: 1.5rem 2rem;
+  background: rgb(214, 214, 214); /* fondo semitransparente */
+  backdrop-filter: blur(8px);    /* efecto vidrio */
+  border-radius: 16px;           /* bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;            /* centra el texto */
+}
+
+.descripcion-receta p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #100f0f;                /* texto clarito */
+  font-style: italic;            
 }
 
 .main-receta {
@@ -435,30 +454,99 @@ img {
 }
 
 .foto-receta {
-    position: relative;
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .imagen-principal {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-    transition: all 0.5s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-top: 3rem;
+  margin-bottom: 2rem ;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display:block;
 }
 
 .imagen-principal:hover {
-    transform: translateY(-10px) scale(1.01);
-    box-shadow: 
-        0 15px 35px rgba(0,0,0,0.2),
-        0 5px 15px rgba(205, 33, 42, 0.1);
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(205, 33, 42, 0.1);
 }
 
 .info-icon {
+}
+.Receta-Flip-Card {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.Receta-Flip-Card-Inner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.Receta-Flip-Card:hover .Receta-Flip-Card-Inner {
+  transform: rotateY(180deg);
+}
+
+.Receta-Flip-Card-Front,
+.Receta-Flip-Card-Back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 8px 20px rgba(146, 145, 145, 0.815);
+}
+
+.Receta-Flip-Card-Front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.Receta-Flip-Card-Overlay {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.Receta-Flip-Card-Front h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.Receta-Flip-Card-Back {
+  background-color: #646363;
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.Receta-Flip-Card-Back p {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
 }
 
 .info-text {
@@ -484,6 +572,38 @@ img {
   margin: 0;
   min-height: 20px;
 }
+
+.contenido-receta {
+  display: flex;
+  flex-wrap: wrap;           /* se apilan en pantallas chicas */
+  gap: 2rem;                 /* espacio entre bloques */
+  margin-top: 2rem;
+}
+
+.seccion-receta {
+  font-weight: 600; /* grosor letra */
+  font-size:1.2rem;
+  flex: 1;                   /* cada bloque ocupa el mismo ancho */
+  min-width: 280px;          /* evita que se achiquen demasiado */
+  background: rgb(214, 214, 214); /* bloque con fondo */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.seccion-receta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.seccion-receta h2 {
+  font-size: 1.6rem; /* títulos más grandes */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
 
 /*AGREGADO*/
 
@@ -548,3 +668,54 @@ img {
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
+
+
+.titulo-similares {
+  font-family: "Italiana-Regular", sans-serif;
+  text-align: center;
+  font-size: 4rem;
+  color: #ffffff;
+  margin: 5rem 5 2rem 5; /* margen arriba y abajo */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+
+.seccion-receta-detal h2 {
+  font-size: 2rem;
+  font-family: "iTALIANA-rEGULAR", sans-serif;
+  color: #ffffff;
+  text-align: left;
+  margin: 3rem 0 1rem 0;
+}
+
+.seccion-receta-detal h2::after {
+  /*Linea de decoracion del detalle de la preparacion*/
+  content: ""; /* contenido vacío */
+  display: inline-block;
+  height: 3px; /* grosor de la línea */
+  width: 100%; /* largo de la línea */
+  max-width: 100%;
+  background: linear-gradient(to right, #cd212a, #f4f9ff, #008c45 ); /* degradado  */
+  margin-left: 8px; /* espacio entre el título y la línea */
+  vertical-align: middle; /* alinea la línea con el texto */
+}
+
+.seccion-receta-detal p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #ffffff;
+  margin: 0 1rem;
+
+}
+
+.seccion-receta-detal {
+  flex: 1 1 100%; /* ocupa todo el ancho disponible */
+  min-width: 280px;
+  padding: 1.5rem;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 0; /* elimina margen lateral extra */
+}
+
