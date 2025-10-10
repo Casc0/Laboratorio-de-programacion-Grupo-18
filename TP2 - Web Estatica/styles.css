@@ -719,3 +719,53 @@ img {
   margin: 0; /* elimina margen lateral extra */
 }
 
+/* Valoracion */
+.valoracion-receta {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  color: #fff;
+}
+
+.valoracion-titulo {
+  font-family: "Italiana-Regular", serif;
+  font-size: 1.4rem;
+  color: #ffffff; /* color destacado */
+  text-align: left;   /* si querés que quede a la izquierda cambia a center/left */
+  margin: 0 0 0.6rem 0;
+  display: block;
+}
+
+/* Estrellas */
+.rating {
+  display: inline-flex;
+  flex-direction: row-reverse; /* rellena visualmente izquierda->derecha */
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .6rem;
+}
+
+.rating input { display: none; }
+
+.rating label {
+  font-size: 2rem;           /* tamaño estrella */
+  color: #bfbfbf;            /* color por defecto (gris) */
+  cursor: pointer;
+  transition: color .18s ease, transform .12s ease;
+  user-select: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* Hover: color al pasar el ratón */
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+  transform: translateY(-3px);
+}
+
+/* Cuando está seleccionado */
+.rating input:checked ~ label,
+.rating input:checked ~ label ~ label {
+  color: gold;
+}
