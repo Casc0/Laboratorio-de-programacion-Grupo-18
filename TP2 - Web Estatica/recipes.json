@@ -1,16 +1,15 @@
 [
-
   {
-    "id" : "pesto" ,
+    "id": "pesto",
     "nombre": "Pesto alla Genovese",
-    "imagen-principal": "ruta",
-    "alt" : "Imagen de unos fideos con crema y pesto",
+    "imagen-principal": "Images/pesto.jpg",
+    "alt": "Imagen de unos fideos con crema y pesto",
     "descripcion": "El Pesto alla Genovese es un clásico de la región de Liguria, Italia, famoso por su frescura y aroma gracias a la albahaca y el aceite de oliva extra virgen.",
-    "categorias" : {
-      "tiempo" : "30 minutos",
-      "dificultad" : "Facil",
-      "porciones" : "4 personas",
-      "categoria" : "Plato principal"
+    "categorias": {
+      "tiempo": "30 minutos",
+      "dificultad": "Facil",
+      "porciones": "4 personas",
+      "categoria": "Plato principal"
     },
     "ingredientes": [
       "400g de pappardelle fresco",
@@ -20,20 +19,263 @@
       "50g de queso parmesano",
       "Aceite de oliva, sal y pimienta"
     ],
-    "resumen" : [
+    "resumen": [
       "Cocinar la pasta al dente",
       "Dorar la salchicha desmenuzada",
       "Saltear los puerros 5 minutos",
       "Añadir la crema y reducir 3 minutos<",
       "Mezclar la pasta con la salsa y servir con parmesano"
     ],
-    "detallado" : "Esta receta combina sabores fresco",
-    "identificadores" : [
-      "Pasta",
-      "Picante",
-      "Fresco"
+    "detallado": "Esta receta combina sabores fresco",
+    "identificadores": ["Pasta", "Picante", "Fresco"],
+    "valoracion": 3
+  },
+  {
+    "id": "lasagna",
+    "nombre": "Lasaña Boloñesa",
+    "imagen-principal": "Images/lasagna.jpg",
+    "alt": "Imagen de lasaña gratinada con salsa boloñesa",
+    "descripcion": "Una receta tradicional italiana que combina capas de pasta, salsa boloñesa y bechamel cremosa, gratinada al horno.",
+    "categorias": {
+      "tiempo": "1 hora 15 minutos",
+      "dificultad": "Media",
+      "porciones": "6 personas",
+      "categoria": "Plato principal"
+    },
+    "ingredientes": [
+      "12 láminas de pasta para lasaña",
+      "500g de carne picada mixta",
+      "400g de tomate triturado",
+      "1 cebolla picada",
+      "2 cucharadas de harina",
+      "500ml de leche",
+      "100g de queso rallado",
+      "Aceite de oliva, sal y pimienta"
     ],
-    "valoracion" : 3
-
+    "resumen": [
+      "Preparar la salsa boloñesa",
+      "Hacer la bechamel con leche y harina",
+      "Armar las capas de pasta, carne y bechamel",
+      "Hornear 30 minutos a 180°C"
+    ],
+    "detallado": "La lasaña boloñesa es uno de los platos más representativos de la cocina italiana. Se puede preparar con antelación y recalentar sin perder sabor.",
+    "identificadores": ["Horno", "Pasta", "Carnes"],
+    "valoracion": 4
+  },
+  {
+    "id": "tiramisú",
+    "nombre": "Tiramisú Clásico",
+    "imagen-principal": "Images/tiramisu.jpg",
+    "alt": "Postre tiramisú espolvoreado con cacao",
+    "descripcion": "El tiramisú es un postre italiano frío con capas de bizcochos de soletilla, café, mascarpone y cacao en polvo.",
+    "categorias": {
+      "tiempo": "25 minutos + refrigeración",
+      "dificultad": "Fácil",
+      "porciones": "8 porciones",
+      "categoria": "Postre"
+    },
+    "ingredientes": [
+      "300g de queso mascarpone",
+      "3 huevos",
+      "100g de azúcar",
+      "200ml de café fuerte",
+      "Bizcochos de soletilla",
+      "Cacao amargo para espolvorear"
+    ],
+    "resumen": [
+      "Separar las claras y batir las yemas con azúcar",
+      "Agregar el mascarpone y mezclar",
+      "Mojar los bizcochos en café y formar capas",
+      "Cubrir con crema y espolvorear cacao"
+    ],
+    "detallado": "El tiramisú debe reposar al menos 4 horas en la heladera antes de servirse. Su textura cremosa y sabor equilibrado lo hacen irresistible.",
+    "identificadores": ["Postre", "Café", "Frío"],
+    "valoracion": 5
+  },
+  {
+    "id": "ensalada-caprese",
+    "nombre": "Ensalada Caprese",
+    "imagen-principal": "Images/ensalada-caprese.jpg",
+    "alt": "Ensalada caprese con tomate, mozzarella y albahaca",
+    "descripcion": "Una ensalada simple y elegante de origen italiano que celebra los colores de su bandera: rojo, blanco y verde.",
+    "categorias": {
+      "tiempo": "10 minutos",
+      "dificultad": "Muy fácil",
+      "porciones": "2 personas",
+      "categoria": "Entrada"
+    },
+    "ingredientes": [
+      "2 tomates maduros",
+      "150g de mozzarella fresca",
+      "Hojas de albahaca",
+      "Aceite de oliva extra virgen",
+      "Sal y pimienta"
+    ],
+    "resumen": [
+      "Cortar el tomate y la mozzarella en rodajas",
+      "Alternar capas y decorar con albahaca",
+      "Aliñar con aceite, sal y pimienta"
+    ],
+    "detallado": "La ensalada caprese es un símbolo de la cocina mediterránea. Puede servirse como entrada o acompañamiento ligero.",
+    "identificadores": ["Vegetariano", "Fresco", "Sin cocción"],
+    "valoracion": 4
+  },
+  {
+    "id": "risotto-funghi",
+    "nombre": "Risotto ai Funghi",
+    "imagen-principal": "Images/risotto-funghi.jpg",
+    "alt": "Risotto cremoso con hongos",
+    "descripcion": "Un plato italiano cremoso hecho con arroz arborio, hongos y parmesano, cocido lentamente en caldo.",
+    "categorias": {
+      "tiempo": "40 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas",
+      "categoria": "Plato principal"
+    },
+    "ingredientes": [
+      "300g de arroz arborio",
+      "200g de hongos frescos",
+      "1 litro de caldo de verduras",
+      "1 cebolla pequeña",
+      "50g de manteca",
+      "50g de queso parmesano rallado",
+      "Aceite de oliva y sal"
+    ],
+    "resumen": [
+      "Rehogar la cebolla y los hongos",
+      "Agregar el arroz y nacararlo",
+      "Añadir caldo poco a poco hasta cocinar",
+      "Incorporar manteca y queso para cremosidad"
+    ],
+    "detallado": "El secreto del risotto es remover constantemente para liberar el almidón del arroz y lograr una textura cremosa sin crema.",
+    "identificadores": ["Arroz", "Vegetariano", "Cremoso"],
+    "valoracion": 5
+  },
+  {
+    "id": "risotto-cebada",
+    "nombre": "Risotto cremoso de cebada",
+    "imagen-principal": "Images/Risotto.jpg",
+    "alt": "Risotto cremoso de cebada con hongos y parmesano",
+    "descripcion": "Una alternativa saludable al clásico risotto, preparado con cebada perlada, hongos y queso parmesano para una textura cremosa y un sabor profundo.",
+    "categorias": {
+      "tiempo": "45 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas",
+      "categoria": "Plato principal"
+    },
+    "ingredientes": [
+      "250g de cebada perlada",
+      "200g de hongos portobello o champiñones",
+      "1 cebolla pequeña picada",
+      "1 diente de ajo",
+      "1 litro de caldo de verduras caliente",
+      "50g de queso parmesano rallado",
+      "30g de manteca",
+      "Aceite de oliva, sal y pimienta a gusto"
+    ],
+    "resumen": [
+      "Rehogar la cebolla y el ajo en aceite de oliva",
+      "Añadir los hongos y cocinar 5 minutos",
+      "Incorporar la cebada y nacarar 2 minutos",
+      "Agregar caldo caliente de a poco hasta que la cebada esté tierna",
+      "Terminar con manteca y parmesano para dar cremosidad"
+    ],
+    "detallado": "La cebada perlada absorbe los sabores del caldo y almidona de manera natural, logrando una textura cremosa similar al arroz arborio. Ideal para una comida reconfortante y nutritiva.",
+    "identificadores": ["Cremoso", "Vegetariano", "Grano integral"],
+    "valoracion": 5
+  },
+  {
+    "id": "frittata-salchicha",
+    "nombre": "Frittata de salchicha italiana",
+    "imagen-principal": "Images/Frittata.jpg",
+    "alt": "Frittata con salchicha italiana y vegetales dorados",
+    "descripcion": "Una frittata abundante y sabrosa con salchicha italiana, cebolla, morrón y queso derretido, perfecta para un almuerzo o brunch.",
+    "categorias": {
+      "tiempo": "30 minutos",
+      "dificultad": "Fácil",
+      "porciones": "4 personas",
+      "categoria": "Plato principal"
+    },
+    "ingredientes": [
+      "6 huevos grandes",
+      "200g de salchicha italiana desmenuzada",
+      "1 cebolla pequeña",
+      "1 morrón rojo",
+      "50g de queso rallado (provolone o mozzarella)",
+      "2 cucharadas de aceite de oliva",
+      "Sal y pimienta al gusto"
+    ],
+    "resumen": [
+      "Dorar la salchicha en una sartén hasta que esté cocida",
+      "Agregar cebolla y morrón, saltear 5 minutos",
+      "Batir los huevos con sal y pimienta",
+      "Verter los huevos sobre el salteado y cocinar a fuego bajo",
+      "Espolvorear el queso y gratinar al horno hasta dorar"
+    ],
+    "detallado": "La frittata es la versión italiana de la tortilla, ideal para aprovechar ingredientes. Se puede servir caliente o a temperatura ambiente acompañada con ensalada verde.",
+    "identificadores": ["Huevos", "Salado", "Rápido"],
+    "valoracion": 4
+  },
+  {
+    "id": "piccata-pollo",
+    "nombre": "Piccata de pollo",
+    "imagen-principal": "Images/piccata.jpg",
+    "alt": "Filetes de pollo piccata con salsa de limón y alcaparras",
+    "descripcion": "Un clásico italiano con filetes de pollo salteados en manteca y bañados en una delicada salsa de limón, vino blanco y alcaparras.",
+    "categorias": {
+      "tiempo": "25 minutos",
+      "dificultad": "Fácil",
+      "porciones": "2 personas",
+      "categoria": "Plato principal"
+    },
+    "ingredientes": [
+      "2 pechugas de pollo fileteadas",
+      "2 cucharadas de harina",
+      "2 cucharadas de manteca",
+      "1 cucharada de aceite de oliva",
+      "1/2 taza de vino blanco seco",
+      "Jugo de 1 limón",
+      "1 cucharada de alcaparras",
+      "Perejil picado, sal y pimienta"
+    ],
+    "resumen": [
+      "Enharinar los filetes de pollo y dorarlos en manteca y aceite",
+      "Agregar el vino blanco y dejar reducir",
+      "Incorporar el jugo de limón y las alcaparras",
+      "Servir con perejil picado por encima"
+    ],
+    "detallado": "La piccata de pollo es ligera, fresca y rápida de preparar. Su salsa cítrica equilibra perfectamente la manteca y combina muy bien con puré de papas o pasta corta.",
+    "identificadores": ["Pollo", "Cítrico", "Clásico"],
+    "valoracion": 5
+  },
+  {
+    "id": "cavatelli",
+    "nombre": "Cavatelli con salsa de tomate y ricotta",
+    "imagen-principal": "Images/cavatelli.jpg",
+    "alt": "Cavatelli caseros con salsa de tomate y ricotta fresca",
+    "descripcion": "Pasta tradicional del sur de Italia elaborada con sémola y agua, servida con una salsa simple de tomate y ricotta cremosa.",
+    "categorias": {
+      "tiempo": "50 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas",
+      "categoria": "Plato principal"
+    },
+    "ingredientes": [
+      "400g de harina de sémola",
+      "200ml de agua tibia",
+      "1 cucharadita de sal",
+      "300g de salsa de tomate casera",
+      "150g de ricotta fresca",
+      "Aceite de oliva y hojas de albahaca"
+    ],
+    "resumen": [
+      "Amasar la harina con agua y sal hasta formar una masa firme",
+      "Cortar y moldear los cavatelli a mano",
+      "Cocer la pasta en agua con sal hasta que suba a la superficie",
+      "Mezclar con salsa de tomate caliente y coronar con ricotta y albahaca"
+    ],
+    "detallado": "Los cavatelli son una pasta artesanal sin huevo, típica del sur de Italia. Su textura rugosa atrapa perfectamente la salsa de tomate y la ricotta cremosa.",
+    "identificadores": ["Pasta", "Tradicional", "Vegetariano"],
+    "valoracion": 5
   }
 ]

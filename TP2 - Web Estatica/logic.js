@@ -5,15 +5,15 @@ const recetaHtml = (id) => {
         <section class="categoria-receta"></section>
 
         <section class="titulo-receta">
-          <h1>Pesto alla Genovese</h1>
+          <h1>${receta.nombre}/h1>
         </section>
       </article>
 
       <article class="main-receta">
         <section class="foto-receta">
           <img
-            src="Images/pesto.jpg"
-            alt="Pappardelle con Salchicha"
+            src="${receta.imagenPrincipal}"
+            alt="${receta.alt}"
             class="imagen-principal"
           />
         </section>
@@ -21,9 +21,7 @@ const recetaHtml = (id) => {
         <section class="descripcion-receta">
           <p>
             <strong
-              >El Pesto alla Genovese es un clásico de la región de Liguria,
-              Italia, famoso por su frescura y aroma gracias a la albahaca y el
-              aceite de oliva extra virgen.</strong
+              >${receta.descripcion}</strong
             >
           </p>
         </section>
@@ -31,7 +29,7 @@ const recetaHtml = (id) => {
         <section class="grid-items">
           <article class="grid-item">
             <h4>⏱️ Tiempo de Preparación</h4>
-            <p>30 minutos</p>
+            <p>${receta.categoria.tiempo}</p>
           </article>
 
           <article class="grid-item">
@@ -41,12 +39,12 @@ const recetaHtml = (id) => {
 
           <article class="grid-item">
             <h4> Porciones</h4>
-            <p>4 personas</p>
+            <p>4${receta.categoria.porciones}</p>
           </article>
 
           <article class="grid-item">
             <h4> Categoría</h4>
-            <p>Plato Principal</p>
+            <p>${receta.categoria.categoria}</p>
           </article>
         </section>"
     `
