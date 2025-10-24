@@ -3,7 +3,7 @@
   {
     "id" : "pesto" ,
     "nombre": "Pesto alla Genovese",
-    "imagen-principal": "TP2 - Web Estatica/Images/pesto.jpg",
+    "imagen-principal": "img/pesto.jpg",
     "alt" : "Imagen de unos fideos con crema y pesto",
     "descripcion": "El Pesto alla Genovese es un clásico de la región de Liguria, Italia, famoso por su frescura y aroma gracias a la albahaca y el aceite de oliva extra virgen.",
     "categorias" : {

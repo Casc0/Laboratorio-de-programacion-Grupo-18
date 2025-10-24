@@ -1,0 +1,90 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.cdnfonts.com/css/ferro-rosso" rel="stylesheet"/>
+    <title id="page-title">Esperando</title>
+</head>
+
+<body>
+<header>
+    <h1 class="TituloPrincipal">
+        <span class="textoTitulo" style="color: #008c45">Cocin</span>
+        <span class="textoTitulo" style="color: #f4f9ff">a Ita</span>
+        <span class="textoTitulo" style="color: #cd212a">liana</span>
+    </h1>
+
+    <div class="Herramientas">
+        <nav>
+            <ul class="navList">
+                <li class="NavElement"><a href="index.html">Inicio</a></li>
+                <li class="NavElement"><a href="recetas.html">Recetas</a></li>
+                <li class="NavElement">
+                    <a href="ingredientes.html">Ingredientes</a>
+                </li>
+                <li class="NavElement"><a href="tecnicas.html">Tecnicas</a></li>
+            </ul>
+        </nav>
+
+        <search>
+            <input id="barraBusqueda" type="text" placeholder="Buscar..."/>
+        </search>
+    </div>
+</header>
+
+<main id="main">
+    <!-- El contenido de la receta se carga dinámicamente aquí -->
+    <div id="loading" class="loading">
+        <p>Cargando receta...</p>
+    </div>
+</main>
+
+    <!-- VALORACIÓN DE LA RECETA -->
+    <section class="valoracion-receta" aria-label="Valoración de la receta">
+        <h3 class="valoracion-titulo">Valoración de la receta</h3>
+
+        <form class="rating" role="radiogroup" aria-label="Valoración con estrellas">
+            <input type="radio" id="r5" name="rating" value="5"/>
+            <label for="r5" title="5 estrellas" aria-label="5 estrellas">★</label>
+
+            <input type="radio" id="r4" name="rating" value="4"/>
+            <label for="r4" title="4 estrellas" aria-label="4 estrellas">★</label>
+
+            <input type="radio" id="r3" name="rating" value="3"/>
+            <label for="r3" title="3 estrellas" aria-label="3 estrellas">★</label>
+
+            <input type="radio" id="r2" name="rating" value="2"/>
+            <label for="r2" title="2 estrellas" aria-label="2 estrellas">★</label>
+
+            <input type="radio" id="r1" name="rating" value="1"/>
+            <label for="r1" title="1 estrella" aria-label="1 estrella">★</label>
+        </form>
+
+    </section>
+
+
+    <h2 class="titulo-similares">Recetas Similares</h2>
+
+    <h2 class="titulo-similares">Recetas Similares</h2>
+    <div class="mini-card-grid" id="recetas-similares">
+        <!-- Las recetas similares se cargan dinámicamente -->
+    </div>
+
+<footer></footer>
+<script src="../js/logic.js"></script>
+    <script>
+        // Obtener el ID de la receta desde la URL
+        function getRecipeIdFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id') || 'pesto'; // Default fallback
+        }
+
+        // Cargar la receta cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', function() {
+            const recipeId = getRecipeIdFromUrl();
+            loadRecipe(recipeId);
+        });
+    </script>
+</body>
+</html>
