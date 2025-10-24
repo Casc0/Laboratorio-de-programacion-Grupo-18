@@ -1,263 +1,134 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.cdnfonts.com/css/ferro-rosso" rel="stylesheet" />
-  </head>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.cdnfonts.com/css/ferro-rosso" rel="stylesheet"/>
+</head>
 
-  <body>
-    <header>
-      <h1 class="TituloPrincipal">
+<body>
+<header>
+    <h1 class="TituloPrincipal">
         <span class="textoTitulo" style="color: #008c45">Cocin</span>
         <span class="textoTitulo" style="color: #f4f9ff">a Ita</span>
         <span class="textoTitulo" style="color: #cd212a">liana</span>
-      </h1>
+    </h1>
 
-      <div class="Herramientas">
+    <div class="Herramientas">
         <nav>
-          <ul class="navList">
-            <li class="NavElement"><a href="index.html">Inicio</a></li>
-            <li class="NavElement"><a href="recetas.html">Recetas</a></li>
-            <li class="NavElement">
-              <a href="ingredientes.html">Ingredientes</a>
-            </li>
-            <li class="NavElement"><a href="tecnicas.html">Tecnicas</a></li>
-          </ul>
+            <ul class="navList">
+                <li class="NavElement"><a href="index.html">Inicio</a></li>
+                <li class="NavElement"><a href="recetas.html">Recetas</a></li>
+                <li class="NavElement">
+                    <a href="ingredientes.html">Ingredientes</a>
+                </li>
+                <li class="NavElement"><a href="tecnicas.html">Tecnicas</a></li>
+            </ul>
         </nav>
 
         <search>
-          <input id="barraBusqueda" type="text" placeholder="Buscar..." />
+            <input id="barraBusqueda" type="text" placeholder="Buscar..."/>
         </search>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-      <article class="header-receta">
-        <section class="categoria-receta"></section>
+<main>
+    <script src="logic.js">
+        recetaHtml('pesto')
+    </script>
 
-        <section class="titulo-receta">
-          <h1>Pesto alla Genovese</h1>
-        </section>
-      </article>
+    <!-- VALORACIÓN DE LA RECETA -->
+    <section class="valoracion-receta" aria-label="Valoración de la receta">
+        <h3 class="valoracion-titulo">Valoración de la receta</h3>
 
-      <article class="main-receta">
-        <section class="foto-receta">
-          <img
-            src="Images/pesto.jpg"
-            alt="Pappardelle con Salchicha"
-            class="imagen-principal"
-          />
-        </section>
+        <form class="rating" role="radiogroup" aria-label="Valoración con estrellas">
+            <input type="radio" id="r5" name="rating" value="5"/>
+            <label for="r5" title="5 estrellas" aria-label="5 estrellas">★</label>
 
-        <section class="descripcion-receta">
-          <p>
-            <strong
-              >El Pesto alla Genovese es un clásico de la región de Liguria,
-              Italia, famoso por su frescura y aroma gracias a la albahaca y el
-              aceite de oliva extra virgen.</strong
-            >
-          </p>
-        </section>
+            <input type="radio" id="r4" name="rating" value="4"/>
+            <label for="r4" title="4 estrellas" aria-label="4 estrellas">★</label>
 
-        <section class="grid-items">
-          <article class="grid-item">
-            <h4>⏱️ Tiempo de Preparación</h4>
-            <p>30 minutos</p>
-          </article>
+            <input type="radio" id="r3" name="rating" value="3"/>
+            <label for="r3" title="3 estrellas" aria-label="3 estrellas">★</label>
 
-          <article class="grid-item">
-            <h4>🎯 Dificultad</h4>
-            <p>Fácil</p>
-          </article>
+            <input type="radio" id="r2" name="rating" value="2"/>
+            <label for="r2" title="2 estrellas" aria-label="2 estrellas">★</label>
 
-          <article class="grid-item">
-            <h4>👥 Porciones</h4>
-            <p>4 personas</p>
-          </article>
+            <input type="radio" id="r1" name="rating" value="1"/>
+            <label for="r1" title="1 estrella" aria-label="1 estrella">★</label>
+        </form>
 
-          <article class="grid-item">
-            <h4>🍝 Categoría</h4>
-            <p>Plato Principal</p>
-          </article>
-        </section>
-
-        <section class="contenido-receta">
-          <article class="Receta-Flip-Card">
-            <section class="Receta-Flip-Card-Inner">
-              <!-- Frente -->
-              <section
-                class="Receta-Flip-Card-Front"
-                style="background-image: url('Images/ingredientes.jpg')"
-              >
-                <div class="Receta-Flip-Card-Overlay">
-                  <h2>Ingredientes</h2>
-                  <p>
-                    400g pappardelle, 300g salchicha, 2 puerros, crema,
-                    parmesano, aceite, sal y pimienta
-                  </p>
-                </div>
-              </section>
-
-              <!-- Reverso -->
-              <section class="Receta-Flip-Card-Back">
-                <p>
-                  - 2 tazas de hojas de albahaca<br />
-                  - 2 dientes de ajo<br />
-                  - 1 taza de cebada perlada<br />
-                  - 1 cebolla mediana, finamente picada<br />
-                  - 2 cucharadas de manteca (una para el sofrito y otra para finalizar)<br />
-                  - 1 cucharada de aceite de oliva<br />
-                  - 1 litro de caldo de verduras o pollo<br />
-                  - 1/2 taza de vino blanco seco<br />
-                  - 1/2 taza de queso parmesano rallado<br />
-                  - 1 litro de caldo de verduras o pollo<br />
-                  - Sal y pimienta a gusto
-                </p>
-              </section>
-            </section>
-          </article>
-
-          <article class="Receta-Flip-Card">
-            <section class="Receta-Flip-Card-Inner">
-              <!-- Frente -->
-              <section
-                class="Receta-Flip-Card-Front"
-                style="background-image: url('Images/preparacion.jpg')"
-              >
-                <div class="Receta-Flip-Card-Overlay">
-                  <h2>Preparación</h2>
-                  <p>Saltear ingredientes y mezclar con pasta al dente</p>
-                </div>
-              </section>
-
-              <!-- Reverso -->
-              <section class="Receta-Flip-Card-Back">
-                <p>
-                  1. Cocinar la pasta al dente<br />
-                  2. Dorar la salchicha desmenuzada<br />
-                  3. Saltear los puerros 5 minutos<br />
-                  4. Añadir la crema y reducir 3 minutos<br />
-                  5. Mezclar la pasta con la salsa y servir con parmesano
-                </p>
-              </section>
-            </section>
-          </article>
-
-          <article class="seccion-receta-detal">
-            <h2>Descripción Detallada de la Preparación</h2>
-            <p>
-              Esta receta combina sabores frescos y tradicionales de Liguria.
-              Comenzamos cocinando la pasta pappardelle hasta alcanzar un punto
-              al dente perfecto. Mientras la pasta se cocina, doramos la
-              salchicha italiana desmenuzada para liberar sus aromas, luego
-              incorporamos los puerros finamente picados y los salteamos hasta
-              que estén tiernos y fragantes. Agregamos la crema de leche y
-              reducimos ligeramente para concentrar los sabores, mezclando
-              cuidadosamente para que no se corte. Finalmente, unimos la pasta
-              con la salsa, asegurándonos de que cada hebra esté perfectamente
-              impregnada de la mezcla cremosa y aromática. Servimos caliente con
-              una generosa porción de queso parmesano rallado por encima,
-              decorando con unas hojas de albahaca fresca para realzar el color
-              y aroma. Ideal para una comida familiar o para impresionar a tus
-              invitados con un plato clásico italiano.
-            </p>
-          </article>
-        </section>
-      </article>
-
- <!-- VALORACIÓN DE LA RECETA -->
-<section class="valoracion-receta" aria-label="Valoración de la receta">
-  <h3 class="valoracion-titulo">Valoración de la receta</h3>
-
-  <form class="rating" role="radiogroup" aria-label="Valoración con estrellas">
-    <input type="radio" id="r5" name="rating" value="5" />
-    <label for="r5" title="5 estrellas" aria-label="5 estrellas">★</label>
-
-    <input type="radio" id="r4" name="rating" value="4" />
-    <label for="r4" title="4 estrellas" aria-label="4 estrellas">★</label>
-
-    <input type="radio" id="r3" name="rating" value="3" />
-    <label for="r3" title="3 estrellas" aria-label="3 estrellas">★</label>
-
-    <input type="radio" id="r2" name="rating" value="2" />
-    <label for="r2" title="2 estrellas" aria-label="2 estrellas">★</label>
-
-    <input type="radio" id="r1" name="rating" value="1" />
-    <label for="r1" title="1 estrella" aria-label="1 estrella">★</label>
-  </form>
-
-</section>
+    </section>
 
 
-      <h2 class="titulo-similares">Recetas Similares</h2>
+    <h2 class="titulo-similares">Recetas Similares</h2>
 
-      <div class="mini-card-grid">
+    <div class="mini-card-grid">
         <article
-          class="mini-card"
-          onclick="window.location.href = 'recipe.html'"
+                class="mini-card"
+                onclick="window.location.href = 'recipe.html'"
         >
-          <h3 class="mini-card-title">Pesto alla Genovese</h3>
-          <img class="mini-card-img" src="Images/pesto.jpg" alt="pesto" />
-          <div class="mini-card-lista-categoria">
-            <p class="mini-card-categoria">Pasta</p>
+            <h3 class="mini-card-title">Pesto alla Genovese</h3>
+            <img class="mini-card-img" src="Images/pesto.jpg" alt="pesto"/>
+            <div class="mini-card-lista-categoria">
+                <p class="mini-card-categoria">Pasta</p>
 
-            <p class="mini-card-categoria">Picante</p>
+                <p class="mini-card-categoria">Picante</p>
 
-            <p class="mini-card-categoria">Fresco</p>
-          </div>
+                <p class="mini-card-categoria">Fresco</p>
+            </div>
         </article>
 
         <article class="mini-card">
-          <h3 class="mini-card-title">Risotto cremoso de cebada</h3>
-          <img class="mini-card-img" src="Images/Risotto.jpg" alt="pesto" />
-          <div class="mini-card-lista-categoria">
-            <p class="mini-card-categoria">Risotto</p>
+            <h3 class="mini-card-title">Risotto cremoso de cebada</h3>
+            <img class="mini-card-img" src="Images/Risotto.jpg" alt="pesto"/>
+            <div class="mini-card-lista-categoria">
+                <p class="mini-card-categoria">Risotto</p>
 
-            <p class="mini-card-categoria">Umami</p>
+                <p class="mini-card-categoria">Umami</p>
 
-            <p class="mini-card-categoria">Nutritivo</p>
-          </div>
+                <p class="mini-card-categoria">Nutritivo</p>
+            </div>
         </article>
 
         <article class="mini-card">
-          <h3 class="mini-card-title">Frittata de salchicha italiana</h3>
-          <img class="mini-card-img" src="Images/Frittata.jpg" alt="pesto" />
-          <div class="mini-card-lista-categoria">
-            <p class="mini-card-categoria">Frittata</p>
+            <h3 class="mini-card-title">Frittata de salchicha italiana</h3>
+            <img class="mini-card-img" src="Images/Frittata.jpg" alt="pesto"/>
+            <div class="mini-card-lista-categoria">
+                <p class="mini-card-categoria">Frittata</p>
 
-            <p class="mini-card-categoria">Salado</p>
+                <p class="mini-card-categoria">Salado</p>
 
-            <p class="mini-card-categoria">Equilibrado</p>
-          </div>
+                <p class="mini-card-categoria">Equilibrado</p>
+            </div>
         </article>
 
         <article class="mini-card">
-          <h3 class="mini-card-title">Piccata de pollo</h3>
-          <img class="mini-card-img" src="Images/piccata.jpg" alt="pesto" />
-          <div class="mini-card-lista-categoria">
-            <p class="mini-card-categoria">Pollo</p>
+            <h3 class="mini-card-title">Piccata de pollo</h3>
+            <img class="mini-card-img" src="Images/piccata.jpg" alt="pesto"/>
+            <div class="mini-card-lista-categoria">
+                <p class="mini-card-categoria">Pollo</p>
 
-            <p class="mini-card-categoria">Cítrico</p>
+                <p class="mini-card-categoria">Cítrico</p>
 
-            <p class="mini-card-categoria">Ligero</p>
-          </div>
+                <p class="mini-card-categoria">Ligero</p>
+            </div>
         </article>
 
         <article class="mini-card">
-          <h3 class="mini-card-title">Cavatelli</h3>
-          <img class="mini-card-img" src="Images/cavatelli.jpg" alt="pesto" />
-          <div class="mini-card-lista-categoria">
-            <p class="mini-card-categoria">Pasta</p>
+            <h3 class="mini-card-title">Cavatelli</h3>
+            <img class="mini-card-img" src="Images/cavatelli.jpg" alt="pesto"/>
+            <div class="mini-card-lista-categoria">
+                <p class="mini-card-categoria">Pasta</p>
 
-            <p class="mini-card-categoria">Suave</p>
+                <p class="mini-card-categoria">Suave</p>
 
-            <p class="mini-card-categoria">Energético</p>
-          </div>
+                <p class="mini-card-categoria">Energético</p>
+            </div>
         </article>
-      </div>
-    </main>
+    </div>
+</main>
 
-    <footer></footer>
-  </body>
+<footer></footer>
+</body>
 </html>

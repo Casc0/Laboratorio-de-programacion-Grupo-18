@@ -79,7 +79,7 @@ header {
 
 /*Colorear herramientas al pasar con el mouse*/
 .navList a:hover {
-  background-color: rgba(165, 168, 164, 0.973);
+  background-color: #D9B382;
   color: rgb(12, 1, 1); /*Cambia el color de la letra*/
 }
 
@@ -111,9 +111,10 @@ body {
     background-size: cover;
     background-position: top center;
     */
-  background-color: #888888;
-  font-family: "Italiana-Regular", serif;
-  font-size: 2vw;
+  background-color: #C09D7B;
+  /*font-family: "Italiana-Regular", serif;*/
+  min-font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 @font-face {
@@ -297,13 +298,14 @@ img {
 .mini-card-grid {
   scrollbar-color: #666 #201c29;
   scrollbar-gutter: stable both-edges;
-  padding: 3rem 0 3rem 2rem;
+  padding: 3rem 0 3rem 2rem;border-radius: 10px;
   margin: 0;
   display: flex;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   gap: 1rem;
   position: relative;
+    background-color: #898886;
 }
 .mini-card-grid::-webkit-scrollbar {
   width: 10px;
@@ -323,7 +325,7 @@ img {
   cursor: pointer;
   padding: 1rem;
   border-radius: 16px;
-  background: linear-gradient(85deg, #434343, #262626);
+  background: linear-gradient(85deg, #434343, #898880);
   color: #fff;
   margin: 0;
   max-width: 300px;
@@ -411,11 +413,10 @@ img {
 }
 
 .titulo-receta {
-  font-family: "Italiana-Regular", sans-serif;
-  color: #ffffff;
+  color: #F1EFE3;
   font-weight: 400;
-  padding: 1.5rem 3rem;
-  background: #00000099;
+  padding: 0.5rem;
+  background: #DAD3BF;
   backdrop-filter: blur(10px);
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -429,7 +430,7 @@ img {
   max-width: 800px;              /* ancho limitado  */
   margin: 2rem auto;             /* centrado */
   padding: 1.5rem 2rem;
-  background: rgb(214, 214, 214); /* fondo semitransparente */
+  background: #DAD3BF; /* fondo semitransparente */
   backdrop-filter: blur(8px);    /* efecto vidrio */
   border-radius: 16px;           /* bordes redondeados */
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -680,15 +681,13 @@ img {
 }
 
 
-.seccion-receta-detal h2 {
+.seccion-receta-2 h2 {
   font-size: 2rem;
-  font-family: "iTALIANA-rEGULAR", sans-serif;
-  color: #ffffff;
   text-align: left;
-  margin: 3rem 0 1rem 0;
+  margin: 0 0 1rem 0;
 }
 
-.seccion-receta-detal h2::after {
+.seccion-receta-2 h2::after {
   /*Linea de decoracion del detalle de la preparacion*/
   content: ""; /* contenido vacío */
   display: inline-block;
@@ -696,27 +695,40 @@ img {
   width: 100%; /* largo de la línea */
   max-width: 100%;
   background: linear-gradient(to right, #cd212a, #f4f9ff, #008c45 ); /* degradado  */
-  margin-left: 8px; /* espacio entre el título y la línea */
+  margin-top: 8px; /* espacio entre el título y la línea */
   vertical-align: middle; /* alinea la línea con el texto */
 }
 
-.seccion-receta-detal p {
+.seccion-receta-2 p {
   font-size: 1.5rem;
   line-height: 1.6;
   text-align: justify;
-  color: #ffffff;
   margin: 0 1rem;
 
 }
 
-.seccion-receta-detal {
-  flex: 1 1 100%; /* ocupa todo el ancho disponible */
-  min-width: 280px;
-  padding: 1.5rem;
-  background-color: rgba(0,0,0,0.2);
+.seccion-receta-2 {
+    flex-grow: 1;
+  padding: 1rem;
+  background-color: #DAD3BF;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   margin: 0; /* elimina margen lateral extra */
+}
+
+.resumen-receta{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 1rem;
+
+}
+
+.cuerpo-receta{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* Valoracion */
