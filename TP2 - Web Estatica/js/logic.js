@@ -4,7 +4,7 @@ try{
 showLoading(true);
 
 // Cargar datos de recetas
-const response = await fetch('../js/recipes.json');
+const response = await fetch('./recipes.json'); // '../js/recipes.json'
 const recipes = await response.json();
 
 // Buscar la receta específica
@@ -102,6 +102,7 @@ const html = `
 `;
 
 mainContent.innerHTML = html;
+setRecipeRating(recipe.valoracion);
 }
 
 // Cargar recetas similares
@@ -150,4 +151,74 @@ mainContent.innerHTML = `
     <button onclick="window.location.href='index.html'">Volver al inicio</button>
 </div>
 `;
+}
+
+/**
+ * Establece el estado de las estrellas de valoración de la receta según el valor proporcionado.
+ * Esto se hace marcando el input de radio (r1 a r5) que corresponde al 'rating' del JSON.
+ * * @param {number} rating El valor de la valoración (ej: 3, 4, 5).
+ */
+function setRecipeRating(rating) {
+    // Construye el ID del input de radio basado en la valoración (ej: rating=3 -> 'r3')
+    const inputId = `r${rating}`;
+    
+    // Busca el elemento en el DOM
+    const ratingInput = document.getElementById(inputId);
+    
+    if (ratingInput) {
+        // Si se encuentra, lo marca como 'checked' para mostrar las estrellas
+        ratingInput.checked = true;
+    }
+
+    /**
+ * Carga todas las recetas y genera las mini-cards para la página principal.
+ */
+async function loadAllMiniCards() {
+    try {
+        // ATENCIÓN: VERIFICA QUE ESTA RUTA ('../js/recipes.json') SEA CORRECTA
+        const response = await fetch('../js/recipes.json'); 
+        
+        // Verifica si la respuesta es exitosa (código 200)
+        if (!response.ok) {
+            throw new Error(`Error HTTP: ${response.status}`);
+        }
+        
+        const allRecipes = await response.json();
+        
+        // Obtener el contenedor
+        const container = document.querySelector('.mini-card-grid');
+        
+        if (!container) {
+            console.error('El contenedor .mini-card-grid no se encontró en el HTML.');
+            return;
+        }
+
+        // Generar el HTML de todas las tarjetas
+        const html = allRecipes.map(recipe => `
+            <article 
+                class="mini-card" 
+                onclick="window.location.href = 'recipe.html?id=${recipe.id}'"
+            >
+                <h3 class="mini-card-title">${recipe.nombre}</h3>
+                <img class="mini-card-img" src="${recipe['imagen-principal']}" alt="${recipe.alt}" />
+                <div class="mini-card-lista-categoria">
+                    ${recipe.identificadores.map(tag =>
+                        `<p class="mini-card-categoria">${tag}</p>`
+                    ).join('')}
+                </div>
+            </article>
+        `).join(''); // Usamos .join('') para que el resultado sea un solo string HTML
+
+        // Insertar el HTML generado
+        container.innerHTML = html;
+
+    } catch (error) {
+        console.error('Error al cargar las mini-cards (revisa la ruta del JSON):', error);
+        // Opcional: muestra un mensaje de error si no se cargan
+        const container = document.querySelector('.mini-card-grid');
+        if (container) {
+            container.innerHTML = '<p style="color: red; text-align: center;">Error al cargar las recetas. Verifica la Consola (F12) y la ruta del JSON.</p>';
+        }
+    }
+}
 }

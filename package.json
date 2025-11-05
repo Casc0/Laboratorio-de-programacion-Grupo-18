@@ -1,0 +1,24 @@
+{
+  "name": "laboratorio-de-programacion-grupo-18",
+  "version": "1.0.0",
+  "description": "Un repositorio para llevar un serguimiento de todos los TPs realizados para la materia \"Laboratorio de Programación\" de la Licenciatura en Ciencias de la Computacion y Licenciatura en Sistemas de la Información de la Universidad Nacional del Comahue.\r ## TP 1 - Concurrencia y Patrones de Diseño",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Casc0/Laboratorio-de-programacion-Grupo-18.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Casc0/Laboratorio-de-programacion-Grupo-18/issues"
+  },
+  "homepage": "https://github.com/Casc0/Laboratorio-de-programacion-Grupo-18#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
