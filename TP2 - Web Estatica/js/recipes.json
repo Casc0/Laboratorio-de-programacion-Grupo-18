@@ -4,22 +4,25 @@
     "nombre": "Pesto alla Genovese",
     "imagen-principal": "img/pesto.jpg",
     "alt": "Imagen de unos fideos con crema y pesto",
-    "descripcion": "El Pesto alla Genovese es un clásico de la región de Liguria, Italia...",
+    "descripcion": "El Pesto alla Genovese es un clásico vibrante de la región de Liguria. Esta salsa cruda y aromática se elabora tradicionalmente machacando albahaca fresca de Génova, piñones, ajo, queso Parmesano Reggiano y aceite de oliva virgen extra. Ideal para pastas, bruschettas o como aderezo.",
     "categorias": {
       "tiempo": "30 minutos",
-      "dificultad": "Facil",
+      "dificultad": "Fácil",
       "porciones": "4 personas"
     },
     "ingredientes": [
-      "Albahaca fresca",
+      "Albahaca fresca (hojas de Génova)",
       "Piñones",
-      "Queso Parmesano"
+      "Queso Parmesano Reggiano rallado",
+      "Ajo",
+      "Aceite de Oliva Virgen Extra (AOVE)"
     ],
     "resumen": [
-      "Procesar albahaca y piñones",
-      "Añadir queso y aceite"
+      "Lava y seca cuidadosamente la albahaca.",
+      "Procesa ajo, piñones y albahaca hasta obtener una pasta rugosa.",
+      "Añade el queso y el AOVE, mezclando hasta conseguir la consistencia deseada."
     ],
-    "detallado": "Esta receta combina sabores fresco",
+    "detallado": "Para un auténtico Pesto, utiliza un mortero si es posible para evitar el sobrecalentamiento de la albahaca, lo que evita que se oxide y se mantenga su color verde brillante. Si usas licuadora, hazlo en pulsos cortos. La cantidad de aceite puede variar hasta que obtengas una salsa homogénea pero no líquida.",
     "identificadores": [
       "Pasta",
       "Picante",
@@ -32,24 +35,27 @@
     "nombre": "Risotto Cremoso de Hongos",
     "imagen-principal": "img/Risotto.jpg",
     "alt": "Plato de risotto cremoso",
-    "descripcion": "Un plato de arroz cremoso, perfecto para una cena elegante.",
+    "descripcion": "Un plato reconfortante y sofisticado. Este risotto utiliza arroz Arborio y la profundidad de sabor de los hongos porcini secos, creando una base rica que se complementa con vino blanco y una cremosa mantecatura final con mantequilla y queso.",
     "categorias": {
       "tiempo": "45 minutos",
       "dificultad": "Medio",
       "porciones": "3 personas"
     },
     "ingredientes": [
-      "Arroz Arborio",
-      "Hongos porcini",
-      "Caldo de verduras",
-      "Vino blanco"
+      "Arroz Arborio o Carnaroli",
+      "Hongos porcini secos (rehidratados)",
+      "Caldo de verduras caliente",
+      "Cebolla picada finamente",
+      "Vino blanco seco",
+      "Mantequilla fría y queso Parmesano"
     ],
     "resumen": [
-      "Sofríe los hongos",
-      "Tuesta el arroz",
-      "Añade caldo gradualmente"
+      "Sofríe la cebolla y los hongos.",
+      "Tuesta el arroz ('tostatura') y desglasa con vino.",
+      "Añade caldo caliente gradualmente, removiendo.",
+      "Retira del fuego y realiza la mantecatura."
     ],
-    "detallado": "Asegúrate de remover constantemente para liberar el almidón...",
+    "detallado": "El secreto de un risotto perfecto es la **Mantecatura**. Cuando el arroz esté al dente, retira la olla del fuego. Agrega una nuez de mantequilla fría y abundante queso parmesano rallado. Cubre y deja reposar por un minuto. Luego, remueve vigorosamente para que el almidón se ligue con la grasa, logrando esa textura cremosa característica. El caldo debe estar siempre muy caliente.",
     "identificadores": [
       "Risotto",
       "Umami",
@@ -62,28 +68,197 @@
     "nombre": "Frittata Italiana de Salchicha",
     "imagen-principal": "img/Frittata.jpg",
     "alt": "Frittata con salchicha y vegetales",
-    "descripcion": "Un plato versátil de huevos, similar a una tortilla española, perfecto para brunch o cena.",
+    "descripcion": "La frittata es la versión italiana de la tortilla: versátil y cocinada enteramente en la sartén (o con un toque final de horno). Es perfecta para un brunch sustancioso o una cena rápida, combinando huevos batidos, queso ricotta cremoso, salchicha italiana picante y espinacas frescas.",
     "categorias": {
       "tiempo": "25 minutos",
-      "dificultad": "Facil",
+      "dificultad": "Fácil",
       "porciones": "4 personas"
     },
     "ingredientes": [
       "6 huevos grandes",
-      "Salchicha italiana desmenuzada",
-      "Espinacas frescas",
-      "Queso ricotta"
+      "Salchicha italiana desmenuzada (sin tripa)",
+      "Espinacas frescas o cocidas",
+      "Queso ricotta o mozzarella",
+      "Aceite de oliva y cebolla"
     ],
     "resumen": [
-      "Dora la salchicha",
-      "Mezcla huevos y queso",
-      "Hornea hasta que cuaje"
+      "Dora la salchicha y sofríe los vegetales.",
+      "Mezcla huevos, ricotta y sazona.",
+      "Vierte la mezcla de huevo sobre la base en la sartén.",
+      "Cocina a fuego lento y gratina el final."
     ],
-    "detallado": "Cocina a fuego lento para evitar que se queme por fuera.",
+    "detallado": "La frittata se cocina a fuego muy bajo para evitar que la parte inferior se queme. Una vez que los bordes estén firmes y solo la parte superior esté ligeramente húmeda, puedes terminar de cuajarla transfiriendo la sartén a un horno precalentado. Esto asegura una cocción uniforme y una textura suave por dentro, sin necesidad de voltearla.",
     "identificadores": [
       "Frittata",
       "Salado",
       "Equilibrado"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "lasagna",
+    "nombre": "Lasagna Clásica Bolognese",
+    "imagen-principal": "img/lasagna.jpg",
+    "alt": "Plato de lasagna con salsa y queso",
+    "descripcion": "Un plato emblemático de Emilia-Romaña, capas de pasta fresca intercaladas con una rica salsa ragú (boloñesa), bechamel cremosa y queso Parmesano. Es el plato perfecto para una comida familiar.",
+    "categorias": {
+      "tiempo": "90 minutos",
+      "dificultad": "Medio",
+      "porciones": "8 personas"
+    },
+    "ingredientes": [
+      "Placas de lasagna",
+      "Carne picada (ternera y cerdo)",
+      "Tomate triturado",
+      "Leche",
+      "Mantequilla",
+      "Harina",
+      "Parmesano rallado",
+      "Zanahoria, Apio y Cebolla (para el sofrito)"
+    ],
+    "resumen": [
+      "Prepara la salsa ragú (cocción lenta).",
+      "Haz la bechamel y reserva.",
+      "Arma la lasagna por capas: ragú, pasta, bechamel, parmesano.",
+      "Hornea hasta que esté dorado y burbujeante."
+    ],
+    "detallado": "La salsa ragú debe cocinarse a fuego lento durante al menos dos horas para desarrollar profundidad de sabor. Asegúrate de que la bechamel no tenga grumos y que esté tibia al ensamblar. Deja reposar la lasagna 15 minutos fuera del horno antes de servir.",
+    "identificadores": [
+      "Sustancioso",
+      "Horno",
+      "Tradicional"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "tiramisu",
+    "nombre": "Tiramisú Clásico Original",
+    "imagen-principal": "img/tiramisu.jpg",
+    "alt": "Postre Tiramisú con capas de crema y cacao",
+    "descripcion": "El postre italiano por excelencia, cremoso y elegante. Consta de capas de bizcochos de soletilla mojados en café fuerte y licor, alternadas con una crema de mascarpone, y espolvoreado con cacao en polvo.",
+    "categorias": {
+      "tiempo": "30 minutos + 4h refrigeración",
+      "dificultad": "Fácil",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Queso Mascarpone",
+      "Huevos (yemas y claras separadas)",
+      "Azúcar",
+      "Café fuerte (espresso) frío",
+      "Licor (Marsala o Ron)",
+      "Bizcochos de soletilla",
+      "Cacao en polvo sin azúcar"
+    ],
+    "resumen": [
+      "Bate las yemas con azúcar hasta blanquear.",
+      "Agrega el mascarpone e integra.",
+      "Monta las claras a punto de nieve e incorpóralas a la crema.",
+      "Moja los bizcochos en café y arma capas con la crema y el cacao.",
+      "Refrigera por al menos 4 horas."
+    ],
+    "detallado": "Usa huevos pasteurizados para más seguridad. Es fundamental que la crema de mascarpone quede muy ligera y aireada. La refrigeración es clave para que tome consistencia y los sabores se fusionen, haciendo que el bizcocho quede tierno.",
+    "identificadores": [
+      "Postre",
+      "Café",
+      "Cremoso"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "gnocchi",
+    "nombre": "Gnocchi Caseros de Patata",
+    "imagen-principal": "img/gnocci.jpg",
+    "alt": "Gnocchi recién hechos en un bol",
+    "descripcion": "Pequeñas y suaves 'bolas' de masa hechas de patata y harina. Son un plato sencillo pero delicado que a menudo se sirve con salsa de tomate, pesto o mantequilla y salvia. Su textura es tierna por dentro y ligeramente masticable por fuera.",
+    "categorias": {
+      "tiempo": "60 minutos",
+      "dificultad": "Medio",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Patatas (tipo russet o harinosas)",
+      "Harina de trigo",
+      "Huevo",
+      "Sal y Nuez moscada"
+    ],
+    "resumen": [
+      "Cuece las patatas y haz un puré seco.",
+      "Mezcla con harina, huevo y sazona sin amasar demasiado.",
+      "Forma los gnocchi y marca con un tenedor.",
+      "Cuece en agua hirviendo hasta que floten (unos 3 minutos)."
+    ],
+    "detallado": "La clave es usar la menor cantidad de harina posible y no trabajar la masa en exceso, para que los gnocchi no queden duros. La patata debe cocerse con piel para que absorba menos agua. Sírvelos inmediatamente con tu salsa favorita.",
+    "identificadores": [
+      "Masa",
+      "Patata",
+      "Confort"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "minestrone",
+    "nombre": "Sopa Minestrone Clásica",
+    "imagen-principal": "img/sopa_minestrone.webp",
+    "alt": "Sopa de verduras Minestrone en un tazón",
+    "descripcion": "Una sopa campesina robusta, saludable y versátil. Se compone de una base de verduras de temporada, frijoles y un poco de pasta corta o arroz, cocidos lentamente en un caldo de verduras. Es el epítome de la cocina de aprovechamiento italiana.",
+    "categorias": {
+      "tiempo": "70 minutos",
+      "dificultad": "Fácil",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Zanahoria, Apio, Cebolla (para el soffritto)",
+      "Patatas y Calabacín",
+      "Frijoles (cannellini o garbanzos)",
+      "Pasta corta o Arroz",
+      "Caldo de verduras",
+      "Aceite de oliva"
+    ],
+    "resumen": [
+      "Sofríe la base (soffritto).",
+      "Agrega las verduras más duras, luego el caldo.",
+      "Incorpora los frijoles y la pasta/arroz hacia el final.",
+      "Cocina hasta que la pasta esté al dente y sirve."
+    ],
+    "detallado": "El \"soffritto\" (sofrito de cebolla, apio y zanahoria) es crucial para crear la base de sabor. La sopa Minestrone mejora al día siguiente, ya que los sabores se asientan. Puedes variar las verduras según la estación, siempre añadiendo las más blandas al final.",
+    "identificadores": [
+      "Vegano",
+      "Sopa",
+      "Saludable"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "bruschetta",
+    "nombre": "Bruschetta al Pomodoro Fresco",
+    "imagen-principal": "img/bruschette.webp",
+    "alt": "Bruschetta con tomate y albahaca",
+    "descripcion": "Un aperitivo simple pero exquisito. Pan tostado frotado con ajo y cubierto con una mezcla de tomates frescos picados, albahaca, aceite de oliva virgen extra y una pizca de sal y pimienta.",
+    "categorias": {
+      "tiempo": "15 minutos",
+      "dificultad": "Muy Fácil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Rebanadas de pan de campo o baguette",
+      "Tomates maduros (tipo Roma)",
+      "Ajo",
+      "Albahaca fresca",
+      "Aceite de oliva virgen extra",
+      "Sal y Pimienta"
+    ],
+    "resumen": [
+      "Tuesta el pan hasta que esté crujiente.",
+      "Frota la superficie del pan con un diente de ajo.",
+      "Mezcla los tomates picados con albahaca y AOVE.",
+      "Coloca la mezcla sobre el pan tostado y sirve inmediatamente."
+    ],
+    "detallado": "Usa tomates de buena calidad y muy maduros. Es importante que el pan esté bien tostado, casi crujiente, para que no se ablande con el jugo del tomate. Para un sabor más profundo, deja macerar la mezcla de tomate 10 minutos antes de usar.",
+    "identificadores": [
+      "Aperitivo",
+      "Fresco",
+      "Rápido"
     ],
     "valoracion": 4
   }

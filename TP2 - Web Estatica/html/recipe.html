@@ -69,21 +69,5 @@
 <footer></footer>
 
 <script src="../js/logic.js"></script> 
-<script>
-    // Obtener el ID de la receta desde la URL
-    function getRecipeIdFromUrl() {
-        const urlParams = new URLSearchParams(window.location.search);
-        // Retorna el ID de la URL. Si no hay ID, usa 'pesto' como default 
-        // para asegurar que algo se cargue si se entra sin parámetros.
-        return urlParams.get('id') || 'pesto'; 
-    }
-
-    // Cargar la receta cuando la página esté lista
-    document.addEventListener('DOMContentLoaded', function() {
-        const recipeId = getRecipeIdFromUrl();
-        // Llama a la función principal definida en logic.js
-        loadRecipe(recipeId); 
-    });
-</script>
 </body>
 </html>
