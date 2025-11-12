@@ -30,9 +30,8 @@ app.get('/cocinaitaliana', (req, res) => {
 });
 
 // RUTA RAÍZ: /
-// Alguien visita solo http://localhost:4000/
 app.get('/', (req, res) => {
-    // Lo redirigimos a la nueva URL limpia
+    // Lo redirigimos a la nueva URL 
     res.redirect('/cocinaitaliana');
 });
 
