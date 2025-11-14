@@ -26,7 +26,7 @@ async function loadRecipe(recipeId) {
     }
 
     renderRecipe(recipe);
-    loadSimilarRecipes(recipes, recipeId);
+    loadSimilarRecipes(recipes, recipe);
     document.getElementById("page-title").textContent = recipe.nombre;
   } catch (error) {
     console.error("Error al cargar la receta:", error);
@@ -118,9 +118,11 @@ function renderRecipe(recipe) {
 }
 
 // Cargar recetas similares
-function loadSimilarRecipes(allRecipes, currentRecipeId) {
+function loadSimilarRecipes(allRecipes, currentRecipe) {
   const similarRecipes = allRecipes
-    .filter((recipe) => recipe.id !== currentRecipeId)
+    .filter(recipe =>  
+      recipe.id !== currentRecipe.id &&
+      recipe.identificadores.some((element => currentRecipe.identificadores.includes(element))))
     .slice(0, 4); // Mostrar solo 4 recetas similares
 
   const container = document.getElementById("recetas-similares");

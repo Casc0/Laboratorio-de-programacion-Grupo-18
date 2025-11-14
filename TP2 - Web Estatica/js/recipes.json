@@ -15,7 +15,7 @@
       "Piñones",
       "Queso Parmesano Reggiano rallado",
       "Ajo",
-      "Aceite de Oliva Virgen Extra (AOVE)"
+      "Aceite de Oliva"
     ],
     "resumen": [
       "Lava y seca cuidadosamente la albahaca.",
@@ -24,8 +24,8 @@
     ],
     "detallado": "Para un auténtico Pesto, utiliza un mortero si es posible para evitar el sobrecalentamiento de la albahaca, lo que evita que se oxide y se mantenga su color verde brillante. Si usas licuadora, hazlo en pulsos cortos. La cantidad de aceite puede variar hasta que obtengas una salsa homogénea pero no líquida.",
     "identificadores": [
-      "Pasta",
-      "Picante",
+      "Salsa",
+      "Aromático",
       "Fresco"
     ],
     "valoracion": 3
@@ -57,9 +57,9 @@
     ],
     "detallado": "El secreto de un risotto perfecto es la **Mantecatura**. Cuando el arroz esté al dente, retira la olla del fuego. Agrega una nuez de mantequilla fría y abundante queso parmesano rallado. Cubre y deja reposar por un minuto. Luego, remueve vigorosamente para que el almidón se ligue con la grasa, logrando esa textura cremosa característica. El caldo debe estar siempre muy caliente.",
     "identificadores": [
-      "Risotto",
+      "Cremoso",
       "Umami",
-      "Nutritivo"
+      "Reconfortante"
     ],
     "valoracion": 5
   },
@@ -89,9 +89,9 @@
     ],
     "detallado": "La frittata se cocina a fuego muy bajo para evitar que la parte inferior se queme. Una vez que los bordes estén firmes y solo la parte superior esté ligeramente húmeda, puedes terminar de cuajarla transfiriendo la sartén a un horno precalentado. Esto asegura una cocción uniforme y una textura suave por dentro, sin necesidad de voltearla.",
     "identificadores": [
-      "Frittata",
-      "Salado",
-      "Equilibrado"
+      "Sabroso",
+      "Rápido",
+      "Brunch"
     ],
     "valoracion": 4
   },
@@ -124,9 +124,9 @@
     ],
     "detallado": "La salsa ragú debe cocinarse a fuego lento durante al menos dos horas para desarrollar profundidad de sabor. Asegúrate de que la bechamel no tenga grumos y que esté tibia al ensamblar. Deja reposar la lasagna 15 minutos fuera del horno antes de servir.",
     "identificadores": [
-      "Sustancioso",
-      "Horno",
-      "Tradicional"
+      "Pasta",
+      "Horneado",
+      "Reconfortante"
     ],
     "valoracion": 5
   },
@@ -160,8 +160,8 @@
     "detallado": "Usa huevos pasteurizados para más seguridad. Es fundamental que la crema de mascarpone quede muy ligera y aireada. La refrigeración es clave para que tome consistencia y los sabores se fusionen, haciendo que el bizcocho quede tierno.",
     "identificadores": [
       "Postre",
-      "Café",
-      "Cremoso"
+      "Cremoso",
+      "Sin Horno"
     ],
     "valoracion": 5
   },
@@ -190,9 +190,9 @@
     ],
     "detallado": "La clave es usar la menor cantidad de harina posible y no trabajar la masa en exceso, para que los gnocchi no queden duros. La patata debe cocerse con piel para que absorba menos agua. Sírvelos inmediatamente con tu salsa favorita.",
     "identificadores": [
-      "Masa",
-      "Patata",
-      "Confort"
+      "Pasta",
+      "Suave",
+      "Reconfortante"
     ],
     "valoracion": 4
   },
@@ -223,9 +223,9 @@
     ],
     "detallado": "El \"soffritto\" (sofrito de cebolla, apio y zanahoria) es crucial para crear la base de sabor. La sopa Minestrone mejora al día siguiente, ya que los sabores se asientan. Puedes variar las verduras según la estación, siempre añadiendo las más blandas al final.",
     "identificadores": [
-      "Vegano",
       "Sopa",
-      "Saludable"
+      "Saludable",
+      "Vegano"
     ],
     "valoracion": 4
   },
