@@ -1,5 +1,3 @@
-// logic.js - Archivo Completo y Corregido
-
 // =======================================================
 // FUNCIONES DE CARGA Y RENDERIZADO DE RECETAS INDIVIDUALES
 // =======================================================
@@ -9,6 +7,7 @@ async function loadRecipe(recipeId) {
   try {
     showLoading(true);
 
+    //CAMBIAR A FETCH DEL ENDPOINT recipes/${recipeId}
     const response = await fetch("./recipes.json");
 
     if (!response.ok) {
@@ -25,9 +24,14 @@ async function loadRecipe(recipeId) {
       return;
     }
 
-    renderRecipe(recipe);
-    loadSimilarRecipes(recipes, recipe);
+    //Titulo de la pestaña
     document.getElementById("page-title").textContent = recipe.nombre;
+
+    //Carga la info de la receta
+    renderRecipe(recipe);
+
+    //Carga una lista de recetas similares
+    loadSimilarRecipes(recipes, recipe);
   } catch (error) {
     console.error("Error al cargar la receta:", error);
     showError("Error al cargar la receta");
@@ -123,39 +127,31 @@ function loadSimilarRecipes(allRecipes, currentRecipe) {
     .filter(recipe =>  
       recipe.id !== currentRecipe.id &&
       recipe.identificadores.some((element => currentRecipe.identificadores.includes(element))))
-    .slice(0, 4); // Mostrar solo 4 recetas similares
+    .slice(0, 7); // Mostrar solo 7 recetas similares
 
   const container = document.getElementById("recetas-similares");
 
-  // Si no hay contenedor para similares, salimos
-  if (!container) return;
-
+  //mapear cada receta similar y crear su mini-card correspondiente
   const html = similarRecipes
-    .map(
-      (recipe) => `
-<article class="mini-card" onclick="window.location.href='recipe.html?id=${
-        recipe.id
-      }'">
- <h3 class="mini-card-title">${recipe.nombre}</h3>
-  <img class="mini-card-img" src="${recipe["imagen-principal"]}" alt="${
-        recipe.alt
-      }"/>
-<div class="mini-card-lista-categoria">
- ${recipe.identificadores
-   .map((tag) => `<p class="mini-card-categoria">${tag}</p>`)
-   .join("")}
-</div>
-</article>
-`
-    )
-    .join("");
-
+    .map((recipe) => crearCard(recipe)).join("");
   container.innerHTML = html;
 }
-
+/*
 // Función para navegar a una receta específica (opcional, ya se usa onclick en las cards)
 function navigateToRecipe(recipeId) {
   window.location.href = `recipe.html?id=${recipeId}`;
+}
+  */
+
+function crearCard(recipe){
+  const html = ` <article class="mini-card" onclick="window.location.href='recipe.html?id=${recipe.id}'">
+      <h3 class="mini-card-title">${recipe.nombre}</h3>
+      <img class="mini-card-img" src="${recipe["imagen-principal"]}" alt="${recipe.alt}"/>
+      <div class="mini-card-lista-categoria">${recipe.identificadores.map((tag) => `<p class="mini-card-categoria">${tag}</p>`).join("")}
+      </div>
+    </article>`;
+
+    return html;
 }
 
 // Mostrar/ocultar loading
@@ -200,7 +196,6 @@ function setRecipeRating(rating) {
  */
 async function loadAllMiniCards() {
   try {
-    // ⚠️ RUTA CRÍTICA: Cambia a './recipes.json' si tu JSON está en la raíz del TP2
     const response = await fetch("./recipes.json");
 
     if (!response.ok) {
@@ -220,24 +215,7 @@ async function loadAllMiniCards() {
     // Generar el HTML de todas las tarjetas
     const html = allRecipes
       .map(
-        (recipe) => `
-            <article 
-                class="mini-card" 
-                onclick="window.location.href = 'recipe.html?id=${recipe.id}'"
-            >
-                <h3 class="mini-card-title">${recipe.nombre}</h3>
-                <img class="mini-card-img" src="${
-                  recipe["imagen-principal"]
-                }" alt="${recipe.alt}" />
-                <div class="mini-card-lista-categoria">
-                    ${recipe.identificadores
-                      .map((tag) => `<p class="mini-card-categoria">${tag}</p>`)
-                      .join("")}
-                </div>
-            </article>
-        `
-      )
-      .join("");
+        (recipe) => crearCard(recipe)).join("");
 
     // Insertar el HTML generado
     container.innerHTML = html;
