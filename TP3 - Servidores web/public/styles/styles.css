@@ -1,0 +1,893 @@
+/* ========================================
+   ESTILOS GENERALES Y LAYOUT
+   ======================================== */
+
+/* Contenedor principal flexible */
+container {
+  display: flex;
+}
+
+/* ========================================
+   HEADER Y NAVEGACIÓN
+   ======================================== */
+
+/* Header con layout vertical */
+header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+/* Título centrado horizontalmente */
+.TituloPrincipal {
+  font-family: "Ferro Rosso", sans-serif;
+  text-align: center; /* Centrado */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  margin: 20px 0; /* Espacio arriba y abajo */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0em;
+}
+
+.textoTitulo {
+  flex-basis: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.Titulo {
+  align-self: center;
+}
+
+/* Contenedor de herramientas de navegación */
+.Herramientas {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8vw;
+}
+
+/* Elementos de navegación con capacidad de compresión */
+.NavElement {
+  flex-shrink: 3;
+  flex-basis: auto;
+}
+
+/* Lista de navegación horizontal */
+
+.navList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Italiana", "Italiana-Regular", sans-serif;
+  font-weight: 900; /* ESTA LÍNEA HACE QUE ESTÉ EN NEGRITA */
+}
+
+/*Modificar letra y estilo de las herramientas*/
+.navList a {
+  text-decoration: none;
+  color: #000000;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/*Colorear herramientas al pasar con el mouse*/
+.navList a:hover {
+  background-color: #d9b382;
+  color: rgb(12, 1, 1); /*Cambia el color de la letra*/
+}
+
+/* Navegación con crecimiento flexible */
+nav {
+  flex-grow: 3;
+}
+
+/* Barra de búsqueda */
+search {
+  display: flex;
+  flex-grow: 5;
+  justify-content: center;
+}
+
+/* Input de búsqueda con ancho relativo */
+#barraBusqueda {
+  inline-size: 80%;
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+   ======================================== */
+
+/* Estilos del cuerpo del documento */
+body {
+  /*
+    background-image: url("images/tabla1.webp");
+    background-size: cover;
+    background-position: top center;
+    */
+  background-color: #c09d7b;
+  /*font-family: "Italiana-Regular", serif;*/
+  min-font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+/* MODIFICACIÓN A LA ETIQUETA MAIN */
+main {
+  /* Quitamos padding en los lados aquí para que la imagen lateral toque el borde de la pantalla */
+  display: block;
+  margin: 0;
+  padding: 0; /* Establecido a 0 para que el grid tome el control total */
+}
+
+/* NUEVO CONTENEDOR DE 3 COLUMNAS */
+.receta-layout-grid {
+  display: grid;
+  /* ➡️ CAMBIO CLAVE: Proporción 1fr 15fr 1fr */
+  /* 1fr para laterales (marco muy delgado) | 15fr para centro (columna GIGANTE) | 1fr para lateral */
+  grid-template-columns: 1fr 15fr 1fr;
+
+  gap: 1rem; /* Espacio entre columnas */
+
+  /* ➡️ AUMENTO MÁXIMO DE ANCHO: Más espacio para que el 15fr sea enorme */
+  max-width: 3000px; /* Aumentado a 3000px */
+
+  margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+/* Columna Central de la Receta */
+.columna-central-receta {
+  /* Asegura que el contenido central fluya normalmente */
+  grid-column: 2 / 3;
+  /* Añadimos más padding lateral para separar el contenido del borde de la columna central */
+  padding: 3rem 5rem; /* Más padding para que el contenido respire dentro de la columna ancha */
+
+  /* Esto ayuda a que el contenido central resalte sobre las imágenes laterales */
+  background-color: #e0e0d6; /* Color claro para destacar la columna central */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); /* Sombra un poco más marcada */
+}
+
+/* Estilo de las Columnas Laterales */
+.columna-lateral {
+  /* 1. Ocultar por defecto en móviles */
+  display: none;
+  overflow: hidden;
+  height: auto;
+}
+
+/* 2. Mostrar solo en pantallas grandes (desktop) */
+@media (min-width: 1000px) {
+  .columna-lateral {
+    display: block;
+    /* Estirar la columna para que se ajuste a la altura del contenido central */
+    height: 100%;
+    position: relative;
+  }
+}
+
+/* Estilo de la imagen dentro de la columna lateral */
+.decoracion-img {
+  width: 100%;
+  height: 100%;
+  /* Asegura que la imagen cubra todo el espacio de la columna ancha */
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.5; /* Hago las imágenes más sutiles para que no compitan con el contenido central */
+}
+
+@font-face {
+  font-family: Italiana-Regular;
+  src: url("fonts/Italiana-Regular.ttf") format("opentype");
+}
+
+h1 {
+  font-family: "Italiana-Regular", serif;
+  font-size: 5.9vw;
+}
+
+h2 {
+  font-family: "Italiana-Regular", serif;
+  font-size: 3vh;
+}
+
+h3 {
+  font-family: "Italiana-Regular", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.03rem;
+}
+
+p {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 2vmin;
+}
+
+/* Contenedor principal con layout vertical */
+main {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 15%;
+  height: auto;
+}
+
+/* Receta destacada con estructura centrada */
+.Destacado-Flip-Card {
+  flex-grow: 5;
+  padding: 2em;
+  box-sizing: border-box;
+  background-color: transparent;
+  perspective: 1000px;
+  width: 100%;
+  height: clamp(220px, 45vw, 520px);
+  cursor: pointer;
+}
+
+.Destacado-Flip-Card-Inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.Destacado-Flip-Card:hover .Destacado-Flip-Card-Inner {
+  transform: rotateY(180deg);
+}
+
+.Destacado-Flip-Card-Front,
+.Destacado-Flip-Card-Back {
+  /* Contenedor principal de la tarjeta destacada */
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+}
+
+.Destacado-Flip-Card-Front {
+  background-color: transparent;
+}
+
+.Destacado-Flip-Card-Back {
+  background: linear-gradient(135deg, #434343, #262626);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.Destacado-Flip-Card-Back .Destacado-Overlay {
+  position: static;
+  background: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Destacado-Flip-Card-Back .Destacado-Titulo {
+  font-size: clamp(18px, 4vw, 32px);
+  margin-bottom: 1rem;
+}
+
+/* Imágenes destacadas con dimensiones controladas */
+.ImagenDestacada {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  height: clamp(220px, 38vw, 520px);
+  width: 100%;
+}
+
+/* Enlaces de recetas clickeables */
+.EnlaceReceta {
+  color: inherit;
+  transition: transform 0.4s ease;
+  border-radius: 5px;
+}
+
+.EnlaceReceta:hover {
+  transform: scale(1.05);
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+.Destacado-Overlay {
+  /* Capa superpuesta con degradado para legibilidad del texto */
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(12px, 4vw, 32px);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.15) 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  color: #ffffff;
+}
+
+.Destacado-Tag {
+  /* Etiqueta pequeña en forma de píldora */
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111;
+  font-size: 1.6vmin;
+  line-height: 1;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.Destacado-Titulo {
+  /* Título con sombra para contraste */
+  margin: 0;
+  font-family: "Italiana-Regular", sans-serif;
+  font-weight: 800;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  font-size: 5vw;
+}
+
+.Destacado-Subtitulo {
+  /* Línea descriptiva debajo del título */
+  margin: 6px 0 0 0;
+  font-size: clamp(12px, 2.4vw, 18px);
+  opacity: 0.95;
+}
+
+.Destacado-Flip-Card-Front .Destacado-Overlay .Destacado-Titulo,
+.Destacado-Flip-Card-Front .Destacado-Overlay .Destacado-Subtitulo {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.mini-card-grid {
+  scrollbar-color: #666 #201c29;
+  scrollbar-gutter: stable both-edges;
+  padding: 3rem 0 3rem 2rem;
+  border-radius: 10px;
+  margin: 0;
+  display: flex;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  position: relative;
+  background-color: #a73d3d; /*#7a2b2b#a73d3d*/
+}
+.mini-card-grid::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.mini-card-grid::-webkit-scrollbar-thumb {
+  background: #434343;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+.mini-card-grid::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #434343, #434343 1px, #262626 0, #262626);
+}
+
+.mini-card {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 16px;
+  background: linear-gradient(85deg, #434343, #898880);
+  color: #fff;
+  margin: 0;
+  max-width: 300px;
+  max-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* <--- cambiar de flex-start a center */
+  justify-content: space-evenly;
+  transition: 0.2s;
+}
+
+.mini-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: absolute;
+  z-index: 0;
+}
+
+.mini-card:focus-within,
+.mini-card:hover {
+  transform: translateY(-1rem) rotate(3deg);
+}
+
+.mini-card:focus-within ~ .mini-card,
+.mini-card:hover ~ .mini-card {
+  transform: translateX(130px);
+}
+
+.mini-card:first-child:focus-within,
+.mini-card:first-child:hover {
+  transform: translate(-0.5rem, -1rem) rotate(3deg);
+}
+
+.mini-card:not(:first-child) {
+  margin-left: -130px;
+  box-shadow: -3rem 0 3rem -2rem #000;
+}
+
+.mini-card :hover {
+  transform: translate(-0.5rem, -1rem) rotate(3deg);
+}
+
+.mini-card-title {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+}
+
+.mini-card-img {
+  width: 250px;
+  border-radius: 16px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.mini-card-lista-categoria {
+  display: flex;
+  flex-flow: row nowrap; /*no permite que pasen a la siguiente línea */
+  justify-content: center; /* centra horizontalmente las píldoras */
+  gap: 1rem;
+  width: 100%; /* para que ocupe todo el ancho de la tarjeta */
+}
+
+.mini-card-categoria {
+  /* Etiqueta pequeña en forma de píldora */
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111;
+  font-size: max(16px, 1.7vmin);
+  line-height: 1;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-top: 5px;
+  text-decoration: 0;
+}
+
+/* ========================================
+   ESTILOS RECETAS
+   ======================================== */
+
+.header-receta {
+  text-align: center; /* Esto centra todo el contenido */
+  padding: 1rem 0;
+}
+
+.titulo-receta {
+  color: #f1efe3;
+  font-weight: 400;
+  padding: 0.5rem;
+  background: #a73d3d;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: inline-block; /* Importante para que se centre */
+  margin: 0 auto; /* Centrado automático */
+}
+
+.descripcion-receta {
+  max-width: 800px; /* ancho limitado  */
+  margin: 2rem auto; /* centrado */
+  padding: 1.5rem 2rem;
+  background: #dad3bf; /* fondo semitransparente */
+  backdrop-filter: blur(8px); /* efecto vidrio */
+  border-radius: 16px; /* bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center; /* centra el texto */
+}
+
+.descripcion-receta p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #100f0f; /* texto clarito */
+  font-style: italic;
+}
+
+.main-receta {
+}
+
+.info-receta {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.foto-receta {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.imagen-principal {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.imagen-principal:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(205, 33, 42, 0.1);
+}
+
+.info-icon {
+}
+.Receta-Flip-Card {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.Receta-Flip-Card-Inner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.Receta-Flip-Card:hover .Receta-Flip-Card-Inner {
+  transform: rotateY(180deg);
+}
+
+.Receta-Flip-Card-Front,
+.Receta-Flip-Card-Back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 8px 20px rgba(146, 145, 145, 0.815);
+}
+
+.Receta-Flip-Card-Front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.Receta-Flip-Card-Overlay {
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.Receta-Flip-Card-Front h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.Receta-Flip-Card-Back {
+  background-color: #751f1f;
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.Receta-Flip-Card-Back p {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.info-text {
+  width: calc(100% - 30px);
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 1px 0 0 0;
+  margin-left: auto;
+}
+
+.info-receta ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.info-receta li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  min-height: 20px;
+}
+
+.contenido-receta {
+  display: flex;
+  flex-wrap: wrap; /* se apilan en pantallas chicas */
+  gap: 2rem; /* espacio entre bloques */
+  margin-top: 2rem;
+}
+
+.seccion-receta {
+  font-weight: 600; /* grosor letra */
+  font-size: 1.2rem;
+  flex: 1; /* cada bloque ocupa el mismo ancho */
+  min-width: 280px; /* evita que se achiquen demasiado */
+  background: rgb(214, 214, 214); /* bloque con fondo */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-receta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.seccion-receta h2 {
+  font-size: 1.6rem; /* títulos más grandes */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/*AGREGADO*/
+
+.grid-items {
+  /*Contenedor*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+/* Verde - Primer ítem */
+.grid-item:nth-child(1) {
+  background: linear-gradient(135deg, #008c45, #006b33);
+}
+
+/* Blanco - Segundo ítem */
+.grid-item:nth-child(2) {
+  background: linear-gradient(135deg, #f4f9ff, #e8eff9);
+  color: #333;
+}
+
+/* Rojo - Tercer ítem */
+.grid-item:nth-child(3) {
+  background: linear-gradient(135deg, #a73d3d, #a73d3d);
+}
+
+/* Verde - Cuarto ítem */
+.grid-item:nth-child(4) {
+  background: linear-gradient(135deg, #008c45, #006b33);
+}
+
+.grid-item {
+  /*Hijos del contenedor*/
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.grid-item h4 {
+  /* Estilo para títulos */
+  margin: 0 0 0.8rem 0;
+  font-size: 1rem;
+  opacity: 0.95;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.grid-item p {
+  /* Estilo para parrafos */
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-similares {
+  font-family: "Italiana-Regular", sans-serif;
+  text-align: center;
+  font-size: 4rem;
+  color: #0a0000;
+  margin-top: 9rem;
+  margin: 5rem 5 2rem 5; /* margen arriba y abajo */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.seccion-receta-2 h2 {
+  font-size: 2rem;
+  text-align: left;
+  margin: 0 0 1rem 0;
+}
+
+.seccion-receta-2 h2::after {
+  /*Linea de decoracion del detalle de la preparacion*/
+  content: ""; /* contenido vacío */
+  display: inline-block;
+  height: 3px; /* grosor de la línea */
+  width: 100%; /* largo de la línea */
+  max-width: 100%;
+  background: linear-gradient(
+    to right,
+    #cd212a,
+    #f4f9ff,
+    #008c45
+  ); /* degradado  */
+  margin-top: 8px; /* espacio entre el título y la línea */
+  vertical-align: middle; /* alinea la línea con el texto */
+}
+
+.seccion-receta-2 p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0 1rem;
+}
+
+.seccion-receta-2 {
+  flex-grow: 1;
+  padding: 1rem;
+  background-color: #dad3bf;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 0; /* elimina margen lateral extra */
+}
+
+.resumen-receta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+
+.cuerpo-receta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Valoracion */
+.valoracion-receta {
+  /* Usamos grid-column: 2 / 3 para que ocupe la columna central de la grilla de layout */
+  grid-column: 2 / 3;
+  max-width: 600px; /* Ancho máximo en el centro */
+  margin: 3rem auto; /* Centrado horizontal y espacio vertical */
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background-color: #e0e0d6; /* Fondo similar al del cuerpo de la receta */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.valoracion-titulo {
+  font-family: "Italiana-Regular", serif;
+  font-size: 2.2rem;
+  color: #cd212a; /* color destacado */
+  text-align: center; 
+  margin: 0 0 1rem 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  display: block;
+}
+
+/* Estrellas */
+.rating {
+  display: inline-flex;
+  flex-direction: row-reverse; /* rellena visualmente izquierda->derecha */
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 2.8rem; /* tamaño estrella */
+  color: #bfbfbf; /* color por defecto (gris) */
+  cursor: pointer;
+  transition: color 0.18s ease, transform 0.12s ease;
+  user-select: none;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover: color al pasar el ratón */
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+  transform: translateY(-5px);
+}
+
+/* Cuando está seleccionado */
+.rating input:checked ~ label,
+.rating input:checked ~ label ~ label {
+  color: gold;
+}
+
+/* ========================================
+   ESTILOS ESPECÍFICOS PARA INGREDIENTES Y PREPARACIÓN
+   ======================================== */
+
+/* 1. Estilo para las listas dentro de las secciones de Ingredientes/Preparación */
+.seccion-receta-2 ul {
+  /* Elimina los estilos de lista por defecto (puntos o números) */
+  list-style: none;
+  padding-left: 0; /* Asegura que la lista esté alineada al borde */
+  margin-top: 0.5rem; /* Espacio entre el <h2> y el inicio de la lista */
+  margin-bottom: 0;
+}
+
+/* 2. Añade espacio entre cada item de la lista (el ingrediente o el paso) */
+.seccion-receta-2 li {
+  font-size: 1.2rem; /* Tamaño de texto legible */
+  line-height: 1.6; /* Espaciado entre líneas */
+  padding: 0.25rem 0; /* Espaciado vertical entre items */
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+/* 3. Estilo para el contenedor de Resumen (Ingredientes y Preparación) */
+.resumen-receta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0 1rem;
+}

@@ -1,0 +1,163 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://fonts.cdnfonts.com/css/ferro-rosso" rel="stylesheet">
+    </head>
+
+    <body>
+
+    <header>
+        <h1 class="TituloPrincipal">
+            <span class="textoTitulo" style="color: #008C45">Cocin</span>
+            <span class="textoTitulo" style="color: #F4F9FF">a Ita</span>
+            <span class="textoTitulo" style="color: #CD212A">liana</span>
+        </h1>
+
+        <div class="Herramientas">
+            <nav>
+                <ul class="navList">
+                    <li class="NavElement"><a href="/cocinaItaliana">Inicio</a></li>
+                    <li class="NavElement"><a href="/cocinaItaliana/recetas">Recetas</a></li>
+                </ul>
+            </nav>
+
+            <search>
+                <input id="barraBusqueda" type="text" placeholder="Buscar...">
+            </search>
+        </div>
+    </header>
+
+    <main id="main_index">
+        
+
+        <div class="mini-card-grid">
+
+
+            <article class="mini-card" onclick="window.location.href = 'recipe.html'">
+               
+                        <h3 class="mini-card-title">
+                            Pesto alla Genovese
+                        </h3>
+                        <img class="mini-card-img" src="../img/pesto.jpg" alt="pesto" />
+                        <a href="recipe.html?id=pesto" class="mini-card-lista-categoria">
+                            <p class="mini-card-categoria" >
+                                Pasta
+                            </p>
+
+                            <p class="mini-card-categoria">
+                                Picante
+                            </p>
+
+                            <p class="mini-card-categoria">
+                                Fresco
+                            </p>
+                        </a>
+
+            </article>
+
+            <article class="mini-card" onclick="window.location.href = 'recipeRisotto.html'"">
+                <h3 class="mini-card-title">
+                    Risotto cremoso de cebada
+                </h3>
+                <img class="mini-card-img" src="../img/Risotto.jpg" alt="pesto" />
+                <div class="mini-card-lista-categoria">
+                    <p class="mini-card-categoria" >
+                        Risotto
+                    </p>
+
+                    <p class="mini-card-categoria">
+                        Umami
+                    </p>
+
+                    <p class="mini-card-categoria">
+                        Nutritivo
+                    </p>
+                </div>
+
+
+            </article>
+
+            <article class="mini-card">
+                <h3 class="mini-card-title">
+                    Frittata de salchicha italiana
+                </h3>
+                <img class="mini-card-img" src="img/Frittata.jpg" alt="pesto" />
+                <div class="mini-card-lista-categoria">
+                    <p class="mini-card-categoria" >
+                        Frittata
+                    </p>
+
+                    <p class="mini-card-categoria">
+                        Salado
+                    </p>
+
+                    <p class="mini-card-categoria">
+                        Equilibrado
+                    </p>
+                </div>
+
+
+            </article>
+
+            <article class="mini-card">
+                <h3 class="mini-card-title">
+                    Piccata de pollo
+                </h3>
+                <img class="mini-card-img" src="../img/piccata.jpg" alt="pesto" />
+                <div class="mini-card-lista-categoria">
+                    <p class="mini-card-categoria" >
+                        Pollo
+                    </p>
+
+                    <p class="mini-card-categoria">
+                        Cítrico
+                    </p>
+
+                    <p class="mini-card-categoria">
+                        Ligero
+                    </p>
+                </div>
+
+
+            </article>
+
+            <article class="mini-card">
+                <h3 class="mini-card-title">
+                    Cavatelli
+                </h3>
+                <img class="mini-card-img" src="../img/cavatelli.jpg" alt="pesto" />
+                <div class="mini-card-lista-categoria">
+                    <p class="mini-card-categoria" >
+                        Pasta
+                    </p>
+
+                    <p class="mini-card-categoria">
+                        Suave
+                    </p>
+
+                    <p class="mini-card-categoria">
+                        Energético
+                    </p>
+                </div>
+
+
+            </article>
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+    </body>
+
+<script src="../js/header.js"> </script> 
+<script src="../js/logic.js"></script>
+
+</html>
