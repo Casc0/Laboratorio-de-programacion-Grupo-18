@@ -37,21 +37,19 @@ app.get("cocinaItaliana/recipes/:valoracion", (req, res) => {
     //VER COMO GENERALIZARLO Y SACAR AFUERA LA CARGA DEL JSON
     const recipesData = require("../public/js/recipes.json");
     console.log("Recipes loaded");
-
+    const stars = req.params.valoracion;
     // HASTA ACA
 
-    console.log("Fetching featured recipe"); // Usa la variable 'recipesData' que ya está en memoria
-    const featuredRecipe = recipesData.find(
-      (recipe) => recipe.valoracion === 5
-    );
+    console.log("Fetching recipe with stars valoracion"); // Usa la variable 'recipesData' que ya está en memoria
+    const recipe = recipesData.find((recipe) => recipe.valoracion === stars);
 
     //Si no encontro alguna, tira error 404
-    if (featuredRecipe) {
-      console.log("Featured recipe found:", featuredRecipe);
-      res.json(featuredRecipe);
+    if (recipe) {
+      console.log("recipe found:", recipe);
+      res.json(recipe);
     } else {
-      console.log("No featured recipe found");
-      res.status(404).json({ message: "No se encontró una receta destacada." });
+      console.log("No  recipe found");
+      res.status(404).json({ message: "No se encontró una receta." });
     }
   } catch (error) {
     console.error("Error fetching featured recipe:", error);
@@ -64,7 +62,8 @@ app.get("cocinaItaliana/recipes/:valoracion", (req, res) => {
 app.get("/cocinaItaliana/recipes/:amount", (req, res) => {
   try {
     const recipesData = require("../public/js/recipes.json");
-    const someRecipes = recipesData.slice(0, 6); // Devuelve las primeras 6 recetas
+    const amount = req.params.amount;
+    const someRecipes = recipesData.slice(0, amount); // Devuelve las primeras 'amount' recetas
     res.json(someRecipes);
   } catch (error) {
     console.error("Error fetching some recipes:", error);

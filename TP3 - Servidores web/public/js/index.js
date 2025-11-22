@@ -3,7 +3,7 @@ import { renderHeader } from "./header.js";
 
 async function getFeaturedRecipe(){
 
-  const url = '/api/featured-recipe';
+  const url = 'cocinaItaliana/recipes/5';
     try {
       const recipe = await fetch(url, {
         method: "GET",
@@ -29,8 +29,8 @@ async function getIndex(){
   const main = document.getElementById("main_index");
   const featuredRecipeHTML = await getFeaturedRecipe();
   const miniCardsHTML = await getAllMiniCards();
-  const body = await getBody();
-  const mainHtml = featuredRecipeHTML + miniCardsHTML + body;
+  //const body = await getBody();
+  const mainHtml = featuredRecipeHTML + miniCardsHTML;
   main.innerHTML = mainHtml;
 }
 

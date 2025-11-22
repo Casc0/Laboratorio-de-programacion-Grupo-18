@@ -243,7 +243,7 @@ function makeMiniCards(recipes) {
 // Función principal para conseguir todas las mini-cards
 export async function getAllMiniCards() {
   try {
-    const url = "/api/some-recipes";
+    const url = "/api/some-recipes/6";
     const recipe = await fetch(url, {
       method: "GET",
       // …
