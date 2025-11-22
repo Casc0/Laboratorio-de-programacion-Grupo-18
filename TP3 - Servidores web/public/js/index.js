@@ -28,9 +28,9 @@ async function getBody(){
 async function getIndex(){
   const main = document.getElementById("main_index");
   const featuredRecipeHTML = await getFeaturedRecipe();
-  //const miniCardsHTML = await getAllMiniCards();
+  const miniCardsHTML = await getAllMiniCards();
   //const body = await getBody();
-  const mainHtml = featuredRecipeHTML; //+ miniCardsHTML;
+  const mainHtml = featuredRecipeHTML+ miniCardsHTML;
   main.innerHTML = mainHtml;
 }
 

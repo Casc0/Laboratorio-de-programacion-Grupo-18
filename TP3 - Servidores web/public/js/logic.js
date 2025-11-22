@@ -172,9 +172,7 @@ export function featuredCard(recipe) {
   const html = `<article class="Destacado-Flip-Card" >
             <section class="Destacado-Flip-Card-Inner">
                 <section class="Destacado-Flip-Card-Front">
-                    <img class="ImagenDestacada" src="${
-                      recipe["imagen-principal"]
-                    }" alt="${recipe.alt}" />
+                    <img class="ImagenDestacada" src="${recipe["imagen-principal"]}" alt="${recipe.alt}" />
                     <div class="Destacado-Overlay">
                         <span class="Destacado-Tag">Destacado-</span>
                         <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
@@ -236,14 +234,15 @@ function setRecipeRating(rating) {
 
 function makeMiniCards(recipes) {
   // Generar el HTML de todas las tarjetas
-  const html = recipes.map((recipe) => crearCard(recipe)).join("");
+  const cards = recipes.map((recipe) => crearCard(recipe)).join("");
+  const html = `<div class="mini-card-grid">${cards}</div>`;
   return html;
 }
 
 // Función principal para conseguir todas las mini-cards
 export async function getAllMiniCards() {
   try {
-    const url = "/api/some-recipes?limit=6";
+    const url = "/api/recipes?limit=3";
     const recipe = await fetch(url, {
       method: "GET",
       // …
@@ -255,13 +254,6 @@ export async function getAllMiniCards() {
 
     const allRecipes = await recipe.json();
 
-    // Obtener el contenedor principal de la grilla
-    const container = document.querySelector(".mini-card-grid");
-
-    if (!container) {
-      console.error("El contenedor .mini-card-grid no se encontró en el HTML.");
-      return;
-    }
     const html = makeMiniCards(allRecipes);
     return html;
     /*
@@ -270,7 +262,10 @@ export async function getAllMiniCards() {
     container.innerHTML = html;
     */
   } catch (error) {
-    console.error("Error al cargar las mini-cards (¡Revisa la ruta del JSON!)", error);
+    console.error(
+      "Error al cargar las mini-cards (¡Revisa la ruta del JSON!)",
+      error
+    );
     /*
     const container = document.querySelector(".mini-card-grid");
     if (container) {
