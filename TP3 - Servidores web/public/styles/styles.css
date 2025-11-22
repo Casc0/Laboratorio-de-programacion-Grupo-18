@@ -186,6 +186,11 @@ main {
   src: url("fonts/Italiana-Regular.ttf") format("opentype");
 }
 
+@font-face{
+  font-family: Ferro Rosso;
+  src: url("fonts/FerroRosso.ttf") format("truetype");
+}
+
 h1 {
   font-family: "Italiana-Regular", serif;
   font-size: 5.9vw;

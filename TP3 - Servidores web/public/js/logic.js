@@ -232,7 +232,28 @@ async function loadAllMiniCards() {
   }
 }
 
+function featuredCard(recipe){
+  const html = `<article class="Destacado-Flip-Card" >
+            <section class="Destacado-Flip-Card-Inner">
+                <section class="Destacado-Flip-Card-Front">
+                    <img class="ImagenDestacada" src="${recipe.imagen-principal}" alt="${recipe.alt}" />
+                    <div class="Destacado-Overlay">
+                        <span class="Destacado-Tag">Destacado-</span>
+                        <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
+                    </div>
+                </section>
+                <section class="Destacado-Flip-Card-Back">
+                    <div class="Destacado-Overlay">
+                        <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
+                        <!-- Descripción breve/subtítulo -->
+                        <p class="Destacado-Subtitulo">${recipe.descripcion}</p>
+                    </div>
+                </section>
+            </section>
+        </article>`;
 
+    return html;
+}
 
 
 // =======================================================
