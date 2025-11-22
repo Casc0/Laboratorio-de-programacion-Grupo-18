@@ -5,6 +5,8 @@ const path = require("path"); // Importa el módulo path de Node.js
 const app = express(); // La variable app es el servidor, una instancia de aplicación Express
 const PORT = 4000; // Define el puerto en el que se ejecutará la app
 
+
+const recipesData = require("../public/js/recipes.json");
 // =======================================================
 //  CONFIGURACIÓN DE RUTAS ESTÁTICAS
 // =======================================================
@@ -29,49 +31,37 @@ app.get("/cocinaItaliana", (req, res) => {
   res.redirect("./index.html");
 });
 
-app.get("/cocinaItaliana/recipes/:id", (req, res) => {
-})
-
-app.get("cocinaItaliana/recipes/:valoracion", (req, res) => {
+// Endpoint para obtener recetas.
+// Soporta filtrado por valoración y limitación de cantidad.
+// Ejemplos:
+//   /api/recipes?valoracion=5  -> Devuelve recetas con 5 estrellas
+//   /api/recipes?limit=6       -> Devuelve las primeras 6 recetas
+//   /api/recipes               -> Devuelve todas las recetas
+app.get("/api/recipes", (req, res) => {
   try {
-    //VER COMO GENERALIZARLO Y SACAR AFUERA LA CARGA DEL JSON
-    const recipesData = require("../public/js/recipes.json");
-    console.log("Recipes loaded");
-    const stars = req.params.valoracion;
-    // HASTA ACA
+    let results = [...recipesData];
+    const { valoracion, limit } = req.query;
 
-    console.log("Fetching recipe with stars valoracion"); // Usa la variable 'recipesData' que ya está en memoria
-    const recipe = recipesData.find((recipe) => recipe.valoracion === stars);
-
-    //Si no encontro alguna, tira error 404
-    if (recipe) {
-      console.log("recipe found:", recipe);
-      res.json(recipe);
-    } else {
-      console.log("No  recipe found");
-      res.status(404).json({ message: "No se encontró una receta." });
+    // Filtrar por valoración si el query param existe
+    if (valoracion) {
+      const rating = parseInt(valoracion, 10);
+      results = results.find(recipe => recipe.valoracion === rating);
     }
+
+    // Limitar la cantidad de resultados si el query param existe
+    if (limit) {
+      const amount = parseInt(limit, 10);
+      results = results.slice(0, amount);
+    }
+
+    res.json(results);
+
   } catch (error) {
-    console.error("Error fetching featured recipe:", error);
-    res
-      .status(500)
-      .json({ message: "Error en el servidor al buscar la receta." });
+    res.status(500).json({ message: "Error en el servidor al procesar las recetas." });
   }
 });
 
-app.get("/cocinaItaliana/recipes/:amount", (req, res) => {
-  try {
-    const recipesData = require("../public/js/recipes.json");
-    const amount = req.params.amount;
-    const someRecipes = recipesData.slice(0, amount); // Devuelve las primeras 'amount' recetas
-    res.json(someRecipes);
-  } catch (error) {
-    console.error("Error fetching some recipes:", error);
-    res
-      .status(500)
-      .json({ message: "Error en el servidor al buscar la receta." });
-  }
-});
+
 // =======================================================
 // INICIO DEL SERVIDOR
 // =======================================================

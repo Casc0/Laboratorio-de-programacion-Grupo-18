@@ -173,7 +173,7 @@ export function featuredCard(recipe) {
             <section class="Destacado-Flip-Card-Inner">
                 <section class="Destacado-Flip-Card-Front">
                     <img class="ImagenDestacada" src="${
-                      recipe.imagen - principal
+                      recipe["imagen-principal"]
                     }" alt="${recipe.alt}" />
                     <div class="Destacado-Overlay">
                         <span class="Destacado-Tag">Destacado-</span>
@@ -243,7 +243,7 @@ function makeMiniCards(recipes) {
 // Función principal para conseguir todas las mini-cards
 export async function getAllMiniCards() {
   try {
-    const url = "/api/some-recipes/6";
+    const url = "/api/some-recipes?limit=6";
     const recipe = await fetch(url, {
       method: "GET",
       // …
