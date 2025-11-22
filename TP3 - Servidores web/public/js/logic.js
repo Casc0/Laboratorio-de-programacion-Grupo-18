@@ -89,7 +89,9 @@ function renderRecipe(recipe) {
               <section class="seccion-receta-2">
                 <h2>Ingredientes</h2>
                 <ul>
-                  ${recipe.ingredientes.map((ing) => `<li>${ing}</li>`).join("")}
+                  ${recipe.ingredientes
+                    .map((ing) => `<li>${ing}</li>`)
+                    .join("")}
                 </ul>
               </section>
               <section class="seccion-receta-2">
@@ -124,16 +126,19 @@ function renderRecipe(recipe) {
 // Cargar recetas similares
 function loadSimilarRecipes(allRecipes, currentRecipe) {
   const similarRecipes = allRecipes
-    .filter(recipe =>  
-      recipe.id !== currentRecipe.id &&
-      recipe.identificadores.some((element => currentRecipe.identificadores.includes(element))))
+    .filter(
+      (recipe) =>
+        recipe.id !== currentRecipe.id &&
+        recipe.identificadores.some((element) =>
+          currentRecipe.identificadores.includes(element)
+        )
+    )
     .slice(0, 7); // Mostrar solo 7 recetas similares
 
   const container = document.getElementById("recetas-similares");
 
   //mapear cada receta similar y crear su mini-card correspondiente
-  const html = similarRecipes
-    .map((recipe) => crearCard(recipe)).join("");
+  const html = similarRecipes.map((recipe) => crearCard(recipe)).join("");
   container.innerHTML = html;
 }
 /*
@@ -143,15 +148,49 @@ function navigateToRecipe(recipeId) {
 }
   */
 
-function crearCard(recipe){
-  const html = ` <article class="mini-card" onclick="window.location.href='recipe.html?id=${recipe.id}'">
+export function crearCard(recipe) {
+  console.log("Creating card for recipe:", recipe.nombre);
+  const html = ` <article class="mini-card" onclick="window.location.href='recipe.html?id=${
+    recipe.id
+  }'">
       <h3 class="mini-card-title">${recipe.nombre}</h3>
-      <img class="mini-card-img" src="${recipe["imagen-principal"]}" alt="${recipe.alt}"/>
-      <div class="mini-card-lista-categoria">${recipe.identificadores.map((tag) => `<p class="mini-card-categoria">${tag}</p>`).join("")}
+      <img class="mini-card-img" src="${recipe["imagen-principal"]}" alt="${
+    recipe.alt
+  }"/>
+      <div class="mini-card-lista-categoria">${recipe.identificadores
+        .map((tag) => `<p class="mini-card-categoria">${tag}</p>`)
+        .join("")}
       </div>
     </article>`;
 
-    return html;
+  return html;
+}
+
+export function featuredCard(recipe) {
+  console.log("Creating featured card for recipe:", recipe.nombre);
+
+  const html = `<article class="Destacado-Flip-Card" >
+            <section class="Destacado-Flip-Card-Inner">
+                <section class="Destacado-Flip-Card-Front">
+                    <img class="ImagenDestacada" src="${
+                      recipe.imagen - principal
+                    }" alt="${recipe.alt}" />
+                    <div class="Destacado-Overlay">
+                        <span class="Destacado-Tag">Destacado-</span>
+                        <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
+                    </div>
+                </section>
+                <section class="Destacado-Flip-Card-Back">
+                    <div class="Destacado-Overlay">
+                        <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
+                        <!-- Descripción breve/subtítulo -->
+                        <p class="Destacado-Subtitulo">${recipe.descripcion}</p>
+                    </div>
+                </section>
+            </section>
+        </article>`;
+
+  return html;
 }
 
 // Mostrar/ocultar loading
@@ -194,15 +233,27 @@ function setRecipeRating(rating) {
 /**
  * Carga todas las recetas y genera las mini-cards para la página principal.
  */
-async function loadAllMiniCards() {
-  try {
-    const response = await fetch("./recipes.json");
 
-    if (!response.ok) {
-      throw new Error(`Error HTTP: ${response.status}`);
+function makeMiniCards(recipes) {
+  // Generar el HTML de todas las tarjetas
+  const html = recipes.map((recipe) => crearCard(recipe)).join("");
+  return html;
+}
+
+// Función principal para conseguir todas las mini-cards
+export async function getAllMiniCards() {
+  try {
+    const url = "/api/some-recipes";
+    const recipe = await fetch(url, {
+      method: "GET",
+      // …
+    });
+
+    if (!recipe.ok) {
+      throw new Error(`Response status: ${recipe.status}`);
     }
 
-    const allRecipes = await response.json();
+    const allRecipes = await recipe.json();
 
     // Obtener el contenedor principal de la grilla
     const container = document.querySelector(".mini-card-grid");
@@ -211,51 +262,24 @@ async function loadAllMiniCards() {
       console.error("El contenedor .mini-card-grid no se encontró en el HTML.");
       return;
     }
-
-    // Generar el HTML de todas las tarjetas
-    const html = allRecipes
-      .map(
-        (recipe) => crearCard(recipe)).join("");
-
+    const html = makeMiniCards(allRecipes);
+    return html;
+    /*
+    
     // Insertar el HTML generado
     container.innerHTML = html;
+    */
   } catch (error) {
-    console.error(
-      "Error al cargar las mini-cards (¡Revisa la ruta del JSON!)",
-      error
-    );
+    console.error("Error al cargar las mini-cards (¡Revisa la ruta del JSON!)", error);
+    /*
     const container = document.querySelector(".mini-card-grid");
     if (container) {
       container.innerHTML =
         '<p style="color: red; text-align: center;">Error al cargar las recetas. Verifica la Consola (F12) y la ruta del JSON.</p>';
     }
+        */
   }
 }
-
-function featuredCard(recipe){
-  const html = `<article class="Destacado-Flip-Card" >
-            <section class="Destacado-Flip-Card-Inner">
-                <section class="Destacado-Flip-Card-Front">
-                    <img class="ImagenDestacada" src="${recipe.imagen-principal}" alt="${recipe.alt}" />
-                    <div class="Destacado-Overlay">
-                        <span class="Destacado-Tag">Destacado-</span>
-                        <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
-                    </div>
-                </section>
-                <section class="Destacado-Flip-Card-Back">
-                    <div class="Destacado-Overlay">
-                        <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
-                        <!-- Descripción breve/subtítulo -->
-                        <p class="Destacado-Subtitulo">${recipe.descripcion}</p>
-                    </div>
-                </section>
-            </section>
-        </article>`;
-
-    return html;
-}
-
-
 // =======================================================
 // LÓGICA DE INICIO (EJECUCIÓN AL CARGAR EL DOCUMENTO)
 // =======================================================
@@ -285,4 +309,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 */
-

@@ -1,4 +1,6 @@
-function renderHeader() {
+export function renderHeader() {
+    console.log("Rendering header...");
+
   const mainContent = document.getElementById("header");
 
   const html = `

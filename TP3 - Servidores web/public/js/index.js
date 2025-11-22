@@ -1,3 +1,6 @@
+import { featuredCard, getAllMiniCards} from "./logic.js";
+import { renderHeader } from "./header.js";
+
 async function getFeaturedRecipe(){
 
   const url = '/api/featured-recipe';
@@ -8,24 +11,33 @@ async function getFeaturedRecipe(){
       });
       if (!recipe.ok) {
         throw new Error(`Response status: ${recipe.status}`);
+      }else{
+        const recipeData = await recipe.json();
+        console.log(recipeData.nombre + " loaded from server");
+        return featuredCard(recipeData);
+        
       }
-      const recipeData = await recipe.json();
-      console.log(recipeData);
-    
     } catch (error) {
       console.error(error.message);
     }
 }
 
+async function getBody(){
+}
+
 async function getIndex(){
   const main = document.getElementById("main_index");
   const featuredRecipeHTML = await getFeaturedRecipe();
-  main.appendChild(featuredRecipeHTML);
+  const miniCardsHTML = await getAllMiniCards();
+  const body = await getBody();
+  const mainHtml = featuredRecipeHTML + miniCardsHTML + body;
+  main.innerHTML = mainHtml;
 }
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
+
+  renderHeader();
   // 1. Lógica para la página principal (index.html)
   if (document.getElementById("main_index")) {
     getIndex();
@@ -37,6 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Solo carga una receta si el parámetro 'id' está en la URL
   if (recipeId) {
-    loadRecipe(recipeId);
+    //loadRecipe(recipeId);
   }
 });
