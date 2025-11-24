@@ -12,7 +12,7 @@ const recipesData = require("../public/js/recipes.json");
 // =======================================================
 
 app.use(express.json());
-app.use(express.static("../public/"));
+app.use(express.static(path.join(__dirname, "../public"))); // Para mas seguridad, se usa path join 
 
 // =======================================================
 // ENDPOINTS (LA LÓGICA DE LAS URLS)
@@ -45,7 +45,7 @@ app.get("/api/recipes", (req, res) => {
     // Filtrar por valoración si el query param existe
     if (valoracion) {
       const rating = parseInt(valoracion, 10);
-      results = results.find(recipe => recipe.valoracion === rating);
+      results = results.filter(recipe => recipe.valoracion === rating);
     }
 
     // Limitar la cantidad de resultados si el query param existe
@@ -58,6 +58,24 @@ app.get("/api/recipes", (req, res) => {
 
   } catch (error) {
     res.status(500).json({ message: "Error en el servidor al procesar las recetas." });
+  }
+});
+
+app.get("/api/explore-items", (req, res) => {
+  try {
+    // Devuelve directamente todas las recetas del JSON para el metodo de las getExploreItems
+    res.json({
+      success: true,
+      data: recipesData,
+      count: recipesData.length,
+      message: "Items obtenidos exitosamente"
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Error en el servidor al procesar los items de exploración."
+    });
   }
 });
 
