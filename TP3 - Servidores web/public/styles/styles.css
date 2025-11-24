@@ -1,30 +1,28 @@
-/* ========================================
-   ESTILOS GENERALES Y LAYOUT
-   ======================================== */
-
+/* ======================================== ESTILOS GENERALES Y LAYOUT ======================================== */
 /* Contenedor principal flexible */
 container {
   display: flex;
 }
 
-/* ========================================
-   HEADER Y NAVEGACIÓN
-   ======================================== */
-
+/* ======================================== HEADER Y NAVEGACIÓN ======================================== */
 /* Header con layout vertical */
 header {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  margin-bottom: 3rem;
+  /* Reducido para acercar el contenido siguiente */
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1000;
+  background-color: #ddc6ad;
+  padding: 10px 0;
 }
-
 /* Título centrado horizontalmente */
 .TituloPrincipal {
   font-family: "Ferro Rosso", sans-serif;
-  text-align: center; /* Centrado */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
-  margin: 20px 0; /* Espacio arriba y abajo */
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -58,14 +56,13 @@ header {
 }
 
 /* Lista de navegación horizontal */
-
 .navList {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
   font-family: "Italiana", "Italiana-Regular", sans-serif;
-  font-weight: 900; /* ESTA LÍNEA HACE QUE ESTÉ EN NEGRITA */
+  font-weight: 900;
 }
 
 /*Modificar letra y estilo de las herramientas*/
@@ -80,7 +77,7 @@ header {
 /*Colorear herramientas al pasar con el mouse*/
 .navList a:hover {
   background-color: #d9b382;
-  color: rgb(12, 1, 1); /*Cambia el color de la letra*/
+  color: rgb(12, 1, 1);
 }
 
 /* Navegación con crecimiento flexible */
@@ -100,85 +97,79 @@ search {
   inline-size: 80%;
 }
 
-/* ========================================
-   CONTENIDO PRINCIPAL
-   ======================================== */
-
+/* ======================================== CONTENIDO PRINCIPAL ======================================== */
 /* Estilos del cuerpo del documento */
 body {
-  /*
-    background-image: url("images/tabla1.webp");
-    background-size: cover;
-    background-position: top center;
-    */
   background-color: #c09d7b;
-  /*font-family: "Italiana-Regular", serif;*/
   min-font-size: 1rem;
   font-size: 1.5rem;
 }
 
-/* MODIFICACIÓN A LA ETIQUETA MAIN */
+/* ETIQUETA MAIN */
 main {
-  /* Quitamos padding en los lados aquí para que la imagen lateral toque el borde de la pantalla */
   display: block;
   margin: 0;
-  padding: 0; /* Establecido a 0 para que el grid tome el control total */
+  padding: 0;
 }
 
-/* NUEVO CONTENEDOR DE 3 COLUMNAS */
+/* CONTENEDOR DE 3 COLUMNAS */
 .receta-layout-grid {
   display: grid;
-  /* ➡️ CAMBIO CLAVE: Proporción 1fr 15fr 1fr */
-  /* 1fr para laterales (marco muy delgado) | 15fr para centro (columna GIGANTE) | 1fr para lateral */
-  grid-template-columns: 1fr 15fr 1fr;
-
-  gap: 1rem; /* Espacio entre columnas */
-
-  /* ➡️ AUMENTO MÁXIMO DE ANCHO: Más espacio para que el 15fr sea enorme */
-  max-width: 3000px; /* Aumentado a 3000px */
-
-  margin: 0 auto; /* Centra el contenedor en la página */
+  /* Usamos 'minmax' para asegurar un ancho mínimo de 800px 
+     * en la columna central, pero permitiendo que crezca con '1fr'.
+     */
+  grid-template-columns: 220px minmax(1300px, 1fr) 220px; /*
+    gap: 1rem;
+    max-width: 3000px;
+    margin: 0 auto;
+    /* AÑADIR MIN-WIDTH al contenedor para permitir el scroll  */
+  min-width: calc(220px + 800px + 220px + 2rem); /* 1240px + 2rem de gaps */
 }
 
-/* Columna Central de la Receta */
+/* Columna Central de la Receta - Este es el contenedor para todo el contenido principal (incluyendo el destacado) */
 .columna-central-receta {
-  /* Asegura que el contenido central fluya normalmente */
+  /* Mantiene la posición correcta en el Grid */
   grid-column: 2 / 3;
-  /* Añadimos más padding lateral para separar el contenido del borde de la columna central */
-  padding: 3rem 5rem; /* Más padding para que el contenido respire dentro de la columna ancha */
-
-  /* Esto ayuda a que el contenido central resalte sobre las imágenes laterales */
-  background-color: #e0e0d6; /* Color claro para destacar la columna central */
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); /* Sombra un poco más marcada */
+  margin: 0;
+  min-height: 100vh;
+  background-color: transparent;
+  padding: 1rem 0;
 }
 
 /* Estilo de las Columnas Laterales */
 .columna-lateral {
-  /* 1. Ocultar por defecto en móviles */
-  display: none;
+  display: block !important;
+  height: 100vh;
+  /* * Mantenemos 'fixed' para que las imágenes no se muevan al hacer scroll, 
+     * pero ahora el Grid les está dando el espacio en el layout.
+     */
+  position: fixed;
+  /* Ajustado para dejar un espacio adecuado debajo del header */
+  top: 100px;
+  /* * Mantenemos el mismo ancho fijo de 220px para que coincida con el Grid. 
+     *
+     */
+  width: 220px;
+  z-index: 1;
   overflow: hidden;
-  height: auto;
 }
 
-/* 2. Mostrar solo en pantallas grandes (desktop) */
-@media (min-width: 1000px) {
-  .columna-lateral {
-    display: block;
-    /* Estirar la columna para que se ajuste a la altura del contenido central */
-    height: 100%;
-    position: relative;
-  }
+/* Alinear las columnas laterales a su respectivo borde del viewport */
+.columna-lateral.izquierda {
+  left: 0;
+}
+
+.columna-lateral.derecha {
+  right: 0;
 }
 
 /* Estilo de la imagen dentro de la columna lateral */
 .decoracion-img {
   width: 100%;
   height: 100%;
-  /* Asegura que la imagen cubra todo el espacio de la columna ancha */
   object-fit: cover;
-  border-radius: 12px;
-  opacity: 0.5; /* Hago las imágenes más sutiles para que no compitan con el contenido central */
+  border-radius: 0;
+  opacity: 0.3;
 }
 
 @font-face {
@@ -186,7 +177,7 @@ main {
   src: url("fonts/Italiana-Regular.ttf") format("opentype");
 }
 
-@font-face{
+@font-face {
   font-family: Ferro Rosso;
   src: url("fonts/FerroRosso.ttf") format("truetype");
 }
@@ -218,20 +209,24 @@ p {
 main {
   display: flex;
   flex-direction: column;
-  margin-inline: 15%;
+  margin-inline: 0;
   height: auto;
 }
 
 /* Receta destacada con estructura centrada */
 .Destacado-Flip-Card {
-  flex-grow: 5;
-  padding: 2em;
+  flex-grow: 3;
+  padding: 1em;
   box-sizing: border-box;
   background-color: transparent;
   perspective: 1000px;
   width: 100%;
-  height: clamp(220px, 45vw, 520px);
+  height: clamp(200px, 40vw, 480px);
   cursor: pointer;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
 }
 
 .Destacado-Flip-Card-Inner {
@@ -288,7 +283,7 @@ main {
   margin-bottom: 1rem;
 }
 
-/* Imágenes destacadas con dimensiones controladas */
+/* Imágenes destacadas */
 .ImagenDestacada {
   aspect-ratio: 16/9;
   object-fit: cover;
@@ -332,7 +327,7 @@ img {
 }
 
 .Destacado-Tag {
-  /* Etiqueta pequeña en forma de píldora */
+  /* Etiqueta pequeña */
   align-self: flex-start;
   background-color: rgba(255, 255, 255, 0.9);
   color: #111;
@@ -381,16 +376,19 @@ img {
   position: relative;
   background-color: #a73d3d; /*#7a2b2b#a73d3d*/
 }
+
 .mini-card-grid::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+
 .mini-card-grid::-webkit-scrollbar-thumb {
   background: #434343;
   border-radius: 10px;
   box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
     inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 }
+
 .mini-card-grid::-webkit-scrollbar-track {
   background: linear-gradient(90deg, #434343, #434343 1px, #262626 0, #262626);
 }
@@ -477,10 +475,7 @@ img {
   text-decoration: 0;
 }
 
-/* ========================================
-   ESTILOS RECETAS
-   ======================================== */
-
+/* ======================================== ESTILOS RECETAS ======================================== */
 .header-receta {
   text-align: center; /* Esto centra todo el contenido */
   padding: 1rem 0;
@@ -501,7 +496,7 @@ img {
 }
 
 .descripcion-receta {
-  max-width: 800px; /* ancho limitado  */
+  max-width: 800px; /* ancho limitado */
   margin: 2rem auto; /* centrado */
   padding: 1.5rem 2rem;
   background: #dad3bf; /* fondo semitransparente */
@@ -554,6 +549,7 @@ img {
 
 .info-icon {
 }
+
 .Receta-Flip-Card {
   width: 100%;
   max-width: 600px;
@@ -681,8 +677,6 @@ img {
   text-align: center;
 }
 
-/*AGREGADO*/
-
 .grid-items {
   /*Contenedor*/
   display: grid;
@@ -773,7 +767,7 @@ img {
     #cd212a,
     #f4f9ff,
     #008c45
-  ); /* degradado  */
+  ); /* degradado */
   margin-top: 8px; /* espacio entre el título y la línea */
   vertical-align: middle; /* alinea la línea con el texto */
 }
@@ -825,7 +819,7 @@ img {
   font-family: "Italiana-Regular", serif;
   font-size: 2.2rem;
   color: #cd212a; /* color destacado */
-  text-align: center; 
+  text-align: center;
   margin: 0 0 1rem 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
   display: block;
@@ -854,7 +848,7 @@ img {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Hover: color al pasar el ratón */
+/* Hover: color al pasar el mouse */
 .rating label:hover,
 .rating label:hover ~ label {
   color: gold;
@@ -867,11 +861,9 @@ img {
   color: gold;
 }
 
-/* ========================================
-   ESTILOS ESPECÍFICOS PARA INGREDIENTES Y PREPARACIÓN
-   ======================================== */
+/* ======================================== ESTILOS ESPECÍFICOS PARA INGREDIENTES Y PREPARACIÓN ======================================== */
 
-/* 1. Estilo para las listas dentro de las secciones de Ingredientes/Preparación */
+/* Estilo para las listas dentro de las secciones de Ingredientes/Preparación */
 .seccion-receta-2 ul {
   /* Elimina los estilos de lista por defecto (puntos o números) */
   list-style: none;
@@ -880,7 +872,7 @@ img {
   margin-bottom: 0;
 }
 
-/* 2. Añade espacio entre cada item de la lista (el ingrediente o el paso) */
+/* Añade espacio entre cada item de la lista (el ingrediente o el paso) */
 .seccion-receta-2 li {
   font-size: 1.2rem; /* Tamaño de texto legible */
   line-height: 1.6; /* Espaciado entre líneas */
@@ -888,11 +880,108 @@ img {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
-/* 3. Estilo para el contenedor de Resumen (Ingredientes y Preparación) */
+/* Estilo para el contenedor de Resumen (Ingredientes y Preparación) */
 .resumen-receta {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin: 0 1rem;
+}
+
+/* ======================================== index recetas ======================================== */
+/* ---- Contenedor de la tarjeta ---- */
+.recipe-minimal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.recipe-minimal:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+/* ---- Imagen ---- */
+.recipe-minimal figure img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ---- Título ---- */
+.recipe-minimal header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* ---- Descripción ---- */
+.recipe-minimal section p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* ---- Ingredientes ---- */
+.recipe-minimal .facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recipe-minimal .facts span {
+  background: #f3f3f3;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+/* ---- Footer ---- */
+.recipe-minimal footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipe-minimal .rating {
+  font-size: 1.1rem;
+  color: #ffb024;
+}
+
+/* ---- Botón ---- */
+.recipe-minimal button {
+  background: #a13737;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.recipe-minimal button:hover {
+  background: #333;
+}
+
+/* ---- Grid de las tarjetas ---- */
+.grid-recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 40px;
+  padding: 30px;
 }

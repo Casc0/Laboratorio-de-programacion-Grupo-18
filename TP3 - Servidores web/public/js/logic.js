@@ -43,81 +43,63 @@ async function loadRecipe(recipeId) {
 function renderRecipe(recipe) {
   const mainContent = document.getElementById("main");
 
-  const html = `
-    <div class="receta-layout-grid">
-      
-      <div class="columna-lateral izquierda">
-        <img src="img/italia2.avif" alt="Decoración de ingredientes" class="decoracion-img"/>
-      </div>
-      
-      <div class="columna-central-receta">
-        
-        <article class="header-receta">
-          <section class="titulo-receta">
-            <h1>${recipe.nombre}</h1>
-          </section>
+  const html = `        
+    <article class="header-receta">
+      <section class="titulo-receta">
+        <h1>${recipe.nombre}</h1>
+      </section>
+    </article>
+    
+    <article class="main-receta">
+      <section class="foto-receta">
+        <img
+          src="${recipe["imagen-principal"]}"
+          alt="${recipe.alt}"
+          class="imagen-principal"
+        />
+      </section>
+      <section class="descripcion-receta">
+        <p><strong>${recipe.descripcion}</strong></p>
+      </section>
+      <section class="grid-items">
+        <article class="grid-item">
+          <h4>⏱️ Tiempo de Preparación</h4>
+          <p>${recipe.categorias.tiempo}</p>
         </article>
-        
-        <article class="main-receta">
-          <section class="foto-receta">
-            <img
-              src="${recipe["imagen-principal"]}"
-              alt="${recipe.alt}"
-              class="imagen-principal"
-            />
-          </section>
-          <section class="descripcion-receta">
-            <p><strong>${recipe.descripcion}</strong></p>
-          </section>
-          <section class="grid-items">
-            <article class="grid-item">
-              <h4>⏱️ Tiempo de Preparación</h4>
-              <p>${recipe.categorias.tiempo}</p>
-            </article>
-            <article class="grid-item">
-              <h4>🎯 Dificultad</h4>
-              <p>${recipe.categorias.dificultad}</p>
-            </article>
-            <article class="grid-item">
-              <h4>👥 Porciones</h4>
-              <p>${recipe.categorias.porciones}</p>
-            </article>
-          </section>
-          
-          <article class="cuerpo-receta">
-            <div class="resumen-receta">
-              <section class="seccion-receta-2">
-                <h2>Ingredientes</h2>
-                <ul>
-                  ${recipe.ingredientes
-                    .map((ing) => `<li>${ing}</li>`)
-                    .join("")}
-                </ul>
-              </section>
-              <section class="seccion-receta-2">
-                <h2>Preparación</h2>
-                <ul>
-                  ${recipe.resumen.map((paso) => `<li>${paso}</li>`).join("")}
-                </ul>
-              </section>
-            </div>
-        
-
-            <section class="seccion-receta-2">
-              <h2>Descripción Detallada de la Preparación</h2>
-              <p>${recipe.detallado}</p>
-            </section>
-          </article>
+        <article class="grid-item">
+          <h4>🎯 Dificultad</h4>
+          <p>${recipe.categorias.dificultad}</p>
         </article>
-        
-      </div>
+        <article class="grid-item">
+          <h4>👥 Porciones</h4>
+          <p>${recipe.categorias.porciones}</p>
+        </article>
+      </section>
       
-      <div class="columna-lateral derecha">
-        <img src="img/italia2.avif" alt="Decoración de utensilios" class="decoracion-img"/>
-      </div>
-      
-    </div>
-  `;
+      <article class="cuerpo-receta">
+        <div class="resumen-receta">
+          <section class="seccion-receta-2">
+            <h2>Ingredientes</h2>
+            <ul>
+              ${recipe.ingredientes
+                .map((ing) => `<li>${ing}</li>`)
+                .join("")}
+            </ul>
+          </section>
+          <section class="seccion-receta-2">
+            <h2>Preparación</h2>
+            <ul>
+              ${recipe.resumen.map((paso) => `<li>${paso}</li>`).join("")}
+            </ul>
+          </section>
+        </div>
+    
+        <section class="seccion-receta-2">
+          <h2>Descripción Detallada de la Preparación</h2>
+          <p>${recipe.detallado}</p>
+        </section>
+      </article>
+    </article>`;
 
   mainContent.innerHTML = html;
   setRecipeRating(recipe.valoracion);
@@ -254,7 +236,10 @@ export async function getAllMiniCards() {
 
     const allRecipes = await recipe.json();
 
-    const html = makeMiniCards(allRecipes);
+    //Verificar que sea arreglo 
+    const recipesArray = Array.isArray(allRecipes) ? allRecipes : [allRecipes];
+
+    const html = makeMiniCards(recipesArray);
     return html;
     /*
     
@@ -304,3 +289,75 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 */
+
+// =======================================================
+// FUNCIÓN PARA CARGAR TODAS LAS CARDS DEL INICIO EN INDEX.HTML
+// =======================================================
+
+function createExploreItem(item) {
+  if (!item) return "";
+
+  // Valores default por si falta algo 
+  const id = item.id || "unknown";
+  const nombre = item.nombre || "Sin nombre";
+  const imagen = item["imagen-principal"] || "img/default.jpg";
+  const descripcion = item.descripcion || "Descripción no disponible";
+  const valoracion = item.valoracion || 0;
+
+  const ingredientes = Array.isArray(item.ingredientes)
+    ? item.ingredientes.slice(0, 4).join(", ") // solo 4 para no explotar la card
+    : "Ingredientes no disponibles";
+
+  const stars = "★".repeat(valoracion) + "☆".repeat(5 - valoracion);
+
+  return `
+    <article class="recipe-minimal" data-id="${id}">
+
+      <figure>
+        <img src="${imagen}" alt="${nombre}" loading="lazy">
+      </figure>
+
+      <header>
+        <h2>${nombre}</h2>
+      </header>
+
+      <section>
+        <p>${descripcion.substring(0, 120)}...</p>
+      </section>
+
+      <section class="facts">
+        <span>${ingredientes}</span>
+      </section>
+
+      <footer>
+        <span class="rating">${stars}</span>
+        <button onclick="window.location.href='recipe.html?id=${id}'">Ver receta</button>
+      </footer>
+
+    </article>
+  `;
+}
+
+export async function getExploreItems() {
+    try {
+        const response = await fetch("/api/explore-items");
+        if (!response.ok) throw new Error("Error al cargar explore items");
+
+        const result = await response.json();
+
+        if (!result.success || !Array.isArray(result.data)) {
+            throw new Error("Formato de datos inválido");
+        }
+
+        const validItems = result.data.filter(item => item !== undefined && item !== null);
+        
+        const cardsHTML = validItems.map(createExploreItem).join("");
+        
+        // Retorna el HTML ya en el contenedor del grid de recetas del index
+        return `<div class="grid-recipes">${cardsHTML}</div>`;
+
+    } catch (e) {
+        console.error("Error en getExploreItems:", e);
+        return "<p>Error al cargar los elementos.</p>";
+    }
+}
