@@ -1,3 +1,6 @@
+ import { crearCard } from "./cards.js";
+ 
+ 
  function renderRecipe(recipe) {
   const mainContent = document.getElementById("main");
 

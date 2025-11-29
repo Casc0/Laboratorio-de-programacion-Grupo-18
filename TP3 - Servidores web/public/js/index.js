@@ -1,4 +1,3 @@
-import { getAllMiniCards, getExploreItems } from "./logic.js";
 import { renderHeader } from "./header.js";
 
 async function getFeaturedRecipe() {
