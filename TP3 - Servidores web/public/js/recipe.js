@@ -1,4 +1,4 @@
-export function renderRecipe(recipe) {
+ function renderRecipe(recipe) {
   const mainContent = document.getElementById("main");
 
   const html = `
@@ -79,4 +79,67 @@ export function renderRecipe(recipe) {
 
   mainContent.innerHTML = html;
   setRecipeRating(recipe.valoracion);
+}
+
+// Función principal para cargar una receta individual
+async function loadRecipe(recipeId) {
+  try {
+    showLoading(true);
+
+    //CAMBIAR A FETCH DEL ENDPOINT recipes/${recipeId}
+    const recipe = await fetch(`/api/recipes/${recipeId}`);
+
+    if (!recipe.ok) {
+      throw new Error(
+        `Error HTTP: ${recipe.status}`
+      );
+    }
+
+    //Titulo de la pestaña
+    document.getElementById("page-title").textContent = recipe.nombre;
+
+    //Carga la info de la receta
+    renderRecipe(recipe);
+
+    //Carga una lista de recetas similares
+    loadSimilarRecipes(recipes, recipe);
+
+  } catch (error) {
+    console.error("Error al cargar la receta:", error);
+    showError("Error al cargar la receta");
+  } finally {
+    showLoading(false);
+  }
+}
+
+// Cargar recetas similares
+function loadSimilarRecipes(allRecipes, currentRecipe) {
+  const similarRecipes = allRecipes
+    .filter(
+      (recipe) =>
+        recipe.id !== currentRecipe.id &&
+        recipe.identificadores.some((element) =>
+          currentRecipe.identificadores.includes(element)
+        )
+    )
+    .slice(0, 7); // Mostrar solo 7 recetas similares
+
+  const container = document.getElementById("recetas-similares");
+
+  //mapear cada receta similar y crear su mini-card correspondiente
+  const html = similarRecipes.map((recipe) => crearCard(recipe)).join("");
+  container.innerHTML = html;
+}
+
+/**
+ * Establece el estado de las estrellas de valoración de la receta.
+ * (Esta función no hace el fetch, solo manipula el DOM).
+ */
+function setRecipeRating(rating) {
+  const inputId = `r${rating}`;
+  const ratingInput = document.getElementById(inputId);
+
+  if (ratingInput) {
+    ratingInput.checked = true;
+  }
 }

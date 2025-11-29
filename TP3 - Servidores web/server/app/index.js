@@ -14,6 +14,7 @@ app.get("/", (req, res) => {
   // Lo redirigimos a la nueva URL
   res.redirect("/index.html");
 });
+
 // Alguien visita http://localhost:4000/cocinaitaliana
 app.get("/cocinaItaliana", (req, res) => {
   // Redirige al archivo principal de la página
