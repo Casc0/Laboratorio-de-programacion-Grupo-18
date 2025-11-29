@@ -4,7 +4,6 @@ const recipeModel = new recipeModel(recipesData);
 
 export function getRecipes(req, res) {
   try {
-    let results = [...recipesData];
     const { valoracion, limit } = req.query;
 
     if(valoracion){

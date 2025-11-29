@@ -2,36 +2,32 @@
 // FUNCIONES DE CARGA Y RENDERIZADO DE RECETAS INDIVIDUALES
 // =======================================================
 
+
+import * as recipesLogic from "./recipe.js";
+
 // Función principal para cargar una receta individual
 async function loadRecipe(recipeId) {
   try {
     showLoading(true);
 
     //CAMBIAR A FETCH DEL ENDPOINT recipes/${recipeId}
-    const response = await fetch("./recipes.json");
+    const recipe = await fetch(`/api/recetas/${recipeId}`);
 
-    if (!response.ok) {
+    if (!recipe.ok) {
       throw new Error(
-        `Error HTTP: ${response.status} - Verifica la ruta del JSON`
+        `Error HTTP: ${recipe.status}`
       );
-    }
-
-    const recipes = await response.json();
-    const recipe = recipes.find((r) => r.id === recipeId);
-
-    if (!recipe) {
-      showError("Receta no encontrada");
-      return;
     }
 
     //Titulo de la pestaña
     document.getElementById("page-title").textContent = recipe.nombre;
 
     //Carga la info de la receta
-    renderRecipe(recipe);
+    recipesLogic.renderRecipe(recipe);
 
     //Carga una lista de recetas similares
     loadSimilarRecipes(recipes, recipe);
+
   } catch (error) {
     console.error("Error al cargar la receta:", error);
     showError("Error al cargar la receta");
@@ -40,70 +36,6 @@ async function loadRecipe(recipeId) {
   }
 }
 
-function renderRecipe(recipe) {
-  const mainContent = document.getElementById("main");
-
-  const html = `        
-    <article class="header-receta">
-      <section class="titulo-receta">
-        <h1>${recipe.nombre}</h1>
-      </section>
-    </article>
-    
-    <article class="main-receta">
-      <section class="foto-receta">
-        <img
-          src="${recipe["imagen-principal"]}"
-          alt="${recipe.alt}"
-          class="imagen-principal"
-        />
-      </section>
-      <section class="descripcion-receta">
-        <p><strong>${recipe.descripcion}</strong></p>
-      </section>
-      <section class="grid-items">
-        <article class="grid-item">
-          <h4>⏱️ Tiempo de Preparación</h4>
-          <p>${recipe.categorias.tiempo}</p>
-        </article>
-        <article class="grid-item">
-          <h4>🎯 Dificultad</h4>
-          <p>${recipe.categorias.dificultad}</p>
-        </article>
-        <article class="grid-item">
-          <h4>👥 Porciones</h4>
-          <p>${recipe.categorias.porciones}</p>
-        </article>
-      </section>
-      
-      <article class="cuerpo-receta">
-        <div class="resumen-receta">
-          <section class="seccion-receta-2">
-            <h2>Ingredientes</h2>
-            <ul>
-              ${recipe.ingredientes
-                .map((ing) => `<li>${ing}</li>`)
-                .join("")}
-            </ul>
-          </section>
-          <section class="seccion-receta-2">
-            <h2>Preparación</h2>
-            <ul>
-              ${recipe.resumen.map((paso) => `<li>${paso}</li>`).join("")}
-            </ul>
-          </section>
-        </div>
-    
-        <section class="seccion-receta-2">
-          <h2>Descripción Detallada de la Preparación</h2>
-          <p>${recipe.detallado}</p>
-        </section>
-      </article>
-    </article>`;
-
-  mainContent.innerHTML = html;
-  setRecipeRating(recipe.valoracion);
-}
 
 // Cargar recetas similares
 function loadSimilarRecipes(allRecipes, currentRecipe) {

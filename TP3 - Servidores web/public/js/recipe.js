@@ -1,4 +1,4 @@
-function renderRecipe(recipe) {
+export function renderRecipe(recipe) {
   const mainContent = document.getElementById("main");
 
   const html = `
