@@ -1,13 +1,17 @@
 
 const express = require("express");
-
+const controller = require('../controllers/recipes.js');
 const router = express.Router();
 
-// Endpoint para obtener recetas.
-// Alguien visita http://localhost:4000/api/recetas
-router.get("/", recipeController.getRecipes);
 
 
+module.exports = () => {
+  // Alguien visita http://localhost:4000/api/recetas
+  router.get("/", controller.getRecipes);
+  router.get("/:id", controller.getRecipeById);
+}
+
+/*
 //Modificar/Quitar
 router.get("/explore-items", (req, res) => {
   try {
@@ -26,5 +30,5 @@ router.get("/explore-items", (req, res) => {
     });
   }
 });
+*/
 
-module.exports = router;

@@ -1,9 +1,8 @@
-class RecipeModel {
-    constructor(recipesData) {
-        this.recipes = recipesData;
-    }
+const recipes = require("./recipes.json");
 
-    getRecipesByRating(valoracion, limit) {
+module.exports = {
+
+    getRecipesByRating: (valoracion, limit) =>{
 
         const rating = parseInt(valoracion, 10);
         results = results.filter(recipe => recipe.valoracion === rating);
@@ -17,7 +16,6 @@ class RecipeModel {
 
         return results;
             
-
         }
 
-}
+};
