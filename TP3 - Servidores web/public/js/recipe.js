@@ -143,3 +143,24 @@ function setRecipeRating(rating) {
     ratingInput.checked = true;
   }
 }
+
+// Mostrar/ocultar loading
+function showLoading(show) {
+  const loading = document.getElementById("loading");
+  if (loading) {
+    loading.style.display = show ? "block" : "none";
+  }
+}
+
+// Mostrar error
+function showError(message) {
+  const mainContent = document.getElementById("main");
+  mainContent.innerHTML = `
+<div class="error-message">
+ <h2>Error</h2>
+ <p>${message}</p>
+<button onclick="window.location.href='index.html'">Volver al inicio</button>
+</div>
+`;
+}
+
