@@ -1,0 +1,30 @@
+
+const express = require("express");
+
+const router = express.Router();
+
+// Endpoint para obtener recetas.
+// Alguien visita http://localhost:4000/api/recetas
+router.get("/", recipeController.getRecipes);
+
+
+//Modificar/Quitar
+router.get("/explore-items", (req, res) => {
+  try {
+    // Devuelve directamente todas las recetas del JSON para el metodo de las getExploreItems
+    res.json({
+      success: true,
+      data: recipesData,
+      count: recipesData.length,
+      message: "Items obtenidos exitosamente"
+    });
+
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Error en el servidor al procesar los items de exploración."
+    });
+  }
+});
+
+module.exports = router;

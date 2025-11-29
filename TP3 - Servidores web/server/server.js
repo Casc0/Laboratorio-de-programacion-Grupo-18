@@ -5,14 +5,17 @@ const path = require("path"); // Importa el módulo path de Node.js
 const app = express(); // La variable app es el servidor, una instancia de aplicación Express
 const PORT = 4000; // Define el puerto en el que se ejecutará la app
 
+//Se carga una vez el archivo JSON con las recetas
+export const recipesData = require("../public/js/recipes.json");
+const userController=require('../controllers/');
 
-const recipesData = require("../public/js/recipes.json");
 // =======================================================
 //  CONFIGURACIÓN DE RUTAS ESTÁTICAS
 // =======================================================
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public"))); // Para mas seguridad, se usa path join 
+
 
 // =======================================================
 // ENDPOINTS (LA LÓGICA DE LAS URLS)
@@ -28,56 +31,10 @@ app.get("/", (req, res) => {
 // Alguien visita http://localhost:4000/cocinaitaliana
 app.get("/cocinaItaliana", (req, res) => {
   // Redirige al archivo principal de la página
-  res.redirect("./index.html");
+  res.send("./index.html");
 });
 
-// Endpoint para obtener recetas.
-// Soporta filtrado por valoración y limitación de cantidad.
-// Ejemplos:
-//   /api/recipes?valoracion=5  -> Devuelve recetas con 5 estrellas
-//   /api/recipes?limit=6       -> Devuelve las primeras 6 recetas
-//   /api/recipes               -> Devuelve todas las recetas
-app.get("/api/recipes", (req, res) => {
-  try {
-    let results = [...recipesData];
-    const { valoracion, limit } = req.query;
-
-    // Filtrar por valoración si el query param existe
-    if (valoracion) {
-      const rating = parseInt(valoracion, 10);
-      results = results.filter(recipe => recipe.valoracion === rating);
-    }
-
-    // Limitar la cantidad de resultados si el query param existe
-    if (limit) {
-      const amount = parseInt(limit, 10);
-      results = results.slice(0, amount);
-    }
-
-    res.json(results);
-
-  } catch (error) {
-    res.status(500).json({ message: "Error en el servidor al procesar las recetas." });
-  }
-});
-
-app.get("/api/explore-items", (req, res) => {
-  try {
-    // Devuelve directamente todas las recetas del JSON para el metodo de las getExploreItems
-    res.json({
-      success: true,
-      data: recipesData,
-      count: recipesData.length,
-      message: "Items obtenidos exitosamente"
-    });
-
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: "Error en el servidor al procesar los items de exploración."
-    });
-  }
-});
+app.use("/api/recetas", require("../routers/routerRecetas"));
 
 
 // =======================================================
