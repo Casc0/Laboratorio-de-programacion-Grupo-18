@@ -1,4 +1,5 @@
  import { crearCard } from "./cards.js";
+import { showLoading, showError } from "./ui.js";
  
  
  function renderRecipe(recipe) {
@@ -87,10 +88,8 @@
 // Función principal para cargar una receta individual
 async function loadRecipe(recipeId) {
   try {
-    showLoading(true);
 
-    //CAMBIAR A FETCH DEL ENDPOINT recipes/${recipeId}
-    const recipe = await fetch(`/api/recipes/${recipeId}`);
+    const recipe = await fetch(`/api/recipes/:${recipeId}`);
 
     if (!recipe.ok) {
       throw new Error(
@@ -109,9 +108,6 @@ async function loadRecipe(recipeId) {
 
   } catch (error) {
     console.error("Error al cargar la receta:", error);
-    showError("Error al cargar la receta");
-  } finally {
-    showLoading(false);
   }
 }
 
@@ -147,23 +143,5 @@ function setRecipeRating(rating) {
   }
 }
 
-// Mostrar/ocultar loading
-function showLoading(show) {
-  const loading = document.getElementById("loading");
-  if (loading) {
-    loading.style.display = show ? "block" : "none";
-  }
-}
 
-// Mostrar error
-function showError(message) {
-  const mainContent = document.getElementById("main");
-  mainContent.innerHTML = `
-<div class="error-message">
- <h2>Error</h2>
- <p>${message}</p>
-<button onclick="window.location.href='index.html'">Volver al inicio</button>
-</div>
-`;
-}
 

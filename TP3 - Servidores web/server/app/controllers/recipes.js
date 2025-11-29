@@ -1,10 +1,10 @@
 const model = require("../models/recipes.js"); 
 
-const getFeaturedRecipes =  (req, res) =>  {
+const getFeaturedRecipes = async (req, res) =>  {
   try {
       const { limit } = req.query;
 
-      results =  model.getRecipesByRating(5, limit);
+      results = await model.getRecipesByRating(5, limit);
       
       res.json(results);
 
@@ -14,24 +14,24 @@ const getFeaturedRecipes =  (req, res) =>  {
     }
 };
 
-const getRecipeById = (req, res) =>  {
+const getRecipeById = async(req, res) =>  {
   try {
     const { id } = req.params;
 
-    const results = model.getRecipeById(id);
+    const results = await model.getRecipeById(id);
   } catch (error) {
     
   }
 };
 
-const getRecipes = (req, res) =>  {
+const getRecipes = async (req, res) =>  {
   try {
       const { from, limit } = req.query;
 
       if (from !== undefined && limit !== undefined) {
-        results = model.getPaginatedRecipes((from), (limit));
+        results = await model.getPaginatedRecipes((from), (limit));
       }else {
-        results = model.getPaginatedRecipes(0, 10); // Valores por defecto
+        results = await model.getPaginatedRecipes(0, 10); // Valores por defecto
       }
 
       res.json(results);

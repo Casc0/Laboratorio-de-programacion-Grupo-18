@@ -52,37 +52,34 @@ async function getBody() {
 }
 
 async function getIndex() {
-  const mainWrapper = document.getElementById("main_index");
-  
-  if (!mainWrapper) {
-      console.error("El contenedor principal 'main_index' no se encontró en el DOM.");
-      return;
-  }
-  
-  //Cargamos el layout de 3 columnas en el main_index
-  mainWrapper.innerHTML = await getBody();
-  
-  //Obtener la referencia al div de la COLUMNA CENTRAL
-  const mainContentArea = document.getElementById("main_content_area");
+  try{
 
-  if (!mainContentArea) {
-      console.error("El contenedor de la columna central 'main_content_area' no se encontró en el DOM.");
-      return;
+    const mainWrapper = document.getElementById("main_index");
+    
+    //Cargamos el layout de 3 columnas en el main_index
+    mainWrapper.innerHTML = await getBody();
+    
+    //Obtener la referencia al div de la COLUMNA CENTRAL
+    const mainContentArea = document.getElementById("main_content_area");
+    
+    //Cargar el contenido dinámico
+    const featuredRecipeHTML = await getFeaturedRecipe();
+    const exploreHTML = await getExploreRecipes(0, 10); 
+    
+    //Insertar el contenido dinámico DENTRO de la columna central
+    const contentHtml = featuredRecipeHTML + exploreHTML;
+    
+    if (contentHtml.trim()) {
+      mainContentArea.innerHTML = contentHtml;
+    } else {
+      // Manejo de caso donde no hay recetas destacadas ni ítems de exploración
+      mainContentArea.innerHTML = '<p>No se pudieron cargar las recetas destacadas ni los ítems de exploración.</p>';
+    }
+    
+  }catch(error){
+    console.error("Error en getIndex:", error);
   }
   
-  //Cargar el contenido dinámico
-  const featuredRecipeHTML = await getFeaturedRecipe();
-  const exploreHTML = await getExploreRecipes(0, 10); 
-  
-  //Insertar el contenido dinámico DENTRO de la columna central
-  const contentHtml = featuredRecipeHTML + exploreHTML;
-  
-  if (contentHtml.trim()) {
-    mainContentArea.innerHTML = contentHtml;
-  } else {
-    // Manejo de caso donde no hay recetas destacadas ni ítems de exploración
-    mainContentArea.innerHTML = '<p>No se pudieron cargar las recetas destacadas ni los ítems de exploración.</p>';
-  }
 }
 
 function featuredCard(recipe) {

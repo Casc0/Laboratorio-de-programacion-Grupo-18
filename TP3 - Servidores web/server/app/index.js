@@ -6,13 +6,14 @@ const app = express(); // La variable app es el servidor, una instancia de aplic
 
 
 
-app.use("/api/recipes", require("./routes/recipes"));
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../../public"))); // Para mas seguridad, se usa path join 
+app.use("/api/recipes", require("./routes/recipes"));
 
 app.get("/", (req, res) => {
   // Lo redirigimos a la nueva URL
-  res.redirect("/index.html");
+  res.redirect("/cocinaItaliana");
 });
 
 // Alguien visita http://localhost:4000/cocinaitaliana
