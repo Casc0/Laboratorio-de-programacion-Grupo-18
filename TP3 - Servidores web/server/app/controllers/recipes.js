@@ -1,4 +1,3 @@
-const { get } = require("../index.js");
 const model = require("../models/recipes.js"); 
 
 const getFeaturedRecipes =  (req, res) =>  {
