@@ -11,7 +11,7 @@ async function loadRecipe(recipeId) {
     showLoading(true);
 
     //CAMBIAR A FETCH DEL ENDPOINT recipes/${recipeId}
-    const recipe = await fetch(`/api/recetas/${recipeId}`);
+    const recipe = await fetch(`/api/recipes/${recipeId}`);
 
     if (!recipe.ok) {
       throw new Error(

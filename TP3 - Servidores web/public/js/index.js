@@ -2,7 +2,7 @@ import { featuredCard, getAllMiniCards, getExploreItems } from "./logic.js";
 import { renderHeader } from "./header.js";
 
 async function getFeaturedRecipe() {
-  const url = "/api/recipes?valoracion=5";
+  const url = "/api/recipes/featured?limit=1"; // Endpoint para obtener recetas con valoración 5, limitando a 1 resultado
   try {
     const recipe = await fetch(url, {
       method: "GET",

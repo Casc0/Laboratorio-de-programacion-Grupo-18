@@ -8,6 +8,7 @@ const router = express.Router();
 module.exports = () => {
   // Alguien visita http://localhost:4000/api/recetas
   router.get("/", controller.getRecipes);
+  router.get("/featured", controller.getFeaturedRecipes);
   router.get("/:id", controller.getRecipeById);
 }
 
