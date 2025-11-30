@@ -3,14 +3,11 @@ const express = require("express");
 const controller = require('../controllers/recipes.js');
 const router = express.Router();
 
+router.get("/", controller.getRecipes);
+router.get("/featured", controller.getFeaturedRecipes);
+router.get("/:id", controller.getRecipeById);
+module.exports = router;
 
-
-module.exports = () => {
-  // Alguien visita http://localhost:4000/api/recetas
-  router.get("/", controller.getRecipes);
-  router.get("/featured", controller.getFeaturedRecipes);
-  router.get("/:id", controller.getRecipeById);
-}
 
 /*
 //Modificar/Quitar
