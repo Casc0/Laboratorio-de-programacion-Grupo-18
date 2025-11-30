@@ -85,16 +85,91 @@ nav {
   flex-grow: 3;
 }
 
-/* Barra de búsqueda */
+/* Contenedor de búsqueda */
 search {
   display: flex;
-  flex-grow: 5;
   justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
 }
 
-/* Input de búsqueda con ancho relativo */
+/* Input de búsqueda */
 #barraBusqueda {
-  inline-size: 80%;
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #e1e5ea;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#barraBusqueda:focus {
+  border-color: #007bff;
+  box-shadow: 0 2px 10px rgba(0,123,255,0.2);
+  transform: scale(1.02);
+}
+
+/* Efecto hover opcional */
+#barraBusqueda:hover {
+  border-color: #d9b382;
+}
+
+/* CONTENEDOR DE SUGERENCIAS - NUEVO */
+.suggestions-container {
+  position: absolute;
+  top: 100%;
+  left: 20px;  /* Mismo padding que el contenedor */
+  right: 20px; /* Mismo padding que el contenedor */
+  background: white;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+  display: none;
+  margin-top: 2px;
+  border: 1px solid #e1e5ea;
+  border-top: none;
+}
+
+.suggestions-container.active {
+  display: block;
+}
+
+.suggestion-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background-color: #f5f9ff;
+}
+
+.suggestion-icon {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.suggestion-text {
+    flex: 1;
+  font-weight: 500;
 }
 
 /* ======================================== CONTENIDO PRINCIPAL ======================================== */
