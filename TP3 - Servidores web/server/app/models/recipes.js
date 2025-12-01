@@ -1,31 +1,72 @@
-const recipes = require("./recipes.json");
+const fs = require('fs').promises;
+const path = require('path');
 
-const getRecipesByRating = (valoracion, limit) =>{
+// Ruta al archivo JSON
+const dataPath = path.join(__dirname, 'recipes.json');
 
-        const rating = parseInt(valoracion, 10);
-        let results = recipes.filter(recipe => recipe.valoracion === rating);
-        
-        const amount = parseInt(limit, 10);
-        results = results.slice(0, amount);
-        return results;
-}
+console.log('Modelo cargado. Ruta del archivo:', dataPath);
 
-const getPaginatedRecipes = (from, limit) =>{
-       // Aseguramos que 'from' y 'limit' sean números
-        const start = parseInt(from, 10);
-        const count = parseInt(limit, 10);
-        const results = recipes.slice(start, count + start);
-         return results;
-}
+// Leer todas las recetas
+const getAllRecipes = async () => {
+  try {
+    console.log('Leyendo archivo:', dataPath);
+    
+    const data = await fs.readFile(dataPath, 'utf8');
+    const recipes = JSON.parse(data);
+    
+    console.log(` ${recipes.length} recetas cargadas`);
+    
+    // Ordenar por VALORACION 
+    return recipes.sort((a, b) => (b.valoracion || 0) - (a.valoracion || 0));
+    
+  } catch (error) {
+    console.error('❌ Error en getAllRecipes:', error.message);
+    throw error;
+  }
+};
 
-const getRecipeById = (id) => {
-    return recipes.find(recipe => recipe.id === id);
-}
+const getRecipeById = async (id) => {
+  try {
+    const data = await fs.readFile(dataPath, 'utf8');
+    const recipes = JSON.parse(data);
+    return recipes.find(recipe => recipe.id == id);
+  } catch (error) {
+    console.error("Error en getRecipeById:", error);
+    throw error;
+  }
+};
 
+const getRecipesByRating = async (minRating, limit) => {
+  try {
+    const data = await fs.readFile(dataPath, 'utf8');
+    const recipes = JSON.parse(data);
+    
+    return recipes
+      .filter(recipe => recipe.valoracion >= minRating) 
+      .sort((a, b) => b.valoracion - a.valoracion) 
+      .slice(0, limit);
+  } catch (error) {
+    console.error("Error en getRecipesByRating:", error);
+    throw error;
+  }
+};
+
+// Obtener recetas paginadas
+const getPaginatedRecipes = async (from, limit) => {
+  try {
+    const data = await fs.readFile(dataPath, 'utf8');
+    const recipes = JSON.parse(data);
+    return recipes.slice(from, from + limit);
+  } catch (error) {
+    console.error("Error en getPaginatedRecipes:", error);
+    throw error;
+  }
+};
+
+// Exportar todas las funciones
 module.exports = {
-
-    getRecipesByRating,
-    getPaginatedRecipes,
-    getRecipeById
-
+  getAllRecipes,
+  getRecipeById,
+  getRecipesByRating,
+  getPaginatedRecipes
 };
