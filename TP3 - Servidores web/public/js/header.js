@@ -24,6 +24,7 @@ export function renderHeader() {
 
         <search>
             <input id="barraBusqueda" type="text" placeholder="Buscar..."/>
+            <div id="suggestionsContainer" class="suggestions-container"></div>
         </search>
     </div>
     `;

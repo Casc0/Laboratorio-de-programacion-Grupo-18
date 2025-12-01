@@ -74,7 +74,7 @@ header {
   transition: 0.3s;
 }
 
-/*Colorear herramientas al pasar con el mouse*/
+/*Colorear herramientas al pasar el mouse*/
 .navList a:hover {
   background-color: #d9b382;
   color: rgb(12, 1, 1);
@@ -84,7 +84,6 @@ header {
 nav {
   flex-grow: 3;
 }
-
 /* Contenedor de búsqueda */
 search {
   display: flex;
@@ -111,65 +110,212 @@ search {
 }
 
 #barraBusqueda:focus {
-  border-color: #007bff;
+  border-color: #b12626;
   box-shadow: 0 2px 10px rgba(0,123,255,0.2);
   transform: scale(1.02);
 }
 
-/* Efecto hover opcional */
 #barraBusqueda:hover {
   border-color: #d9b382;
 }
 
-/* CONTENEDOR DE SUGERENCIAS - NUEVO */
+/* CONTENEDOR DE SUGERENCIAS */
 .suggestions-container {
   position: absolute;
   top: 100%;
-  left: 20px;  /* Mismo padding que el contenedor */
-  right: 20px; /* Mismo padding que el contenedor */
+  left: 20px;
+  right: 20px;
   background: white;
   border-radius: 0 0 12px 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  max-height: 300px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  max-height: 350px;
   overflow-y: auto;
-  z-index: 100;
+  z-index: 1000;
   display: none;
   margin-top: 2px;
   border: 1px solid #e1e5ea;
   border-top: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.98);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .suggestions-container.active {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideDown 0.3s ease-out;
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ITEM DE SUGERENCIA  */
 .suggestion-item {
-  padding: 12px 20px;
+  padding: 14px 18px;
   cursor: pointer;
-  border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.5);
+  transition: all 0.2s ease;
+  gap: 14px;
+  position: relative;
 }
 
 .suggestion-item:last-child {
   border-bottom: none;
+  border-radius: 0 0 12px 12px;
 }
 
 .suggestion-item:hover {
-  background-color: #f5f9ff;
+  background: linear-gradient(90deg, rgba(248, 250, 255, 0.9), rgba(240, 247, 255, 0.9));
+  padding-left: 22px;
 }
 
-.suggestion-icon {
-  font-size: 16px;
-  width: 20px;
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(-3px);
+  }
+}
+
+
+.suggestion-item:hover .suggestion-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* CONTENIDO MEJORADO */
+.suggestion-text {
+
+}
+
+.suggestion-message {
+  padding: 14px 20px;
+  color: #666;
+  font-size: 15px;
+  font-weight: 500;
   text-align: center;
 }
 
-.suggestion-text {
-    flex: 1;
-  font-weight: 500;
+.suggestion-text strong {
+  color: #2c3e50;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.suggestion-item:hover .suggestion-text strong {
+  color: #a72020;
+}
+
+.suggestion-text small {
+  color: #7f8c8d;
+  font-size: 12px;
+  display: block;
+  margin-top: 2px;
+}
+
+.no-results, .error-message, .loading-message {
+  padding: 25px 20px;
+  text-align: center;
+  color: #a81e1e;
+  font-style: italic;
+}
+
+/* Scrollbar*/
+.suggestions-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions-container::-webkit-scrollbar-track {
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 0 0 12px 0;
+}
+
+.suggestions-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #861313, #921111);
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.suggestions-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #861313, #921111);
+}
+
+/* Borde inferior */
+.suggestions-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 123, 255, 0.3) 50%, 
+    transparent 100%
+  );
+  border-radius: 0 0 12px 12px;
+}
+
+/* Efecto de pulso para ítem activo */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(118, 151, 120, 0.4); }
+  50% { box-shadow: 0 0 0 4px rgba(0, 123, 255, 0); }
+}
+
+.suggestion-item:active {
+  animation: pulseGlow 0.4s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  search {
+    width: 90%;
+    padding: 0 15px;
+  }
+  
+  .suggestions-container {
+    left: 15px;
+    right: 15px;
+    max-height: 300px;
+  }
+  
+  .suggestion-item {
+    padding: 12px 16px;
+  }
+  
+  .suggestion-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+}
+
+/* Efecto de desvanecimiento al ocultar */
+.suggestions-container:not(.active) {
+  animation: fadeOutUp 0.2s ease-out;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 
 /* ======================================== CONTENIDO PRINCIPAL ======================================== */

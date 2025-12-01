@@ -185,11 +185,7 @@ export async function getExploreRecipes(x, y) {
 document.addEventListener("DOMContentLoaded", function () {
   renderHeader();
 
-  setTimeout(() => {
-    console.log("⏰ Iniciando búsqueda...");
-    setupSearch();
-  }, 100);
-
+  
   if (document.getElementById("main_index")) {
     getIndex();
   }
