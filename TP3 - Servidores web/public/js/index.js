@@ -68,6 +68,21 @@ async function getIndex() {
   }
 }
 
+// En la función que crea las cards
+function crearCard(recipe) {
+    return `
+        <article class="mini-card" onclick="window.location.href = 'receta.html?id=${recipe.id}'">
+            <h3 class="mini-card-title">${recipe.nombre}</h3>
+            <img class="mini-card-img" src="${recipe['imagen-principal']}" alt="${recipe.alt}" />
+            <div class="mini-card-lista-categoria">
+                ${recipe.categorias.map(cat => 
+                    `<p class="mini-card-categoria">${cat}</p>`
+                ).join('')}
+            </div>
+        </article>
+    `;
+}
+
 function featuredCard(recipe) {
   console.log("Creating featured card for recipe:", recipe.nombre);
 
