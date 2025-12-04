@@ -38,11 +38,20 @@ async function getBody() {
 <div class =receta-layout>
   <div class="receta-layout-grid">
     <div class="columna-central-receta" id="main_content_area"></div>
-
+      <article class="Destacado-Flip-Card" id="featured_recipe_area"></article>
+      <article class="grid-recipes" id="explore_recipes_area"> </article>
   </div>
+  <div class="layout-load-more">
   <button class="load-more-button" id="load_more_button">Cargar más</button>
-</div>
+  </div>
+  </div>
 `;
+}
+
+async function loadMore(init, limit) {
+  const mainContentArea = document.getElementById("main_content_area");
+  const recetasNuevas = await getExploreRecipes(init, limit);
+  mainContentArea.insertAdjacentHTML("beforeend", recetasNuevas);
 }
 
 async function getIndex() {
@@ -51,19 +60,25 @@ async function getIndex() {
 
     mainWrapper.innerHTML = await getBody();
 
-    const mainContentArea = document.getElementById("main_content_area");
+    const featuredRecipeArea = document.getElementById("featured_recipe_area");
+    const cardsRecipesArea = document.getElementById("explore_recipes_area");
 
     const featuredRecipeHTML = await getFeaturedRecipe();
-    const exploreHTML = await getExploreRecipes(0, 10); // Usamos la función importada
 
-    const contentHtml = featuredRecipeHTML + exploreHTML;
+    const recipeAmount = 6;
+    let limit = recipeAmount;
+    const cardsHTML = await getExploreRecipes(0, limit); // Usamos la función importada
 
-    if (contentHtml.trim()) {
-      mainContentArea.innerHTML = contentHtml;
-    } else {
-      mainContentArea.innerHTML =
-        "<p>No se pudieron cargar las recetas destacadas ni los ítems de exploración.</p>";
+
+    featuredRecipeArea.innerHTML = featuredRecipeHTML;
+    cardsRecipesArea.innerHTML = cardsHTML;
+    
+    /*
+    const document.getElementById("load_more_button").addEventListener("click", () => {
+      limit += recipeAmount;
+      loadMore(limit, recipeAmount);
     }
+    */
   } catch (error) {
     console.error("Error en getIndex:", error);
   }
@@ -72,7 +87,7 @@ async function getIndex() {
 function featuredCard(recipe) {
   console.log("Creating featured card for recipe:", recipe.nombre);
 
-  const html = `<article class="Destacado-Flip-Card" >
+  const html = `
  <section class="Destacado-Flip-Card-Inner">
  <section class="Destacado-Flip-Card-Front">
  <img class="ImagenDestacada" src="${recipe["imagen-principal"]}" alt="${recipe.alt}" />
@@ -168,7 +183,7 @@ export async function getExploreRecipes(x, y) {
     const cardsHTML = validItems.map(createExploreRecipes).join("");
 
     // Retorna el HTML ya en el contenedor del grid de recetas del index
-    return `<div class="grid-recipes">${cardsHTML}</div>`;
+    return cardsHTML;
   } catch (e) {
     console.error("Error en getExploreRecipes:", e);
     return "<p>Error al cargar los elementos.</p>";

@@ -333,6 +333,24 @@ main {
   padding: 0;
 }
 
+.receta-layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.layout-load-more{
+  flex-basis: 100%;
+  display: block;
+  text-align: center;
+}
+
+.load-more-button{
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
 /* CONTENEDOR DE 3 COLUMNAS */
 .receta-layout-grid {
   display: grid;
@@ -790,7 +808,8 @@ img {
 }
 
 .imagen-principal {
-  width: 800px;
+  width: 50%;
+  height: auto;
   object-fit: cover;
   border-radius: 16px;
   margin-top: 3rem;
@@ -1178,10 +1197,12 @@ img {
 
 /* ---- Título ---- */
 .recipe-minimal header h2 {
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.35rem;
   font-weight: 600;
   color: #1a1a1a;
+  justify-content: center;
 }
 
 /* ---- Descripción ---- */
