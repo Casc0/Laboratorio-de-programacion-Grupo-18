@@ -181,10 +181,5 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("main_index")) {
     getIndex();
   }
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const recipeId = urlParams.get("id");
-  if (recipeId) {
-    // loadRecipe(recipeId);
-  }
+  
 });
