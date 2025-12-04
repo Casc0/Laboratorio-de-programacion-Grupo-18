@@ -188,21 +188,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // loadRecipe(recipeId);
   }
 });
-
-
-/*ORGINAL
-<div class="receta-layout-grid">
-
-<div class="columna-lateral izquierda">
- <img src="img/italia2.avif" alt="Decoración de ingredientes" class="decoracion-img"/>
- </div>
-
-<div class="columna-central-receta" id="main_content_area">
- </div>
-
-<div class="columna-lateral derecha">
- <img src="img/italia2.avif" alt="Decoración de utensilios" class="decoracion-img"/>
- </div>
-
- </div>
-*/
