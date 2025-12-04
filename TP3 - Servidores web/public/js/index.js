@@ -35,17 +35,9 @@ async function getFeaturedRecipe() {
 async function getBody() {
   //  establece la estructura de 3 columnas
   return `
- <div class="receta-layout-grid">
-
-<div class="columna-lateral izquierda">
- <img src="img/italia2.avif" alt="Decoración de ingredientes" class="decoracion-img"/>
- </div>
+<div class="receta-layout-grid">
 
 <div class="columna-central-receta" id="main_content_area">
- </div>
-
-<div class="columna-lateral derecha">
- <img src="img/italia2.avif" alt="Decoración de utensilios" class="decoracion-img"/>
  </div>
 
  </div>
@@ -84,7 +76,7 @@ function featuredCard(recipe) {
  <section class="Destacado-Flip-Card-Front">
  <img class="ImagenDestacada" src="${recipe["imagen-principal"]}" alt="${recipe.alt}" />
  <div class="Destacado-Overlay">
- <span class="Destacado-Tag">Destacado-</span>
+ <span class="Destacado-Tag">Destacado</span>
  <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
  </div>
  </section>
@@ -196,3 +188,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // loadRecipe(recipeId);
   }
 });
+
+
+/*ORGINAL
+<div class="receta-layout-grid">
+
+<div class="columna-lateral izquierda">
+ <img src="img/italia2.avif" alt="Decoración de ingredientes" class="decoracion-img"/>
+ </div>
+
+<div class="columna-central-receta" id="main_content_area">
+ </div>
+
+<div class="columna-lateral derecha">
+ <img src="img/italia2.avif" alt="Decoración de utensilios" class="decoracion-img"/>
+ </div>
+
+ </div>
+*/

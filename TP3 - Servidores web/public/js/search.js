@@ -10,7 +10,7 @@ class RecipeSearch {
 
             this.init();
         } else {
-            console.error('❌ No se encontraron elementos del buscador');
+            console.error('No se encontraron elementos del buscador');
         }
     }
 
@@ -141,23 +141,8 @@ showError() {
         this.showContainer();
     }
 
-    showNoResults() {
-        this.suggestionsContainer.innerHTML = `
-            <div class="suggestion-message">
-                <div class="suggestion-text">No se encontraron recetas</div>
-            </div>
-        `;
-        this.showContainer();
-    }
+  
 
-    showError() {
-        this.suggestionsContainer.innerHTML = `
-            <div class="suggestion-message">
-                <div class="suggestion-text">Error al buscar</div>
-            </div>
-        `;
-        this.showContainer();
-    }
 
     showContainer() {
         this.suggestionsContainer.classList.add('active');

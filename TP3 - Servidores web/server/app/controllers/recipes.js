@@ -55,6 +55,24 @@ const getRecipes = async (req, res) => {
   }
 };
 
+const getSimilarRecipes = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await model.getSimilarRecipes(id, 5);
+    
+    if (result) {
+      res.json(result);
+    } else {
+      res.status(404).json({ message: "Receta no encontrada." });
+    }
+  } catch (error) {
+    console.error("Error en el controlador getRecipeById:", error);
+    res
+      .status(500)
+      .json({ message: "Error en el servidor al buscar la receta." });
+  }
+};
+
 const searchRecipes = async (req, res) => {
   console.log("Búsqueda iniciada ");
 
@@ -131,4 +149,5 @@ module.exports = {
   getFeaturedRecipes,
   getRecipes,
   searchRecipes,
+  getSimilarRecipes,
 };
