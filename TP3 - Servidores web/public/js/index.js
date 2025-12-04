@@ -35,13 +35,14 @@ async function getFeaturedRecipe() {
 async function getBody() {
   //  establece la estructura de 3 columnas
   return `
-<div class="receta-layout-grid">
+<div class =receta-layout>
+  <div class="receta-layout-grid">
+    <div class="columna-central-receta" id="main_content_area"></div>
 
-<div class="columna-central-receta" id="main_content_area">
- </div>
-
- </div>
- `;
+  </div>
+  <button class="load-more-button" id="load_more_button">Cargar más</button>
+</div>
+`;
 }
 
 async function getIndex() {

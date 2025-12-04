@@ -4,7 +4,7 @@ const path = require('path');
 // Ruta al archivo JSON
 //const dataPath = path.join(__dirname, 'recipes.json');
 
-const recipes = require('./recipes.json');
+const recipes = require('../bd/recipes.json');
 console.log(`${recipes.length} recetas cargadas en el modelo.`);
 
 
