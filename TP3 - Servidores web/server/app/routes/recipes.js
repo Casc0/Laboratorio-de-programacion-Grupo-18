@@ -7,7 +7,7 @@ router.get("/", controller.getRecipes);
 router.get("/featured", controller.getFeaturedRecipes);
 router.get("/:id", controller.getRecipeById);
 router.get("/:id/similar", controller.getSimilarRecipes);
-router.get("/search/suggestions", controller.searchRecipes);
+//router.get("/search/suggestions", controller.searchRecipes);
 module.exports = router;
 
 

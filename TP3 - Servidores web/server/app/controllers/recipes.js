@@ -72,7 +72,7 @@ const getSimilarRecipes = async (req, res) => {
       .json({ message: "Error en el servidor al buscar la receta." });
   }
 };
-
+/*
 const searchRecipes = async (req, res) => {
   console.log("Búsqueda iniciada ");
 
@@ -143,11 +143,11 @@ const searchRecipes = async (req, res) => {
     console.error("Stack:", error.stack);
   }
 };
-
+*/
 module.exports = {
   getRecipeById,
   getFeaturedRecipes,
   getRecipes,
-  searchRecipes,
+  //searchRecipes,
   getSimilarRecipes,
 };

@@ -100,7 +100,7 @@
   `;
 
   mainContent.innerHTML = html;
-  //setRecipeRating(recipe.valoracion);
+  setRecipeRating(recipe.valoracion);
 }
 
 // Función principal para cargar una receta individual
