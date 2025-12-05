@@ -37,22 +37,18 @@ async function getBody() {
   return `
 <div class =receta-layout>
   <div class="receta-layout-grid">
-    <div class="columna-central-receta" id="main_content_area"></div>
+    <div class="columna-central-receta" id="main_content_area">
       <article class="Destacado-Flip-Card" id="featured_recipe_area"></article>
       <article class="grid-recipes" id="explore_recipes_area"> </article>
+    </div>
   </div>
   <div class="layout-load-more">
-  <button class="load-more-button" id="load_more_button">Cargar más</button>
+    <button class="load-more-button" id="load_more_button">Cargar más</button>
   </div>
-  </div>
+</div>
 `;
 }
 
-async function loadMore(init, limit) {
-  const mainContentArea = document.getElementById("main_content_area");
-  const recetasNuevas = await getExploreRecipes(init, limit);
-  mainContentArea.insertAdjacentHTML("beforeend", recetasNuevas);
-}
 
 async function getIndex() {
   try {
@@ -62,23 +58,27 @@ async function getIndex() {
 
     const featuredRecipeArea = document.getElementById("featured_recipe_area");
     const cardsRecipesArea = document.getElementById("explore_recipes_area");
+    const loadMoreButton = document.getElementById("load_more_button");
 
     const featuredRecipeHTML = await getFeaturedRecipe();
 
     const recipeAmount = 6;
+    let init = 0;
     let limit = recipeAmount;
-    const cardsHTML = await getExploreRecipes(0, limit); // Usamos la función importada
+    const cardsHTML = await getExploreRecipes(init, limit); // Usamos la función importada
 
 
     featuredRecipeArea.innerHTML = featuredRecipeHTML;
     cardsRecipesArea.innerHTML = cardsHTML;
     
-    /*
-    const document.getElementById("load_more_button").addEventListener("click", () => {
-      limit += recipeAmount;
-      loadMore(limit, recipeAmount);
-    }
-    */
+    
+    loadMoreButton.addEventListener("click", async () => {
+      init += recipeAmount;
+      const recetasNuevas = await getExploreRecipes(init, limit);
+      cardsRecipesArea.insertAdjacentHTML("beforeend", recetasNuevas);
+    });
+    
+    
   } catch (error) {
     console.error("Error en getIndex:", error);
   }
@@ -104,7 +104,7 @@ function featuredCard(recipe) {
  </div>
  </section>
  </section>
- </article>`;
+`;
 
   return html;
 }

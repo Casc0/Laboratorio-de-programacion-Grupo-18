@@ -709,10 +709,11 @@ img {
 }
 
 /*COMENTAR PARA CORREGIR*/
-
+/*
 .mini-card :hover {
   transform: translate(-0.5rem, -1rem) rotate(3deg);
 }
+  */
 
 .mini-card-title {
   font-size: 1.3rem;

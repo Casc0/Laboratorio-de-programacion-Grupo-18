@@ -42,7 +42,7 @@ const getRecipeById = async (req, res) => {
 const getRecipes = async (req, res) => {
   try {
     const from = parseInt(req.query.from) || 0;
-    const limit = parseInt(req.query.limit) || 10;
+    const limit = parseInt(req.query.limit) || 6;
 
     const results = await model.getPaginatedRecipes(from, limit);
 
