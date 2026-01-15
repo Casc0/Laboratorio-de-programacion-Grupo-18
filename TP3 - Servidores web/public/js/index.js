@@ -1,0 +1,201 @@
+import { renderHeader } from "./header.js";
+
+async function getFeaturedRecipe() {
+  const url = "/api/recipes/featured?limit=1"; // Endpoint para obtener recetas con valoración 5, limitando a 1 resultado
+  try {
+    const recipe = await fetch(url, {
+      method: "GET",
+      // …
+    });
+    if (!recipe.ok) {
+      throw new Error(`Response status: ${recipe.status}`);
+    } else {
+      const responseBody = await recipe.json();
+
+      // Verificar que el formato sea el esperado: { success: true, data: [...] }
+      if (!responseBody.success || !Array.isArray(responseBody.data)) {
+        throw new Error("Formato de datos destacado inválido del servidor");
+      }
+
+      const recipeData = responseBody.data; // Extraemos el array de data
+
+      if (recipeData.length > 0) {
+        console.log(recipeData[0].nombre + " loaded from server");
+        return featuredCard(recipeData[0]);
+      } else {
+        throw new Error("No se encontraron recetas con valoración 5");
+      }
+    }
+  } catch (error) {
+    console.error("Error en getFeaturedRecipe:", error.message);
+    return "Error cargando receta destacada";
+  }
+}
+
+async function getBody() {
+  //  establece la estructura de 3 columnas
+  return `
+<div class =receta-layout>
+  <div class="receta-layout-grid">
+    <div class="columna-central-receta" id="main_content_area">
+      <article class="Destacado-Flip-Card" id="featured_recipe_area"></article>
+      <article class="grid-recipes" id="explore_recipes_area"> </article>
+    </div>
+  </div>
+  <div class="layout-load-more">
+    <button class="load-more-button" id="load_more_button">Cargar más</button>
+  </div>
+</div>
+`;
+}
+
+
+async function getIndex() {
+  try {
+    const mainWrapper = document.getElementById("main_index");
+
+    mainWrapper.innerHTML = await getBody();
+
+    const featuredRecipeArea = document.getElementById("featured_recipe_area");
+    const cardsRecipesArea = document.getElementById("explore_recipes_area");
+    const loadMoreButton = document.getElementById("load_more_button");
+
+    const featuredRecipeHTML = await getFeaturedRecipe();
+
+    const recipeAmount = 6;
+    let init = 0;
+    let limit = recipeAmount;
+    const cardsHTML = await getExploreRecipes(init, limit); // Usamos la función importada
+
+
+    featuredRecipeArea.innerHTML = featuredRecipeHTML;
+    cardsRecipesArea.innerHTML = cardsHTML;
+    
+    
+    loadMoreButton.addEventListener("click", async () => {
+      init += recipeAmount;
+      const recetasNuevas = await getExploreRecipes(init, limit);
+      cardsRecipesArea.insertAdjacentHTML("beforeend", recetasNuevas);
+    });
+    
+    
+  } catch (error) {
+    console.error("Error en getIndex:", error);
+  }
+}
+
+function featuredCard(recipe) {
+  console.log("Creating featured card for recipe:", recipe.nombre);
+
+  const html = `
+ <section class="Destacado-Flip-Card-Inner">
+ <section class="Destacado-Flip-Card-Front">
+ <img class="ImagenDestacada" src="${recipe["imagen-principal"]}" alt="${recipe.alt}" />
+ <div class="Destacado-Overlay">
+ <span class="Destacado-Tag">Destacado</span>
+ <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
+ </div>
+ </section>
+ <section class="Destacado-Flip-Card-Back">
+ <div class="Destacado-Overlay">
+ <h2 class="Destacado-Titulo">${recipe.nombre}</h2>
+ <!-- Descripción breve/subtítulo -->
+ <p class="Destacado-Subtitulo">${recipe.descripcion}</p>
+ </div>
+ </section>
+ </section>
+`;
+
+  return html;
+}
+
+function createExploreRecipes(item) {
+  if (!item) return "";
+
+  // Valores default por si falta algo
+  const id = item.id || "unknown";
+  const nombre = item.nombre || "Sin nombre";
+  const imagen = item["imagen-principal"] || "img/default.jpg";
+  const descripcion = item.descripcion || "Descripción no disponible";
+  const valoracion = item.valoracion || 0;
+
+  const ingredientes = Array.isArray(item.ingredientes)
+    ? item.ingredientes.slice(0, 4).join(", ") // solo 4 para no explotar la card
+    : "Ingredientes no disponibles";
+
+  const stars = "★".repeat(valoracion) + "☆".repeat(5 - valoracion);
+
+  return `
+ <article class="recipe-minimal" data-id="${id}">
+
+ <figure>
+ <img src="${imagen}" alt="${nombre}" loading="lazy">
+ </figure>
+
+ <header>
+ <h2>${nombre}</h2>
+ </header>
+
+ <section>
+ <p>${descripcion.substring(0, 120)}...</p>
+ </section>
+
+ <section class="facts">
+ <span>${ingredientes}</span>
+ </section>
+
+ <footer>
+ <span class="rating">${stars}</span>
+ <button onclick="window.location.href='recipe.html?id=${id}'">Ver receta</button>
+ </footer>
+
+</article>
+ `;
+}
+
+export async function getExploreRecipes(x, y) {
+  try {
+    const response = await fetch(`/api/recipes?from=${x}&limit=${y}`);
+    if (!response.ok) throw new Error("Error al cargar explore items");
+
+    const result = await response.json();
+    let recipesArray = [];
+
+    //caso de respuesta correcta: { success: true, data: [...] }
+    if (result.success && Array.isArray(result.data)) {
+      recipesArray = result.data;
+    }
+    //caso de respuesta incorrecta: array directo [...]
+    else if (Array.isArray(result)) {
+      recipesArray = result;
+    }
+    //caso totalmente inválido o fallido
+    else {
+      throw new Error(
+        "Formato de datos inválido: Se esperaba un array o {success: true, data: array}"
+      );
+    }
+
+    const validItems = recipesArray.filter(
+      (item) => item !== undefined && item !== null
+    );
+
+    const cardsHTML = validItems.map(createExploreRecipes).join("");
+
+    // Retorna el HTML ya en el contenedor del grid de recetas del index
+    return cardsHTML;
+  } catch (e) {
+    console.error("Error en getExploreRecipes:", e);
+    return "<p>Error al cargar los elementos.</p>";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  renderHeader();
+
+  
+  if (document.getElementById("main_index")) {
+    getIndex();
+  }
+  
+});

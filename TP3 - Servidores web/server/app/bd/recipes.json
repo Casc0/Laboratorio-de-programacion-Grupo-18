@@ -1,0 +1,2230 @@
+[
+  {
+    "id": "pesto",
+    "nombre": "Pesto alla Genovese",
+    "imagen-principal": "img/pesto.jpg",
+    "alt": "Imagen de unos fideos con crema y pesto",
+    "descripcion": "El Pesto alla Genovese es un clásico vibrante de la región de Liguria. Esta salsa cruda y aromática se elabora tradicionalmente machacando albahaca fresca de Génova, piñones, ajo, queso Parmesano Reggiano y aceite de oliva virgen extra. Ideal para pastas, bruschettas o como aderezo.",
+    "categorias": {
+      "tiempo": "30 minutos",
+      "dificultad": "Fácil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Albahaca fresca (hojas de Génova)",
+      "Piñones",
+      "Queso Parmesano Reggiano rallado",
+      "Ajo",
+      "Aceite de Oliva"
+    ],
+    "resumen": [
+      "Lava y seca cuidadosamente la albahaca.",
+      "Procesa ajo, piñones y albahaca hasta obtener una pasta rugosa.",
+      "Añade el queso y el AOVE, mezclando hasta conseguir la consistencia deseada."
+    ],
+    "detallado": "Para un auténtico Pesto, utiliza un mortero si es posible para evitar el sobrecalentamiento de la albahaca, lo que evita que se oxide y se mantenga su color verde brillante. Si usas licuadora, hazlo en pulsos cortos. La cantidad de aceite puede variar hasta que obtengas una salsa homogénea pero no líquida.",
+    "identificadores": [
+      "Salsa",
+      "Aromático",
+      "Fresco"
+    ],
+    "valoracion": 3
+  },
+  {
+    "id": "risotto",
+    "nombre": "Risotto Cremoso de Hongos",
+    "imagen-principal": "img/Risotto.jpg",
+    "alt": "Plato de risotto cremoso",
+    "descripcion": "Un plato reconfortante y sofisticado. Este risotto utiliza arroz Arborio y la profundidad de sabor de los hongos porcini secos, creando una base rica que se complementa con vino blanco y una cremosa mantecatura final con mantequilla y queso.",
+    "categorias": {
+      "tiempo": "45 minutos",
+      "dificultad": "Medio",
+      "porciones": "3 personas"
+    },
+    "ingredientes": [
+      "Arroz Arborio o Carnaroli",
+      "Hongos porcini secos (rehidratados)",
+      "Caldo de verduras caliente",
+      "Cebolla picada finamente",
+      "Vino blanco seco",
+      "Mantequilla fría y queso Parmesano"
+    ],
+    "resumen": [
+      "Sofríe la cebolla y los hongos.",
+      "Tuesta el arroz ('tostatura') y desglasa con vino.",
+      "Añade caldo caliente gradualmente, removiendo.",
+      "Retira del fuego y realiza la mantecatura."
+    ],
+    "detallado": "El secreto de un risotto perfecto es la **Mantecatura**. Cuando el arroz esté al dente, retira la olla del fuego. Agrega una nuez de mantequilla fría y abundante queso parmesano rallado. Cubre y deja reposar por un minuto. Luego, remueve vigorosamente para que el almidón se ligue con la grasa, logrando esa textura cremosa característica. El caldo debe estar siempre muy caliente.",
+    "identificadores": [
+      "Cremoso",
+      "Umami",
+      "Reconfortante"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "frittata",
+    "nombre": "Frittata Italiana de Salchicha",
+    "imagen-principal": "img/Frittata.jpg",
+    "alt": "Frittata con salchicha y vegetales",
+    "descripcion": "La frittata es la versión italiana de la tortilla: versátil y cocinada enteramente en la sartén (o con un toque final de horno). Es perfecta para un brunch sustancioso o una cena rápida, combinando huevos batidos, queso ricotta cremoso, salchicha italiana picante y espinacas frescas.",
+    "categorias": {
+      "tiempo": "25 minutos",
+      "dificultad": "Fácil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "6 huevos grandes",
+      "Salchicha italiana desmenuzada (sin tripa)",
+      "Espinacas frescas o cocidas",
+      "Queso ricotta o mozzarella",
+      "Aceite de oliva y cebolla"
+    ],
+    "resumen": [
+      "Dora la salchicha y sofríe los vegetales.",
+      "Mezcla huevos, ricotta y sazona.",
+      "Vierte la mezcla de huevo sobre la base en la sartén.",
+      "Cocina a fuego lento y gratina el final."
+    ],
+    "detallado": "La frittata se cocina a fuego muy bajo para evitar que la parte inferior se queme. Una vez que los bordes estén firmes y solo la parte superior esté ligeramente húmeda, puedes terminar de cuajarla transfiriendo la sartén a un horno precalentado. Esto asegura una cocción uniforme y una textura suave por dentro, sin necesidad de voltearla.",
+    "identificadores": [
+      "Sabroso",
+      "Rápido",
+      "Brunch"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "lasagna",
+    "nombre": "Lasagna Clásica Bolognese",
+    "imagen-principal": "img/lasagna.jpg",
+    "alt": "Plato de lasagna con salsa y queso",
+    "descripcion": "Un plato emblemático de Emilia-Romaña, capas de pasta fresca intercaladas con una rica salsa ragú (boloñesa), bechamel cremosa y queso Parmesano. Es el plato perfecto para una comida familiar.",
+    "categorias": {
+      "tiempo": "90 minutos",
+      "dificultad": "Medio",
+      "porciones": "8 personas"
+    },
+    "ingredientes": [
+      "Placas de lasagna",
+      "Carne picada (ternera y cerdo)",
+      "Tomate triturado",
+      "Leche",
+      "Mantequilla",
+      "Harina",
+      "Parmesano rallado",
+      "Zanahoria, Apio y Cebolla (para el sofrito)"
+    ],
+    "resumen": [
+      "Prepara la salsa ragú (cocción lenta).",
+      "Haz la bechamel y reserva.",
+      "Arma la lasagna por capas: ragú, pasta, bechamel, parmesano.",
+      "Hornea hasta que esté dorado y burbujeante."
+    ],
+    "detallado": "La salsa ragú debe cocinarse a fuego lento durante al menos dos horas para desarrollar profundidad de sabor. Asegúrate de que la bechamel no tenga grumos y que esté tibia al ensamblar. Deja reposar la lasagna 15 minutos fuera del horno antes de servir.",
+    "identificadores": [
+      "Pasta",
+      "Horneado",
+      "Reconfortante"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "tiramisu",
+    "nombre": "Tiramisú Clásico Original",
+    "imagen-principal": "img/tiramisu.jpg",
+    "alt": "Postre Tiramisú con capas de crema y cacao",
+    "descripcion": "El postre italiano por excelencia, cremoso y elegante. Consta de capas de bizcochos de soletilla mojados en café fuerte y licor, alternadas con una crema de mascarpone, y espolvoreado con cacao en polvo.",
+    "categorias": {
+      "tiempo": "30 minutos + 4h refrigeración",
+      "dificultad": "Fácil",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Queso Mascarpone",
+      "Huevos (yemas y claras separadas)",
+      "Azúcar",
+      "Café fuerte (espresso) frío",
+      "Licor (Marsala o Ron)",
+      "Bizcochos de soletilla",
+      "Cacao en polvo sin azúcar"
+    ],
+    "resumen": [
+      "Bate las yemas con azúcar hasta blanquear.",
+      "Agrega el mascarpone e integra.",
+      "Monta las claras a punto de nieve e incorpóralas a la crema.",
+      "Moja los bizcochos en café y arma capas con la crema y el cacao.",
+      "Refrigera por al menos 4 horas."
+    ],
+    "detallado": "Usa huevos pasteurizados para más seguridad. Es fundamental que la crema de mascarpone quede muy ligera y aireada. La refrigeración es clave para que tome consistencia y los sabores se fusionen, haciendo que el bizcocho quede tierno.",
+    "identificadores": [
+      "Postre",
+      "Cremoso",
+      "Sin Horno"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "gnocchi",
+    "nombre": "Gnocchi Caseros de Patata",
+    "imagen-principal": "img/gnocci.jpg",
+    "alt": "Gnocchi recién hechos en un bol",
+    "descripcion": "Pequeñas y suaves 'bolas' de masa hechas de patata y harina. Son un plato sencillo pero delicado que a menudo se sirve con salsa de tomate, pesto o mantequilla y salvia. Su textura es tierna por dentro y ligeramente masticable por fuera.",
+    "categorias": {
+      "tiempo": "60 minutos",
+      "dificultad": "Medio",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Patatas (tipo russet o harinosas)",
+      "Harina de trigo",
+      "Huevo",
+      "Sal y Nuez moscada"
+    ],
+    "resumen": [
+      "Cuece las patatas y haz un puré seco.",
+      "Mezcla con harina, huevo y sazona sin amasar demasiado.",
+      "Forma los gnocchi y marca con un tenedor.",
+      "Cuece en agua hirviendo hasta que floten (unos 3 minutos)."
+    ],
+    "detallado": "La clave es usar la menor cantidad de harina posible y no trabajar la masa en exceso, para que los gnocchi no queden duros. La patata debe cocerse con piel para que absorba menos agua. Sírvelos inmediatamente con tu salsa favorita.",
+    "identificadores": [
+      "Pasta",
+      "Suave",
+      "Reconfortante"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "minestrone",
+    "nombre": "Sopa Minestrone Clásica",
+    "imagen-principal": "img/sopa_minestrone.webp",
+    "alt": "Sopa de verduras Minestrone en un tazón",
+    "descripcion": "Una sopa campesina robusta, saludable y versátil. Se compone de una base de verduras de temporada, frijoles y un poco de pasta corta o arroz, cocidos lentamente en un caldo de verduras. Es el epítome de la cocina de aprovechamiento italiana.",
+    "categorias": {
+      "tiempo": "70 minutos",
+      "dificultad": "Fácil",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Zanahoria, Apio, Cebolla (para el soffritto)",
+      "Patatas y Calabacín",
+      "Frijoles (cannellini o garbanzos)",
+      "Pasta corta o Arroz",
+      "Caldo de verduras",
+      "Aceite de oliva"
+    ],
+    "resumen": [
+      "Sofríe la base (soffritto).",
+      "Agrega las verduras más duras, luego el caldo.",
+      "Incorpora los frijoles y la pasta/arroz hacia el final.",
+      "Cocina hasta que la pasta esté al dente y sirve."
+    ],
+    "detallado": "El \"soffritto\" (sofrito de cebolla, apio y zanahoria) es crucial para crear la base de sabor. La sopa Minestrone mejora al día siguiente, ya que los sabores se asientan. Puedes variar las verduras según la estación, siempre añadiendo las más blandas al final.",
+    "identificadores": [
+      "Sopa",
+      "Saludable",
+      "Vegano"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "bruschetta",
+    "nombre": "Bruschetta al Pomodoro Fresco",
+    "imagen-principal": "img/bruschette.webp",
+    "alt": "Bruschetta con tomate y albahaca",
+    "descripcion": "Un aperitivo simple pero exquisito. Pan tostado frotado con ajo y cubierto con una mezcla de tomates frescos picados, albahaca, aceite de oliva virgen extra y una pizca de sal y pimienta.",
+    "categorias": {
+      "tiempo": "15 minutos",
+      "dificultad": "Muy Fácil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Rebanadas de pan de campo o baguette",
+      "Tomates maduros (tipo Roma)",
+      "Ajo",
+      "Albahaca fresca",
+      "Aceite de oliva virgen extra",
+      "Sal y Pimienta"
+    ],
+    "resumen": [
+      "Tuesta el pan hasta que esté crujiente.",
+      "Frota la superficie del pan con un diente de ajo.",
+      "Mezcla los tomates picados con albahaca y AOVE.",
+      "Coloca la mezcla sobre el pan tostado y sirve inmediatamente."
+    ],
+    "detallado": "Usa tomates de buena calidad y muy maduros. Es importante que el pan esté bien tostado, casi crujiente, para que no se ablande con el jugo del tomate. Para un sabor más profundo, deja macerar la mezcla de tomate 10 minutos antes de usar.",
+    "identificadores": [
+      "Aperitivo",
+      "Fresco",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "carbonara",
+    "nombre": "Spaghetti alla Carbonara (Original)",
+    "imagen-principal": "img/carbonara.jpg",
+    "alt": "Plato de spaghetti carbonara con huevo y guanciale",
+    "descripcion": "Un clásico de Roma. Esta receta no lleva nata y se basa en la emulsión de yema de huevo, queso Pecorino Romano rallado y la grasa fundida del guanciale (cachete de cerdo) para crear una salsa cremosa y rica.",
+    "categorias": {
+      "tiempo": "20 minutos",
+      "dificultad": "Medio",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Spaghetti o Rigatoni",
+      "Guanciale (o panceta curada)",
+      "Yemas de huevo",
+      "Queso Pecorino Romano rallado",
+      "Pimienta negra recién molida"
+    ],
+    "resumen": [
+      "Corta el guanciale en cubos y dóralo lentamente hasta que esté crujiente.",
+      "Mezcla las yemas con el Pecorino y la pimienta.",
+      "Cocer la pasta al dente y mezclarla fuera del fuego con la mezcla de huevo y un poco de agua de cocción para emulsionar.",
+      "Servir inmediatamente con más Pecorino y pimienta."
+    ],
+    "detallado": "El secreto de la cremosidad (y la clave para evitar que se cuaje el huevo) es realizar la emulsión *fuera del fuego* y utilizar el calor residual de la pasta y el agua de cocción. No sustituyas el Pecorino por Parmesano, ya que el sabor salado y picante del Pecorino es esencial. El Guanciale debe cocinarse lentamente a fuego bajo para liberar su grasa y volverse crujiente.",
+    "identificadores": [
+      "Pasta",
+      "Cremoso",
+      "Clásico"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "saltimbocca",
+    "nombre": "Saltimbocca alla Romana",
+    "imagen-principal": "img/saltimbocca.jpg",
+    "alt": "Rollitos de ternera con jamón y salvia",
+    "descripcion": "El nombre significa literalmente 'salta a la boca', indicando lo deliciosamente rápido que desaparece. Es un plato rápido de ternera de Roma, con una fina loncha de ternera, jamón Prosciutto y una hoja de salvia, todo cocido en mantequilla y vino blanco.",
+    "categorias": {
+      "tiempo": "15 minutos",
+      "dificultad": "Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Filetes de ternera finos",
+      "Lonchas de Prosciutto",
+      "Hojas de salvia fresca",
+      "Vino blanco seco",
+      "Mantequilla",
+      "Harina para rebozar"
+    ],
+    "resumen": [
+      "Coloca una loncha de prosciutto y una hoja de salvia sobre cada filete y sujeta con un palillo.",
+      "Enharina ligeramente la parte inferior de la ternera.",
+      "Sella la carne en mantequilla por ambos lados.",
+      "Desglasa la sartén con vino blanco y reduce la salsa."
+    ],
+    "detallado": "Cocina la carne muy rápido, solo 1-2 minutos por cada lado para que la ternera no se seque y el prosciutto se dore. El truco es 'flambear' el vino para eliminar el alcohol y dejar solo el sabor. La salsa debe ser ligera y muy sabrosa, ideal para mojar un poco de pan.",
+    "identificadores": [
+      "Carne",
+      "Rápido",
+      "Sabroso"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "pannacotta",
+    "nombre": "Panna Cotta Clásica",
+    "imagen-principal": "img/pannacotta.jpg",
+    "alt": "Panna Cotta con coulis de fresa",
+    "descripcion": "Un postre suave y delicado del Piamonte. Se trata de una crema dulce hecha a base de nata (crema de leche), azúcar y gelatina. Es muy versátil y se puede acompañar con una salsa de caramelo, chocolate o, en este caso, un coulis de frutos rojos frescos.",
+    "categorias": {
+      "tiempo": "20 minutos + 6h refrigeración",
+      "dificultad": "Fácil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Nata para montar (crema de leche)",
+      "Azúcar",
+      "Vaina de vainilla (o extracto)",
+      "Gelatina (hojas o en polvo)",
+      "Frutos rojos para el coulis"
+    ],
+    "resumen": [
+      "Calienta la nata con azúcar y vainilla sin que llegue a hervir.",
+      "Hidrata y disuelve la gelatina en la mezcla de nata.",
+      "Vierte en moldes individuales y refrigera hasta que cuaje.",
+      "Sirve desmoldado o en copa con coulis de frutos rojos."
+    ],
+    "detallado": "Asegúrate de no hervir la nata para evitar que se formen cristales y la textura sea perfectamente suave. Para desmoldar fácilmente, sumerge brevemente la base del molde en agua caliente. La proporción de gelatina debe ser justa para que mantenga su forma, pero que se deshaga en la boca.",
+    "identificadores": [
+      "Postre",
+      "Cremoso",
+      "Sin Horno"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "arancini",
+    "nombre": "Arancini de Ragú y Mozzarella",
+    "imagen-principal": "img/arancini.jpg",
+    "alt": "Bolas de arroz fritas con relleno",
+    "descripcion": "Especialidad siciliana. Son bolas de arroz rellenas, empanadas y fritas, cuyo nombre se debe a su forma y color que recuerda a una pequeña naranja ('arancia'). El relleno clásico es ragú de carne (boloñesa) y mozzarella fundente.",
+    "categorias": {
+      "tiempo": "90 minutos (si el ragú está listo)",
+      "dificultad": "Medio",
+      "porciones": "6 unidades"
+    },
+    "ingredientes": [
+      "Arroz Arborio o Carnaroli (cocido con azafrán)",
+      "Ragú de carne (salsa boloñesa)",
+      "Mozzarella cortada en cubos",
+      "Harina, huevo y pan rallado para el rebozado",
+      "Aceite para freír"
+    ],
+    "resumen": [
+      "Enfría el arroz cocido y haz bolas, huecas en el centro.",
+      "Rellena con un poco de ragú y un cubo de mozzarella, y cierra la bola.",
+      "Pasa por harina, huevo y pan rallado.",
+      "Fríe en aceite caliente hasta que estén doradas."
+    ],
+    "detallado": "El arroz debe cocinarse de manera similar al risotto (con caldo y azafrán, pero no la mantecatura), y luego enfriarse por completo para que sea moldeable. El ragú debe ser espeso, no líquido, para que el relleno se mantenga. Se sirven muy calientes, para que la mozzarella esté fundida y el exterior crujiente.",
+    "identificadores": [
+      "Aperitivo",
+      "Umami",
+      "Frito"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "pizza_margherita",
+    "nombre": "Pizza Margherita",
+    "imagen-principal": "img/margherita.jpg",
+    "alt": "Pizza redonda con tomate, mozzarella y albahaca",
+    "descripcion": "La pizza más icónica de Nápoles, creada en honor a la Reina Margarita. Sus colores (rojo, blanco y verde) representan la bandera italiana. Es simple, con salsa de tomate San Marzano, mozzarella fresca y albahaca.",
+    "categorias": {
+      "tiempo": "30 minutos (si la masa está lista)",
+      "dificultad": "Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Masa de pizza",
+      "Salsa de tomate San Marzano",
+      "Mozzarella fresca (fior di latte)",
+      "Albahaca fresca",
+      "Aceite de oliva virgen extra"
+    ],
+    "resumen": [
+      "Estira la masa y extiende la salsa de tomate.",
+      "Añade la mozzarella rasgada y un chorrito de aceite.",
+      "Hornea a temperatura alta (250°C o más) por 8-12 minutos.",
+      "Decora con hojas de albahaca fresca antes de servir."
+    ],
+    "detallado": "La clave es usar ingredientes de la mejor calidad. El horno debe estar muy caliente para lograr una corteza crujiente por fuera y suave por dentro. El tiempo de horneado varía, pero debe ser rápido. Si es posible, usa una piedra para pizza.",
+    "identificadores": [
+      "Horneado",
+      "Rápido",
+      "Clásico"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "fettuccine_alfredo",
+    "nombre": "Fettuccine Alfredo",
+    "imagen-principal": "img/fettuccine_alfredo.jpg",
+    "alt": "Plato de fettuccine con salsa cremosa de queso",
+    "descripcion": "Aunque popularizado en América, este plato romano se basa en una simple y deliciosa emulsión de mantequilla y queso Parmesano Reggiano. La salsa espesa y aterciopelada es el resultado del almidón de la pasta, sin necesidad de nata.",
+    "categorias": {
+      "tiempo": "15 minutos",
+      "dificultad": "Muy Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Fettuccine (pasta al huevo)",
+      "Mantequilla sin sal de alta calidad",
+      "Queso Parmesano Reggiano rallado",
+      "Agua de cocción de la pasta"
+    ],
+    "resumen": [
+      "Cocer la pasta al dente.",
+      "En una sartén, mezclar la mantequilla con una cucharada de agua de cocción.",
+      "Añadir la pasta escurrida y el queso Parmesano rallado.",
+      "Mezclar vigorosamente fuera del fuego hasta que la salsa se emulsione."
+    ],
+    "detallado": "La 'mantecatura' es esencial: el queso y la mantequilla deben mezclarse fuera del calor directo para evitar que el queso se separe y se vuelva grumoso. La cremosidad proviene del almidón del agua de la pasta. Sirve inmediatamente, ya que la salsa tiende a espesar rápidamente.",
+    "identificadores": [
+      "Pasta",
+      "Cremoso",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "ossobuco",
+    "nombre": "Ossobuco alla Milanese",
+    "imagen-principal": "img/ossobuco.jpg",
+    "alt": "Estofado de jarrete de ternera con gremolata",
+    "descripcion": "Un plato icónico de Milán (Lombardía). Jarrete de ternera cocido a fuego lento con vino blanco, caldo y verduras, a menudo servido con 'Gremolata' (cáscara de limón, ajo y perejil) y, tradicionalmente, con Risotto alla Milanese.",
+    "categorias": {
+      "tiempo": "150 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "4 jarretes de ternera con hueso",
+      "Harina para rebozar",
+      "Vino blanco seco",
+      "Caldo de carne",
+      "Zanahoria, Apio y Cebolla",
+      "Gremolata (perejil, ajo, ralladura de limón)"
+    ],
+    "resumen": [
+      "Enharinar y sellar los jarretes en aceite.",
+      "Sofríe las verduras, agrega la carne y desglasa con vino.",
+      "Cubre con caldo y cuece a fuego lento por 2-3 horas.",
+      "Termina con Gremolata antes de servir."
+    ],
+    "detallado": "La cocción lenta es clave para que la carne quede tierna y el tuétano ('ossobuco') se ablande. La Gremolata no se cocina; se añade al final para aportar una nota fresca y cítrica que corta la riqueza del estofado. Suele servirse sobre polenta o risotto.",
+    "identificadores": [
+      "Carne",
+      "Estofado",
+      "Lento"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "caprese",
+    "nombre": "Insalata Caprese",
+    "imagen-principal": "img/caprese.jpg",
+    "alt": "Rodajas de tomate, mozzarella y albahaca",
+    "descripcion": "Una ensalada de la isla de Capri (Campania), que representa la bandera italiana. Es fresca, simple y deliciosa, con rodajas de tomate, mozzarella de búfala fresca y hojas de albahaca, aderezada con aceite de oliva.",
+    "categorias": {
+      "tiempo": "10 minutos",
+      "dificultad": "Muy Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Tomates maduros grandes",
+      "Mozzarella de búfala (o fior di latte)",
+      "Hojas de albahaca fresca",
+      "Aceite de oliva virgen extra",
+      "Sal marina y pimienta negra"
+    ],
+    "resumen": [
+      "Cortar el tomate y la mozzarella en rodajas gruesas.",
+      "Alternar las rodajas con hojas de albahaca en un plato.",
+      "Sazonar con sal, pimienta y rociar generosamente con AOVE.",
+      "Servir inmediatamente."
+    ],
+    "detallado": "La calidad de los ingredientes es lo único que importa aquí. La mozzarella de búfala ofrece una textura suave y un sabor más intenso. El aceite debe ser el mejor virgen extra que tengas, ya que es el sabor dominante. También puedes añadir un chorrito de vinagre balsámico de Módena.",
+    "identificadores": [
+      "Aperitivo",
+      "Fresco",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "vongole",
+    "nombre": "Spaghetti alle Vongole",
+    "imagen-principal": "img/vongole.jpg",
+    "alt": "Plato de spaghetti con almejas y perejil",
+    "descripcion": "Un plato de pasta icónico de la costa de Campania (Nápoles). Los espaguetis se cocinan con almejas frescas (vongole) en una salsa ligera de vino blanco, ajo, aceite de oliva y un toque opcional de chile (peperoncino).",
+    "categorias": {
+      "tiempo": "25 minutos",
+      "dificultad": "Media",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Spaghetti",
+      "Almejas frescas (vongole)",
+      "Ajo, Perejil",
+      "Vino blanco seco",
+      "Aceite de oliva virgen extra",
+      "Chile o Peperoncino (opcional)"
+    ],
+    "resumen": [
+      "Limpiar las almejas sumergiéndolas en agua salada.",
+      "Sofríe ajo y chile; añade las almejas y desglasa con vino.",
+      "Tapa hasta que las almejas se abran y retira las que no lo hagan.",
+      "Mezcla la pasta cocida con la salsa y perejil picado."
+    ],
+    "detallado": "No añadas queso a este plato. El sabor salino de las almejas es el protagonista. Asegúrate de que las almejas estén frescas y vivas (tocando las conchas para ver si se cierran) y de limpiarlas bien para eliminar la arena. La salsa debe ser líquida para que empape la pasta.",
+    "identificadores": [
+      "Pasta",
+      "Mariscos",
+      "Rápido"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "cacio_e_pepe",
+    "nombre": "Spaghetti Cacio e Pepe",
+    "imagen-principal": "img/cacio_e_pepe.jpg",
+    "alt": "Pasta con salsa cremosa de queso y pimienta",
+    "descripcion": "Una de las cuatro pastas romanas clásicas. Un plato increíblemente simple, que requiere sólo tres ingredientes (queso, pimienta y pasta) y habilidad. El resultado es una salsa untuosa y picante.",
+    "categorias": {
+      "tiempo": "15 minutos",
+      "dificultad": "Media (por la técnica)",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Spaghetti o Tonnarelli",
+      "Queso Pecorino Romano rallado",
+      "Pimienta negra recién molida",
+      "Agua de cocción de la pasta"
+    ],
+    "resumen": [
+      "Tuesta la pimienta en seco y añade un poco de agua de cocción.",
+      "Cocer la pasta al dente, reservando el agua de cocción.",
+      "Mezcla el Pecorino con el agua caliente para hacer una 'crema'.",
+      "Combina rápidamente la pasta con la pimienta y la crema de queso fuera del fuego."
+    ],
+    "detallado": "La cremosidad se logra con la grasa del Pecorino, las proteínas del queso y el almidón del agua de cocción. Es fundamental trabajar la mezcla fuera del fuego para evitar que el queso se aglutine. La pimienta debe ser abundante y recién molida.",
+    "identificadores": [
+      "Pasta",
+      "Cremoso",
+      "Rápido"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "cannoli",
+    "nombre": "Cannoli Siciliani",
+    "imagen-principal": "img/cannoli.jpg",
+    "alt": "Tubos de masa frita rellenos de crema de ricotta",
+    "descripcion": "El postre más famoso de Sicilia. Son tubos de masa frita crujiente rellenos con una dulce y suave crema a base de queso ricotta, a menudo adornados con fruta confitada o pepitas de chocolate.",
+    "categorias": {
+      "tiempo": "90 minutos (preparación)",
+      "dificultad": "Difícil",
+      "porciones": "10 unidades"
+    },
+    "ingredientes": [
+      "Para la cáscara: Harina, Vino Marsala, Cacao",
+      "Para el relleno: Queso Ricotta de oveja, Azúcar glas, Vainilla",
+      "Aceite para freír",
+      "Fruta confitada o pepitas de chocolate"
+    ],
+    "resumen": [
+      "Prepara la masa, estírala y córtala en círculos.",
+      "Envuelve los círculos alrededor de tubos de metal y fríe hasta que estén dorados.",
+      "Prepara la crema de ricotta y refrigera.",
+      "Rellena las cáscaras justo antes de servir y decora."
+    ],
+    "detallado": "La masa de las cáscaras debe ser muy delgada y estirarse bien. Es fundamental rellenar los cannoli justo antes de comer, ya que la humedad del relleno ablandaría la masa crujiente. El uso de ricotta de oveja auténtica es clave para el sabor tradicional.",
+    "identificadores": [
+      "Postre",
+      "Frito",
+      "Rellena"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "melanzane",
+    "nombre": "Melanzane alla Parmigiana",
+    "imagen-principal": "img/melanzane.jpg",
+    "alt": "Capas de berenjena, tomate y queso gratinadas",
+    "descripcion": "Un plato vegetariano horneado del Sur de Italia. Capas de berenjena (frita o a la parrilla), salsa de tomate, mozzarella y queso parmesano se gratinan hasta obtener un plato delicioso y cremoso.",
+    "categorias": {
+      "tiempo": "80 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Berenjenas",
+      "Salsa de tomate casera",
+      "Mozzarella fresca",
+      "Queso Parmesano rallado",
+      "Albahaca fresca",
+      "Aceite de oliva"
+    ],
+    "resumen": [
+      "Corta las berenjenas, sala y déjalas reposar (opcional). Fríelas o ásalas.",
+      "En un molde, arma capas alternando salsa de tomate, berenjenas, mozzarella y parmesano.",
+      "Termina con una capa de parmesano y hornea a 180°C por 40 minutos.",
+      "Deja reposar antes de servir."
+    ],
+    "detallado": "Para evitar que el plato quede aceitoso, escurre bien las berenjenas después de freírlas. Es crucial que la salsa de tomate sea casera y muy sabrosa. Al igual que la lasaña, este plato mejora al día siguiente.",
+    "identificadores": [
+      "Horneado",
+      "Vegetariano",
+      "Umami"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "focaccia",
+    "nombre": "Focaccia Genovese",
+    "imagen-principal": "img/focaccia.jpg",
+    "alt": "Pan Focaccia con agujeros, aceite y sal gruesa",
+    "descripcion": "Un pan plano tradicional de Liguria, similar a la masa de pizza, pero más gruesa y suave. Se caracteriza por sus hoyuelos hechos con los dedos, rellenos de aceite de oliva y sal marina gruesa.",
+    "categorias": {
+      "tiempo": "120 minutos (incluye levado)",
+      "dificultad": "Media",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Harina de fuerza",
+      "Levadura fresca",
+      "Agua tibia",
+      "Aceite de oliva virgen extra (AOVE)",
+      "Sal marina gruesa"
+    ],
+    "resumen": [
+      "Prepara la masa y déjala levar una hora.",
+      "Extiende la masa en una bandeja y haz los característicos hoyuelos.",
+      "Rocía con la salmuera (agua, sal y AOVE) y deja levar de nuevo.",
+      "Hornea a 200°C hasta que esté dorada."
+    ],
+    "detallado": "La salmuera (mezcla de agua tibia, aceite y sal gruesa) que se vierte sobre la focaccia antes de hornearla es esencial para que la corteza quede suave y no se seque. El AOVE debe ser abundante. Se puede comer sola, como acompañamiento o rellena.",
+    "identificadores": [
+      "Aperitivo",
+      "Pan",
+      "Vegano"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "zabaglione",
+    "nombre": "Zabaglione (Sabayón)",
+    "imagen-principal": "img/zabaglione.jpg",
+    "alt": "Crema espumosa de yemas de huevo y Marsala",
+    "descripcion": "Un postre ligero y espumoso del Piamonte, hecho batiendo yemas de huevo con azúcar y vino Marsala (o similar) a baño maría hasta que la mezcla espese y se vuelva una mousse aireada. Ideal para acompañar frutas o galletas.",
+    "categorias": {
+      "tiempo": "15 minutos",
+      "dificultad": "Media",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Yemas de huevo",
+      "Azúcar",
+      "Vino Marsala dulce (o Vino de Jerez)"
+    ],
+    "resumen": [
+      "Coloca un tazón resistente al calor sobre una olla con agua hirviendo a fuego lento (baño maría).",
+      "Bate las yemas y el azúcar hasta que la mezcla esté pálida.",
+      "Agrega el vino Marsala y continúa batiendo vigorosamente hasta que duplique su volumen y se vuelva espumosa.",
+      "Sirve inmediatamente en copas."
+    ],
+    "detallado": "Es vital batir constantemente y asegurarse de que el fondo del tazón no toque el agua hirviendo, ya que esto cuajaría las yemas. El calor suave y el constante batido son lo que crea el aire y la textura espumosa. Se debe servir de inmediato, ya que el volumen se pierde al enfriarse.",
+    "identificadores": [
+      "Postre",
+      "Cremoso",
+      "Clásico"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "agnolotti",
+    "nombre": "Agnolotti del Plin con Mantequilla y Salvia",
+    "imagen-principal": "img/agnolotti.jpg",
+    "alt": "Pequeños agnolotti rellenos con salsa de mantequilla y salvia",
+    "descripcion": "Pasta rellena tradicional de Piamonte. Los 'plin' son pequeños pellizcos de masa rellenos de carne asada o verduras. Se sirven a menudo simplemente con mantequilla derretida y hojas de salvia, una de las salsas más clásicas.",
+    "categorias": {
+      "tiempo": "90 minutos (preparación)",
+      "dificultad": "Difícil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Masa de pasta fresca (harina, huevo)",
+      "Relleno de carne asada (ternera, cerdo) o Ricotta y espinacas",
+      "Mantequilla de alta calidad",
+      "Hojas de salvia fresca",
+      "Queso Parmesano rallado"
+    ],
+    "resumen": [
+      "Prepara la masa y el relleno (cocinar y picar la carne).",
+      "Estira la masa, rellena y pellizca para formar los 'plin'.",
+      "Cuece la pasta por 3-4 minutos.",
+      "Saltea la pasta con mantequilla derretida, salvia y un poco de agua de cocción."
+    ],
+    "detallado": "Los 'plin' deben ser pequeños y bien sellados para que el relleno no se escape. La salsa de mantequilla y salvia ('burro e salvia') es un clásico que realza el sabor de la pasta rellena sin opacarla. La mantequilla debe cocinarse hasta que esté ligeramente dorada y aromática.",
+    "identificadores": [
+      "Pasta",
+      "Rellena",
+      "Suave"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "zuppa_di_pesce",
+    "nombre": "Zuppa di Pesce (Cioppino Italiano)",
+    "imagen-principal": "img/zuppa_di_pesce.jpg",
+    "alt": "Sopa de pescado y mariscos con tomate",
+    "descripcion": "Una rica y sabrosa sopa de pescado y mariscos del Mediterráneo. Es una mezcla de diferentes tipos de pescado y marisco (almejas, mejillones, calamares, camarones) cocinados en una base de tomate, vino blanco, ajo y perejil, servida con pan tostado.",
+    "categorias": {
+      "tiempo": "45 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Pescado blanco (ej. bacalao)",
+      "Mariscos variados (almejas, mejillones, calamares)",
+      "Tomate triturado",
+      "Vino blanco seco",
+      "Caldo de pescado",
+      "Ajo, Perejil y Peperoncino"
+    ],
+    "resumen": [
+      "Sofríe ajo, chile y perejil.",
+      "Añade el vino y el tomate, y deja reducir un poco.",
+      "Agrega el pescado y los mariscos por etapas, comenzando por los más duros.",
+      "Sirve con pan tostado y rociado con aceite."
+    ],
+    "detallado": "Asegúrate de no cocinar demasiado el marisco, ya que se volverá gomoso. El caldo debe ser rico y el toque de vino blanco es clave. Es importante servirlo con pan de campo crujiente para mojar en el caldo.",
+    "identificadores": [
+      "Sopa",
+      "Mariscos",
+      "Umami"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "bistecca",
+    "nombre": "Bistecca alla Fiorentina",
+    "imagen-principal": "img/bistecca.jpg",
+    "alt": "Filete T-bone de ternera a la parrilla",
+    "descripcion": "El plato de carne más famoso de la Toscana. Es un corte grueso (al menos 3-4 cm) de lomo de ternera (típicamente Chianina) a la parrilla, sazonado únicamente con sal y, a veces, un poco de AOVE. Se sirve muy poco hecho (al sangre).",
+    "categorias": {
+      "tiempo": "20 minutos",
+      "dificultad": "Media",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Corte de lomo de ternera (T-bone) de 1.5kg a 2kg",
+      "Sal marina gruesa",
+      "Aceite de oliva (opcional)"
+    ],
+    "resumen": [
+      "Asegúrate de que la carne esté a temperatura ambiente.",
+      "Sella la carne a fuego muy alto por ambos lados (6-8 min por lado).",
+      "Coloca el hueso en la parrilla por unos minutos.",
+      "Retira, sazona generosamente con sal gruesa y deja reposar 10 minutos."
+    ],
+    "detallado": "El reposo es fundamental para que los jugos de la carne se redistribuyan. El interior debe estar rojo brillante y jugoso, nunca cocido por completo. Tradicionalmente no lleva pimienta ni aceite hasta que se sirve. El corte debe ser grueso.",
+    "identificadores": [
+      "Carne",
+      "Rápido",
+      "Clásico"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "torta_nonna",
+    "nombre": "Torta della Nonna",
+    "imagen-principal": "img/torta_nonna.jpg",
+    "alt": "Tarta de crema pastelera con piñones y azúcar glas",
+    "descripcion": "Un pastel de la Toscana con un nombre que significa 'tarta de la abuela'. Consiste en una base de masa quebrada rellena de crema pastelera de limón, cubierta con otra capa de masa y espolvoreada con piñones y azúcar glas.",
+    "categorias": {
+      "tiempo": "90 minutos",
+      "dificultad": "Media",
+      "porciones": "8 personas"
+    },
+    "ingredientes": [
+      "Para la masa: Harina, Mantequilla, Azúcar, Huevos",
+      "Para el relleno: Leche, Yemas de huevo, Azúcar, Maicena, Ralladura de limón",
+      "Piñones",
+      "Azúcar glas para decorar"
+    ],
+    "resumen": [
+      "Prepara la masa quebrada y la crema pastelera (debe enfriarse).",
+      "Extiende la mitad de la masa, rellena con la crema.",
+      "Cubre con la otra mitad, sella los bordes y esparce piñones.",
+      "Hornea a 180°C por 40 minutos y espolvorea azúcar glas al enfriar."
+    ],
+    "detallado": "La ralladura de limón en la crema pastelera es lo que le da el toque aromático característico. La masa debe ser fina y crujiente. Esta tarta mejora si se deja reposar unas horas para que la crema se asiente.",
+    "identificadores": [
+      "Postre",
+      "Horneado",
+      "Suave"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "cotoletta",
+    "nombre": "Cotoletta alla Milanese",
+    "imagen-principal": "img/cotoletta.jpg",
+    "alt": "Costilla de ternera empanada y frita",
+    "descripcion": "Un plato de Milán que consiste en una costilla de ternera con hueso, empanada en huevo y pan rallado, y luego frita en mantequilla clarificada (o aceite) hasta que quede dorada y crujiente. Es similar al 'Wiener Schnitzel'.",
+    "categorias": {
+      "tiempo": "25 minutos",
+      "dificultad": "Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "2 costillas de ternera con hueso (grosor medio)",
+      "Huevos batidos",
+      "Pan rallado",
+      "Mantequilla clarificada o aceite para freír",
+      "Sal y limón (para servir)"
+    ],
+    "resumen": [
+      "Golpea ligeramente la carne (opcional, si es gruesa).",
+      "Pasa la carne por huevo batido y luego por pan rallado.",
+      "Fríe en abundante grasa caliente hasta que esté dorada.",
+      "Sazona con sal inmediatamente y sirve con limón."
+    ],
+    "detallado": "Para la versión auténtica, debe freírse en mantequilla clarificada, lo que le da un sabor más rico. Asegúrate de que el pan rallado cubra completamente la carne. Se sirve tradicionalmente con una rodaja de limón para exprimir por encima.",
+    "identificadores": [
+      "Carne",
+      "Frito",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "panzerotti",
+    "nombre": "Panzerotti",
+    "imagen-principal": "img/panzerotti.jpg",
+    "alt": "Empanadillas de masa de pizza rellenas y fritas",
+    "descripcion": "Pequeñas empanadas de masa de pizza fritas de Puglia. Suelen rellenarse con salsa de tomate y mozzarella fresca, y se comen como comida callejera o aperitivo. El exterior es crujiente y el interior es suave y fundente.",
+    "categorias": {
+      "tiempo": "45 minutos (si la masa está lista)",
+      "dificultad": "Media",
+      "porciones": "8 unidades"
+    },
+    "ingredientes": [
+      "Masa de pizza o pan",
+      "Mozzarella fresca (bien escurrida)",
+      "Salsa de tomate espesa",
+      "Aceite para freír",
+      "Orégano o albahaca"
+    ],
+    "resumen": [
+      "Estirar la masa y cortar círculos.",
+      "Rellenar la mitad del círculo con salsa de tomate, mozzarella y orégano.",
+      "Cerrar la masa como una media luna y sellar bien los bordes.",
+      "Freír en aceite caliente hasta que estén hinchados y dorados."
+    ],
+    "detallado": "Es vital sellar muy bien los bordes para evitar que el relleno se escape y explote al freír. El relleno de mozzarella debe estar lo más seco posible. Los panzerotti se sirven muy calientes, ¡cuidado al morder el interior fundido!",
+    "identificadores": [
+      "Aperitivo",
+      "Frito",
+      "Rellena"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "pasta_norma",
+    "nombre": "Pasta alla Norma",
+    "imagen-principal": "img/pasta_norma.jpg",
+    "alt": "Plato de pasta con salsa de tomate, berenjena frita y ricotta salata",
+    "descripcion": "Un plato siciliano clásico, originario de Catania. El nombre viene de la ópera de Bellini 'Norma', por su perfección. Combina pasta (generalmente maccheroni o rigatoni) con salsa de tomate, berenjena frita y queso ricotta salata rallado.",
+    "categorias": {
+      "tiempo": "40 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Maccheroni o Rigatoni",
+      "Berenjenas",
+      "Salsa de tomate casera",
+      "Ricotta Salata (queso seco y salado)",
+      "Albahaca fresca",
+      "Aceite de oliva para freír y cocinar"
+    ],
+    "resumen": [
+      "Corta las berenjenas en rodajas y fríelas hasta que estén doradas.",
+      "Prepara una salsa de tomate simple con ajo y albahaca.",
+      "Cocer la pasta al dente.",
+      "Mezcla la pasta con la salsa y las berenjenas. Sirve con Ricotta Salata rallada."
+    ],
+    "detallado": "El ingrediente distintivo es el queso Ricotta Salata, que es diferente a la ricotta fresca. Aporta un sabor salado y picante que equilibra la dulzura del tomate y la berenjena. Es importante que la berenjena se fría bien para que quede suave.",
+    "identificadores": [
+      "Pasta",
+      "Vegetariano",
+      "Fresco"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "ribollita",
+    "nombre": "Ribollita Toscana",
+    "imagen-principal": "img/ribollita.jpg",
+    "alt": "Sopa espesa de verduras, frijoles y pan",
+    "descripcion": "Una 're-cocida' (ribollita) sopa campesina de la Toscana, que se espesa con pan duro en lugar de carne. Es una sopa sin carne muy sustanciosa, a base de frijoles cannellini, col negra (cavolo nero), y otras verduras.",
+    "categorias": {
+      "tiempo": "120 minutos",
+      "dificultad": "Media",
+      "porciones": "8 personas"
+    },
+    "ingredientes": [
+      "Frijoles Cannellini",
+      "Col Negra (Cavolo Nero)",
+      "Col Rizada o Repollo",
+      "Zanahoria, Apio y Cebolla",
+      "Pan duro (sin corteza)",
+      "Caldo de verduras y Aceite de oliva"
+    ],
+    "resumen": [
+      "Sofríe la base (soffritto).",
+      "Añade las verduras y los frijoles (parte triturados, parte enteros).",
+      "Cocina a fuego lento por al menos una hora.",
+      "Al servir, se calienta de nuevo (se 'rebulle') y se coloca sobre rebanadas de pan duro."
+    ],
+    "detallado": "Esta sopa debe ser muy espesa, casi un guiso. El pan duro se utiliza como agente espesante y tradicionalmente se añade en el fondo del tazón. La clave es el uso de 'cavolo nero' (col rizada negra), que le da su sabor amargo característico.",
+    "identificadores": [
+      "Sopa",
+      "Vegano",
+      "Reconfortante"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "prosciutto_melone",
+    "nombre": "Prosciutto e Melone",
+    "imagen-principal": "img/prosciutto_melone.jpg",
+    "alt": "Lonchas de jamón crudo sobre trozos de melón",
+    "descripcion": "El aperitivo italiano por excelencia en verano. Un plato simple y rápido que combina la dulzura refrescante del melón maduro con el sabor salado y ligeramente dulce del Prosciutto Crudo (jamón curado).",
+    "categorias": {
+      "tiempo": "5 minutos",
+      "dificultad": "Muy Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Melón Cantalupo o Honeydew (maduro y frío)",
+      "Prosciutto Crudo (jamón curado)",
+      "Menta (opcional)"
+    ],
+    "resumen": [
+      "Corta el melón en rodajas, gajos o cubos.",
+      "Envuelve cada trozo de melón con una loncha de prosciutto.",
+      "Refrigera hasta el momento de servir."
+    ],
+    "detallado": "La clave es usar un melón que esté perfectamente frío y maduro, y Prosciutto de alta calidad que sea dulce y fino. La combinación de sabores (salado, dulce, fresco) es lo que hace que este plato funcione. Se sirve como antipasto (aperitivo) o un plato ligero de verano.",
+    "identificadores": [
+      "Aperitivo",
+      "Fresco",
+      "Rápido"
+    ],
+    "valoracion": 3
+  },
+  {
+    "id": "vitello_tonnato",
+    "nombre": "Vitello Tonnato",
+    "imagen-principal": "img/vitello_tonnato.jpg",
+    "alt": "Finas rodajas de ternera con salsa de atún y alcaparras",
+    "descripcion": "Un plato frío tradicional del Piamonte. Consiste en finas rodajas de ternera cocida (típicamente 'magatello') cubiertas con una salsa cremosa y sabrosa hecha de atún, mayonesa, alcaparras y anchoas. Se sirve como antipasto.",
+    "categorias": {
+      "tiempo": "120 minutos (cocción de la ternera)",
+      "dificultad": "Media",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Lomo de ternera (magatello)",
+      "Atún en aceite (escurrido)",
+      "Mayonesa",
+      "Alcaparras y Anchoas",
+      "Caldo de carne o vino blanco"
+    ],
+    "resumen": [
+      "Cuece la ternera en caldo y vino blanco hasta que esté tierna.",
+      "Enfría la ternera y córtala en rodajas muy finas.",
+      "Mezcla atún, mayonesa, alcaparras y anchoas hasta obtener una salsa suave.",
+      "Cubre las rodajas de ternera con la salsa y refrigera."
+    ],
+    "detallado": "La ternera debe estar completamente fría para cortarse muy fina. El sabor 'Umami' de la salsa proviene de la combinación de atún y anchoas. Es un plato que se prepara un día antes, ya que el reposo en frío permite que la ternera absorba mejor el sabor de la salsa.",
+    "identificadores": [
+      "Carne",
+      "Fresco",
+      "Clásico"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "crostata",
+    "nombre": "Crostata di Marmellata",
+    "imagen-principal": "img/crostata.jpg",
+    "alt": "Tarta de masa quebrada con mermelada y rejilla",
+    "descripcion": "Una de las tartas caseras más comunes en Italia. Es una tarta rústica con una base de masa 'pasta frolla' (masa quebrada) y un relleno de mermelada de albaricoque, cereza o frutos rojos. Se decora con una rejilla de masa.",
+    "categorias": {
+      "tiempo": "70 minutos",
+      "dificultad": "Fácil",
+      "porciones": "8 personas"
+    },
+    "ingredientes": [
+      "Para la masa (pasta frolla): Harina, Mantequilla, Azúcar, Huevo",
+      "Mermelada de fruta (albaricoque o cereza)"
+    ],
+    "resumen": [
+      "Prepara la pasta frolla y refrigera la masa.",
+      "Estira dos tercios de la masa para la base del molde.",
+      "Rellena con la mermelada y decora la parte superior con tiras de masa para hacer la rejilla.",
+      "Hornea a 180°C hasta que la masa esté dorada."
+    ],
+    "detallado": "La masa quebrada debe ser muy tierna; se logra con mantequilla fría. No hay que amasarla en exceso. Para evitar que la mermelada se salga, puedes pincelar la base con huevo antes de añadir el relleno. Ideal para la merienda o el desayuno.",
+    "identificadores": [
+      "Postre",
+      "Horneado",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "amatriciana",
+    "nombre": "Bucatini all'Amatriciana",
+    "imagen-principal": "img/amatriciana.jpg",
+    "alt": "Bucatini con salsa de tomate, guanciale y pecorino",
+    "descripcion": "Otro de los 'Cuatro Clásicos' romanos, aunque originario de Amatrice. Pasta con una salsa de guanciale (cachete de cerdo curado), queso Pecorino Romano y salsa de tomate. El Bucatini (un tipo de espagueti hueco) es la pasta tradicional.",
+    "categorias": {
+      "tiempo": "30 minutos",
+      "dificultad": "Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Bucatini o Spaghetti",
+      "Guanciale",
+      "Pecorino Romano rallado",
+      "Salsa de tomate o tomates pelados",
+      "Chile o Peperoncino"
+    ],
+    "resumen": [
+      "Dora el guanciale a fuego lento hasta que suelte su grasa.",
+      "Añade el chile, desglasa con vino blanco (opcional) y luego añade el tomate.",
+      "Cocer la pasta al dente y mezclar con la salsa.",
+      "Servir con abundante Pecorino rallado."
+    ],
+    "detallado": "El guanciale debe quedar crujiente, no quemado. La grasa del guanciale es la base del sabor y actúa como la emulsión junto con el queso. No lleva cebolla. Si utilizas vino blanco, deja que se evapore por completo antes de añadir el tomate.",
+    "identificadores": [
+      "Pasta",
+      "Clásico",
+      "Sabroso"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "calzone",
+    "nombre": "Calzone Napoletano",
+    "imagen-principal": "img/calzone.jpg",
+    "alt": "Media luna de masa de pizza rellena",
+    "descripcion": "El Calzone (que significa 'calcetín' o 'pantalón') es una pizza plegada. Originario de Nápoles, es una masa de pizza doblada en forma de media luna y sellada, rellena de ricotta, mozzarella, jamón cocido y, a veces, salsa de tomate. Se puede hornear o freír.",
+    "categorias": {
+      "tiempo": "40 minutos (si la masa está lista)",
+      "dificultad": "Media",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Masa de pizza",
+      "Ricotta fresca",
+      "Mozzarella (fior di latte o baja humedad)",
+      "Jamón cocido o Salame",
+      "Huevo batido para sellar"
+    ],
+    "resumen": [
+      "Estira la masa en un círculo y coloca el relleno en una mitad.",
+      "Humedece los bordes y dobla la masa, sellando firmemente.",
+      "Pinta con huevo (opcional) y hornea a 200°C hasta que esté dorado.",
+      "Alternativamente, puedes freírlo ('Calzone fritto')."
+    ],
+    "detallado": "Es esencial que el relleno esté lo más seco posible para evitar que la masa se rompa al hornearse y el queso se derrame. Sellar los bordes con un tenedor o retorciéndolos (a 'cordone') es crucial.",
+    "identificadores": [
+      "Horneado",
+      "Rellena",
+      "Sabroso"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "ciambella",
+    "nombre": "Ciambella Romagnola",
+    "imagen-principal": "img/ciambella.jpg",
+    "alt": "Rosca de bizcocho simple con azúcar",
+    "descripcion": "Un bizcocho simple y rústico en forma de rosca o anillo de la región de Emilia-Romaña. Es esponjoso, a menudo aromatizado con limón y se sirve tradicionalmente mojado en vino dulce o leche, perfecto para el desayuno o la merienda.",
+    "categorias": {
+      "tiempo": "60 minutos",
+      "dificultad": "Fácil",
+      "porciones": "8 personas"
+    },
+    "ingredientes": [
+      "Harina, Huevos",
+      "Azúcar",
+      "Mantequilla o aceite",
+      "Levadura en polvo",
+      "Ralladura de limón",
+      "Leche o yogur"
+    ],
+    "resumen": [
+      "Bate los huevos con el azúcar hasta que estén espumosos.",
+      "Añade la mantequilla derretida/aceite y la leche/yogur.",
+      "Incorpora la harina, la levadura y la ralladura de limón, mezclando suavemente.",
+      "Vierte en un molde de rosca y hornea a 180°C por 30-40 minutos."
+    ],
+    "detallado": "El molde de rosca es lo que le da su forma tradicional (Ciambella significa 'anillo'). La masa debe quedar ligeramente pegajosa, y el horneado debe ser a temperatura media para que se cocine uniformemente sin secarse.",
+    "identificadores": [
+      "Postre",
+      "Horneado",
+      "Rápido"
+    ],
+    "valoracion": 3
+  },
+  {
+    "id": "bagna_cauda",
+    "nombre": "Bagna Càuda",
+    "imagen-principal": "img/bagna_cauda.jpg",
+    "alt": "Salsa caliente de aceite, anchoas y ajo con verduras crudas",
+    "descripcion": "Literalmente 'salsa caliente', es una salsa de inmersión del Piamonte a base de ajo, anchoas y aceite de oliva, servida caliente en un recipiente especial. Las verduras de temporada (cardos, pimientos, hinojo) se mojan en ella.",
+    "categorias": {
+      "tiempo": "40 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Ajo (mucha cantidad)",
+      "Anchoas en aceite",
+      "Aceite de oliva virgen extra",
+      "Mantequilla (opcional)",
+      "Verduras crudas (pimientos, zanahorias, apio)"
+    ],
+    "resumen": [
+      "Corta el ajo muy fino y confítalo en el aceite a fuego muy bajo.",
+      "Añade las anchoas y disuélvelas lentamente con un tenedor.",
+      "Mantén la salsa caliente en una cazuela de barro sobre una vela o mechero.",
+      "Sirve las verduras crudas para mojar en la salsa."
+    ],
+    "detallado": "La cocción lenta del ajo es vital para que se ablande y no resulte amargo. La salsa es muy aromática y sabrosa (umami). Se come directamente del recipiente central, un acto muy social. No se debe hervir la salsa, solo mantenerla caliente.",
+    "identificadores": [
+      "Salsa",
+      "Umami",
+      "Aperitivo"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "zuppa_inglese",
+    "nombre": "Zuppa Inglese",
+    "imagen-principal": "img/zuppa_inglese.jpg",
+    "alt": "Postre de bizcocho empapado en licor y crema pastelera",
+    "descripcion": "Un postre de la región de Emilia-Romaña que se traduce como 'Sopa Inglesa', aunque es totalmente italiano. Consiste en capas de bizcocho empapado en licor Alchermes (un licor rojo) o Ron, alternadas con crema pastelera y crema de chocolate, similar a un trifle.",
+    "categorias": {
+      "tiempo": "60 minutos + 4h refrigeración",
+      "dificultad": "Media",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Bizcocho o bizcochos de soletilla",
+      "Leche, Yemas de huevo, Azúcar, Ralladura de limón (para la crema)",
+      "Cacao en polvo (para la crema de chocolate)",
+      "Licor Alchermes o Ron"
+    ],
+    "resumen": [
+      "Prepara la crema pastelera, dividiéndola y añadiendo cacao a una mitad.",
+      "Corta el bizcocho en capas y mójalas en el licor.",
+      "Monta las capas de bizcocho, crema amarilla y crema de chocolate.",
+      "Refrigera por al menos 4 horas para que el postre se asiente."
+    ],
+    "detallado": "El licor Alchermes es lo que le da el característico color rosa-rojo. La clave está en la doble crema, que le aporta la riqueza. Aunque se llama 'sopa', es un postre firme que se come con cuchara.",
+    "identificadores": [
+      "Postre",
+      "Cremoso",
+      "Clásico"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "pappa_al_pomodoro",
+    "nombre": "Pappa al Pomodoro",
+    "imagen-principal": "img/pappa_al_pomodoro.jpg",
+    "alt": "Sopa espesa de tomate y pan toscana",
+    "descripcion": "Una sencilla y tradicional sopa toscana a base de pan duro, tomates, ajo, albahaca y aceite de oliva. Es un plato vegano y de aprovechamiento, que se sirve caliente, aunque también se puede tomar a temperatura ambiente.",
+    "categorias": {
+      "tiempo": "45 minutos",
+      "dificultad": "Fácil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Tomates maduros o triturado",
+      "Pan de campo toscano duro (sin sal)",
+      "Caldo de verduras",
+      "Ajo y Albahaca fresca",
+      "Aceite de oliva virgen extra"
+    ],
+    "resumen": [
+      "Sofríe el ajo en aceite y añade el tomate, cocinando unos 20 minutos.",
+      "Añade el pan duro troceado y el caldo de verduras.",
+      "Cocina a fuego lento, removiendo hasta que el pan se disuelva y espese la 'pappa'.",
+      "Sirve con un chorrito de AOVE crudo y albahaca."
+    ],
+    "detallado": "El pan debe ser denso y sin sal. El objetivo es que el pan se disuelva por completo en el tomate, creando una textura suave y espesa (la 'pappa'). Utilizar tomates San Marzano aumenta la dulzura natural.",
+    "identificadores": [
+      "Sopa",
+      "Vegano",
+      "Reconfortante"
+    ],
+    "valoracion": 3
+  },
+  {
+    "id": "pistachio_pesto",
+    "nombre": "Pesto de Pistacho Siciliano",
+    "imagen-principal": "img/pistachio_pesto.jpg",
+    "alt": "Pasta con salsa verde de pistacho",
+    "descripcion": "Una variación del pesto tradicional, típica de Sicilia. Utiliza pistachos molidos en lugar de piñones, creando una salsa rica, ligeramente dulce y terrosa, ideal para pasta corta, mariscos o para untar.",
+    "categorias": {
+      "tiempo": "15 minutos",
+      "dificultad": "Fácil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Pistachos pelados y sin sal",
+      "Aceite de oliva virgen extra",
+      "Queso Parmesano y Pecorino (opcional)",
+      "Albahaca o Menta (opcional)",
+      "Ajo"
+    ],
+    "resumen": [
+      "Tuesta ligeramente los pistachos.",
+      "Muele los pistachos con ajo hasta que se forme una pasta.",
+      "Añade el queso y el aceite de oliva, mezclando hasta obtener la consistencia de una salsa.",
+      "Sírvelo sobre pasta corta o como aderezo."
+    ],
+    "detallado": "Para evitar que los pistachos liberen demasiado aceite, hay que picarlos rápidamente. La albahaca o la menta son opcionales y sirven para añadir frescura. Se puede añadir un poco de ricotta para una textura más cremosa.",
+    "identificadores": [
+      "Salsa",
+      "Aromático",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "polenta_ragu",
+    "nombre": "Polenta con Ragú de Jabalí",
+    "imagen-principal": "img/polenta_ragu.jpg",
+    "alt": "Polenta cremosa con estofado de carne oscuro",
+    "descripcion": "Plato típico de la cocina del Norte de Italia, especialmente en regiones montañosas. La polenta (sémola de maíz cocida) se sirve blanda y cremosa, acompañada de un ragú de carne de caza (como jabalí) o carne de vacuno cocido a fuego lento.",
+    "categorias": {
+      "tiempo": "180 minutos (ragú) / 45 minutos (polenta)",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Harina de maíz para Polenta",
+      "Caldo o agua",
+      "Ragú de carne de jabalí o ternera",
+      "Vino tinto",
+      "Zanahoria, Apio y Cebolla"
+    ],
+    "resumen": [
+      "Prepara el ragú con la carne marinada, cocinando a fuego lento durante al menos 3 horas.",
+      "Hierve el agua/caldo para la polenta y añade la harina lentamente, sin dejar de remover.",
+      "Cocina la polenta hasta que se separe de los bordes (30-45 minutos).",
+      "Sirve la polenta caliente con el ragú encima."
+    ],
+    "detallado": "La polenta debe ser cremosa; usa polenta instantánea para acelerar el proceso, pero la tradicional cocción lenta con constante remoción es lo que le da la mejor textura. El ragú debe ser muy espeso y rico en sabor.",
+    "identificadores": [
+      "Reconfortante",
+      "Umami",
+      "Lento"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "pisarei_faso",
+    "nombre": "Pisarei e Fasò (Pasta y Frijoles)",
+    "imagen-principal": "img/pisarei_faso.jpg",
+    "alt": "Pasta pequeña con salsa de frijoles",
+    "descripcion": "Un plato pobre pero sabroso de Piacenza (Emilia-Romaña). Pequeñas bolitas de pasta ('pisarei', hechas con harina y pan rallado) cocinadas en una salsa espesa de frijoles (fasò), manteca de cerdo y a veces panceta.",
+    "categorias": {
+      "tiempo": "120 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Para los Pisarei: Harina, Pan rallado, Agua",
+      "Frijoles Borlotti o Canellinni",
+      "Cebolla, Zanahoria, Apio",
+      "Extracto de tomate",
+      "Manteca de cerdo (lardo) o aceite"
+    ],
+    "resumen": [
+      "Prepara la masa y forma los pequeños 'pisarei'.",
+      "Prepara un soffritto y añade los frijoles cocidos y el extracto de tomate.",
+      "Cocina la salsa a fuego lento para que espese.",
+      "Cuece los pisarei en la salsa de frijoles o en agua y mézclalos antes de servir."
+    ],
+    "detallado": "La pasta 'pisarei' es diminuta. La salsa debe ser espesa y reconfortante. El secreto de este plato radica en el uso de una base grasa de manteca y el sabor terroso de los frijoles Borlotti.",
+    "identificadores": [
+      "Pasta",
+      "Legumbres",
+      "Reconfortante"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "sfogliatella",
+    "nombre": "Sfogliatella Riccia Napoletana",
+    "imagen-principal": "img/sfogliatella.jpg",
+    "alt": "Pastel en forma de concha con hojaldre y relleno",
+    "descripcion": "Un postre horneado de Nápoles, famoso por su masa de hojaldre crujiente ('riccia', que significa rizada) en forma de concha. El relleno es una mezcla dulce y especiada de sémola, ricotta y fruta confitada.",
+    "categorias": {
+      "tiempo": "180 minutos (masa)",
+      "dificultad": "Difícil",
+      "porciones": "6 unidades"
+    },
+    "ingredientes": [
+      "Para la masa: Harina, Agua, Manteca de cerdo",
+      "Para el relleno: Ricotta fresca, Sémola, Azúcar, Fruta confitada, Canela, Esencia de azahar"
+    ],
+    "resumen": [
+      "Prepara la masa y extiéndela muy fina, untándola con manteca y enrollándola.",
+      "Corta la masa en rodajas y forma las 'conchas'.",
+      "Prepara el relleno de sémola y ricotta y rellena las conchas.",
+      "Hornea a 200°C hasta que el hojaldre esté dorado y crujiente."
+    ],
+    "detallado": "El proceso de la masa 'riccia' es muy laborioso, ya que requiere crear innumerables capas finas que se abren como una ostra al hornear. El contraste entre la cáscara crujiente y el relleno suave es lo que lo hace único.",
+    "identificadores": [
+      "Postre",
+      "Rellena",
+      "Horneado"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "piadina",
+    "nombre": "Piadina Romagnola",
+    "imagen-principal": "img/piadina.jpg",
+    "alt": "Pan plano delgado doblado con relleno",
+    "descripcion": "Un pan plano delgado de la región de Emilia-Romaña, típicamente cocinado en una plancha o sartén. Se rellena como un sándwich o taco con ingredientes como Prosciutto, Rúcula y Queso Squacquerone (un queso fresco y suave).",
+    "categorias": {
+      "tiempo": "20 minutos",
+      "dificultad": "Fácil",
+      "porciones": "4 unidades"
+    },
+    "ingredientes": [
+      "Harina, Agua, Sal",
+      "Manteca de cerdo o aceite de oliva",
+      "Relleno: Prosciutto Crudo, Rúcula, Queso Squacquerone o Crescenza"
+    ],
+    "resumen": [
+      "Prepara la masa con harina y grasa, y déjala reposar brevemente.",
+      "Divide la masa y estírala en círculos muy delgados (2-3 mm).",
+      "Cocina cada piadina en una sartén caliente por ambos lados.",
+      "Rellena inmediatamente mientras está caliente, dobla y sirve."
+    ],
+    "detallado": "La grasa (tradicionalmente manteca de cerdo) es lo que le da su elasticidad. El grosor debe ser el de una tortilla. La piadina se sirve mejor al momento, cuando la masa está suave y el relleno empieza a derretirse ligeramente con el calor residual.",
+    "identificadores": [
+      "Rápido",
+      "Aperitivo",
+      "Pan"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "pasta_aglio",
+    "nombre": "Spaghetti Aglio e Olio",
+    "imagen-principal": "img/aglio_e_olio.jpg",
+    "alt": "Pasta con ajo, aceite de oliva y chile",
+    "descripcion": "El epítome de la simplicidad napolitana. Un plato de pasta (spaghetti) con una salsa hecha únicamente de aceite de oliva, ajo, peperoncino (chile) y perejil. Es increíblemente rápido y sabroso.",
+    "categorias": {
+      "tiempo": "15 minutos",
+      "dificultad": "Muy Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Spaghetti",
+      "Aceite de oliva virgen extra",
+      "Ajo en láminas",
+      "Peperoncino (chile)",
+      "Perejil fresco picado"
+    ],
+    "resumen": [
+      "Calienta el aceite a fuego bajo y añade el ajo y el chile.",
+      "Fríe el ajo hasta que esté ligeramente dorado (sin quemarse).",
+      "Añade el perejil y un poco de agua de cocción de la pasta.",
+      "Mezcla los espaguetis cocidos al dente con la salsa y sirve inmediatamente."
+    ],
+    "detallado": "El secreto es infusionar el aceite con el ajo y el chile a fuego muy bajo para que el ajo no se queme ni amargue. Si el ajo se dora demasiado, el plato se arruina. Se puede añadir pan rallado tostado para dar textura.",
+    "identificadores": [
+      "Pasta",
+      "Rápido",
+      "Sabroso"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "risotto_milano",
+    "nombre": "Risotto alla Milanese",
+    "imagen-principal": "img/risotto_milano.jpg",
+    "alt": "Risotto de color amarillo con azafrán",
+    "descripcion": "Un risotto de Milán, famoso por su color dorado que proviene del azafrán. La cremosidad se logra con el proceso de cocción lenta y la mantecatura final con mantequilla y queso Parmesano.",
+    "categorias": {
+      "tiempo": "40 minutos",
+      "dificultad": "Medio",
+      "porciones": "3 personas"
+    },
+    "ingredientes": [
+      "Arroz Carnaroli o Arborio",
+      "Azafrán en hebras (o polvo)",
+      "Cebolla finamente picada",
+      "Vino blanco seco",
+      "Caldo de carne o verduras",
+      "Mantequilla y queso Parmesano"
+    ],
+    "resumen": [
+      "Sofríe la cebolla y tuesta el arroz ('tostatura').",
+      "Desglasa con vino y añade el caldo caliente poco a poco.",
+      "Disuelve el azafrán en el último cucharón de caldo y añádelo.",
+      "Retira del fuego para la mantecatura con mantequilla y queso."
+    ],
+    "detallado": "Se debe usar caldo muy caliente y mover constantemente, pero suavemente. El azafrán debe ser de buena calidad para obtener el color y sabor deseados. Este risotto a menudo se sirve como acompañamiento del Ossobuco alla Milanese.",
+    "identificadores": [
+      "Cremoso",
+      "Umami",
+      "Clásico"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "gricia",
+    "nombre": "Pasta alla Gricia",
+    "imagen-principal": "img/gricia.jpg",
+    "alt": "Pasta con guanciale, pecorino y pimienta",
+    "descripcion": "Considerada la madre de las pastas romanas (anterior a la Carbonara y Amatriciana). Es una versión sencilla pero potente de pasta con guanciale crujiente, queso Pecorino Romano y pimienta negra.",
+    "categorias": {
+      "tiempo": "20 minutos",
+      "dificultad": "Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Rigatoni o Spaghetti",
+      "Guanciale",
+      "Queso Pecorino Romano rallado",
+      "Pimienta negra recién molida",
+      "Agua de cocción de la pasta"
+    ],
+    "resumen": [
+      "Dora el guanciale a fuego lento hasta que esté crujiente y reserva los trozos.",
+      "Mezcla el Pecorino con el agua de cocción para crear la crema.",
+      "Combina la pasta cocida con la grasa del guanciale y la crema de queso.",
+      "Sirve con los trozos de guanciale y pimienta."
+    ],
+    "detallado": "No lleva tomate, huevo ni cebolla. La cremosidad se basa únicamente en la grasa del guanciale y la emulsión del Pecorino. Es un plato muy sabroso que depende totalmente de la calidad de sus dos ingredientes principales.",
+    "identificadores": [
+      "Pasta",
+      "Clásico",
+      "Rápido"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "parrozzo",
+    "nombre": "Parrozzo Abruzzese",
+    "imagen-principal": "img/parrozzo.jpg",
+    "alt": "Pastel semiesférico cubierto de chocolate",
+    "descripcion": "Un pastel tradicional de la región de Abruzzo. Su forma semiesférica imita una hogaza de pan de la región, y su masa es densa, hecha con sémola o almendras. Está cubierto por una rica capa de chocolate negro.",
+    "categorias": {
+      "tiempo": "80 minutos",
+      "dificultad": "Media",
+      "porciones": "8 personas"
+    },
+    "ingredientes": [
+      "Sémola o Harina de almendras",
+      "Huevos, Azúcar",
+      "Ralladura de limón o naranja",
+      "Chocolate negro para la cobertura"
+    ],
+    "resumen": [
+      "Bate los huevos con el azúcar y añade la sémola/almendras y los aromas.",
+      "Vierte la masa en un molde semiesférico y hornea a 170°C.",
+      "Una vez frío, cubre el pastel con chocolate negro derretido.",
+      "Deja enfriar el chocolate antes de servir."
+    ],
+    "detallado": "El pastel no lleva levadura. La clave de su textura es que las claras se baten a punto de nieve e integran suavemente con las yemas y la sémola/almendra. La capa de chocolate negro es distintiva y debe ser fina.",
+    "identificadores": [
+      "Postre",
+      "Horneado",
+      "Clásico"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "fritto_misto",
+    "nombre": "Fritto Misto di Mare",
+    "imagen-principal": "img/fritto_misto.jpg",
+    "alt": "Plato de mariscos y pescado frito variado",
+    "descripcion": "Una mezcla de pescados y mariscos fritos, popular en las regiones costeras. Típicamente incluye camarones, calamares y pequeños pescados blancos, ligeramente rebozados en harina y fritos hasta que estén crujientes.",
+    "categorias": {
+      "tiempo": "20 minutos",
+      "dificultad": "Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Calamares y camarones",
+      "Pescado blanco pequeño (ej. boquerones)",
+      "Harina de sémola o de arroz",
+      "Aceite de girasol para freír",
+      "Limón (para servir)"
+    ],
+    "resumen": [
+      "Lava y seca muy bien el pescado y el marisco.",
+      "Pasa ligeramente por harina (el exceso se quita con un colador).",
+      "Fríe en aceite muy caliente hasta que estén dorados (por tandas).",
+      "Sirve inmediatamente con una pizca de sal y rodajas de limón."
+    ],
+    "detallado": "La fritura debe ser rápida y a alta temperatura para que el interior quede suave y el exterior muy crujiente. Es crucial secar el pescado antes de enharinar. Se sirve tradicionalmente en un cono de papel o en un plato con limón.",
+    "identificadores": [
+      "Mariscos",
+      "Frito",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "baccala_vicentina",
+    "nombre": "Baccalà alla Vicentina",
+    "imagen-principal": "img/baccala.jpg",
+    "alt": "Pescado (bacalao) guisado cremoso",
+    "descripcion": "Un plato tradicional y laborioso de Vicenza (Véneto). Es bacalao (stockfish) seco y desalado, cocinado a fuego lento en leche y aceite con cebolla y queso Parmesano hasta que se vuelve increíblemente suave y cremoso. Se sirve con polenta.",
+    "categorias": {
+      "tiempo": "240 minutos (4 horas)",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Bacalao seco (stockfish) desalado",
+      "Leche",
+      "Aceite de oliva",
+      "Cebolla",
+      "Queso Parmesano rallado",
+      "Harina de trigo (para espesar)"
+    ],
+    "resumen": [
+      "Sofríe la cebolla, añade el bacalao en trozos y espolvorea harina.",
+      "Cubre con la leche y el aceite, y cocina a fuego muy lento por 3-4 horas.",
+      "Remueve ocasionalmente hasta que el bacalao se deshaga y espese la salsa.",
+      "Sirve caliente con polenta y Parmesano."
+    ],
+    "detallado": "La clave es la cocción extremadamente lenta que transforma el pescado en una crema. No se debe remover demasiado, solo lo suficiente para evitar que se pegue al fondo. El Parmesano se añade al final para enriquecer la salsa.",
+    "identificadores": [
+      "Pescado",
+      "Cremoso",
+      "Lento"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "torta_caprese",
+    "nombre": "Torta Caprese",
+    "imagen-principal": "img/torta_caprese.jpg",
+    "alt": "Pastel de chocolate y almendras sin harina",
+    "descripcion": "Un pastel denso y húmedo de la isla de Capri, famoso por no llevar harina. Se elabora con chocolate negro y almendras molidas, lo que lo hace naturalmente libre de gluten. Tiene un rico sabor a cacao y almendra.",
+    "categorias": {
+      "tiempo": "60 minutos",
+      "dificultad": "Fácil",
+      "porciones": "8 personas"
+    },
+    "ingredientes": [
+      "Chocolate negro de alta calidad",
+      "Almendras molidas",
+      "Mantequilla",
+      "Azúcar, Huevos",
+      "Un toque de licor (ej. Strega o ron)",
+      "Azúcar glas para decorar"
+    ],
+    "resumen": [
+      "Derrite el chocolate con la mantequilla.",
+      "Bate las yemas con azúcar; monta las claras a punto de nieve.",
+      "Mezcla el chocolate, las almendras molidas y las yemas; luego incorpora las claras.",
+      "Hornea a 170°C por 40-50 minutos."
+    ],
+    "detallado": "El licor es opcional pero añade profundidad de sabor. El pastel debe quedar húmedo y ligeramente hundido en el centro al enfriarse. No lleva levadura, por lo que su volumen proviene de las claras de huevo montadas. Se sirve frío o a temperatura ambiente.",
+    "identificadores": [
+      "Postre",
+      "Horneado",
+      "Sin Gluten"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "coda_vaccinara",
+    "nombre": "Coda alla Vaccinara",
+    "imagen-principal": "img/coda_vaccinara.jpg",
+    "alt": "Estofado de rabo de toro con tomate y verduras",
+    "descripcion": "Un estofado clásico de la cocina romana, hecho con rabo de toro. La carne se cuece a fuego lento con vino tinto, tomate, apio, pasas y a veces piñones. El resultado es una carne tiernísima con una salsa agridulce y rica.",
+    "categorias": {
+      "tiempo": "240 minutos (4 horas)",
+      "dificultad": "Difícil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Rabo de toro (coda di bue)",
+      "Vino tinto",
+      "Tomate triturado",
+      "Apio, Zanahoria, Cebolla",
+      "Pasas, Piñones, Hierbas aromáticas"
+    ],
+    "resumen": [
+      "Sella el rabo de toro y reserva.",
+      "Sofríe las verduras, añade la carne y desglasa con vino.",
+      "Añade el tomate y el caldo, y cuece a fuego muy lento por al menos 4 horas.",
+      "Incorpora las pasas y los piñones en la fase final."
+    ],
+    "detallado": "La cocción debe ser muy, muy lenta para que el colágeno del rabo se disuelva y la carne se desprenda del hueso. La cantidad de apio es significativa en la receta tradicional romana y es esencial para el sabor.",
+    "identificadores": [
+      "Carne",
+      "Estofado",
+      "Lento"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "tortellini_brodo",
+    "nombre": "Tortellini in Brodo",
+    "imagen-principal": "img/tortellini_brodo.jpg",
+    "alt": "Tortellini rellenos flotando en caldo",
+    "descripcion": "Un plato tradicional de Bolonia (Emilia-Romaña), especialmente para Navidad. Los pequeños tortellini rellenos (típicamente de carne, Parmesano y jamón) se sirven en un caldo de capón (caldo de ave) claro y sabroso.",
+    "categorias": {
+      "tiempo": "180 minutos (caldo) / 30 minutos (pasta)",
+      "dificultad": "Difícil (por la pasta rellena)",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Tortellini frescos (rellenos de carne)",
+      "Caldo de capón (o pollo/ternera) casero",
+      "Queso Parmesano rallado (para servir)"
+    ],
+    "resumen": [
+      "Prepara un caldo de capón robusto y claro, y cuélalo.",
+      "Justo antes de servir, cuece los tortellini en el caldo hirviendo por 3-4 minutos.",
+      "Sirve inmediatamente el caldo con los tortellini flotando.",
+      "Acompaña con queso Parmesano."
+    ],
+    "detallado": "El caldo es tan importante como la pasta. Debe ser casero, aromático y no grasoso. Los tortellini deben ser pequeños y rellenos de carne. Este es un plato de gran tradición, donde la pasta se come 'sorbiendo' el caldo.",
+    "identificadores": [
+      "Pasta",
+      "Sopa",
+      "Rellena"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "affogato",
+    "nombre": "Affogato al Caffè",
+    "imagen-principal": "img/affogato.jpg",
+    "alt": "Helado de vainilla cubierto con un chorro de espresso caliente",
+    "descripcion": "Un postre-bebida increíblemente simple que se traduce como 'ahogado'. Consiste en una bola de helado de vainilla (o fior di latte) 'ahogada' con un chorro de espresso caliente recién hecho. El contraste es delicioso.",
+    "categorias": {
+      "tiempo": "5 minutos",
+      "dificultad": "Muy Fácil",
+      "porciones": "1 persona"
+    },
+    "ingredientes": [
+      "Helado de vainilla o Fior di Latte",
+      "Café espresso caliente",
+      "Licor (ej. Amaretto) opcional"
+    ],
+    "resumen": [
+      "Coloca una o dos bolas de helado en una taza o vaso.",
+      "Vierte inmediatamente un shot de espresso caliente sobre el helado.",
+      "Añade un chorrito de licor si lo deseas.",
+      "Sirve de inmediato, antes de que el helado se derrita por completo."
+    ],
+    "detallado": "El contraste de temperatura (helado frío y café caliente) es fundamental. Es el postre perfecto y rápido para después de la cena, combinando la cremosidad del helado y la amargura del café.",
+    "identificadores": [
+      "Postre",
+      "Rápido",
+      "Cremoso"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "zeppole",
+    "nombre": "Zeppole di San Giuseppe",
+    "imagen-principal": "img/zeppole.jpg",
+    "alt": "Bolas de masa frita o al horno con crema pastelera",
+    "descripcion": "Un postre tradicional de la Fiesta de San José (Día del Padre en Italia). Son buñuelos hechos con masa choux, que se fríen o se hornean y se rellenan con crema pastelera y cerezas negras confitadas (amarena).",
+    "categorias": {
+      "tiempo": "60 minutos",
+      "dificultad": "Media",
+      "porciones": "8 unidades"
+    },
+    "ingredientes": [
+      "Para la masa choux: Agua, Harina, Mantequilla, Huevos",
+      "Crema Pastelera",
+      "Cerezas Amarena (cerezas negras confitadas)",
+      "Aceite para freír (o al horno)"
+    ],
+    "resumen": [
+      "Prepara la masa choux (similar a los profiteroles) y haz anillos con una manga pastelera.",
+      "Fríe o hornea los anillos hasta que estén hinchados y huecos.",
+      "Rellena con abundante crema pastelera y decora con las cerezas.",
+      "Espolvorea con azúcar glas."
+    ],
+    "detallado": "La versión frita ('fritta') es la más tradicional y la más sabrosa, aunque la horneada ('al forno') es más ligera. Es importante que la masa se seque bien al freír o al hornear para que mantenga su forma y textura.",
+    "identificadores": [
+      "Postre",
+      "Frito",
+      "Cremoso"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "brodetto",
+    "nombre": "Brodetto all'Anconetana",
+    "imagen-principal": "img/brodetto.jpg",
+    "alt": "Guiso de pescado y mariscos con tomate y vinagre",
+    "descripcion": "Un guiso de pescado y mariscos de la costa adriática (región de Marche). Es una sopa de pescado con una gran variedad de pescados, cocinados en una base de tomate, vino blanco y, distintivamente, vinagre. Se sirve con pan tostado.",
+    "categorias": {
+      "tiempo": "45 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Pescado y marisco variado (13 tipos en la receta original)",
+      "Tomate, Vino blanco",
+      "Vinagre (de vino o manzana)",
+      "Aceite de oliva, ajo, perejil"
+    ],
+    "resumen": [
+      "Sofríe el ajo, añade el tomate, vino y vinagre, y cocina la base.",
+      "Añade los pescados más duros primero, y luego el marisco.",
+      "Cocina a fuego lento hasta que todos los ingredientes estén tiernos.",
+      "Sirve inmediatamente con pan tostado."
+    ],
+    "detallado": "La adición de vinagre es la característica de este 'brodetto' (caldo), que le da un toque agridulce que lo distingue de otras sopas de pescado italianas. Se suele usar poca o ninguna agua, ya que el caldo se forma con el líquido de los ingredientes.",
+    "identificadores": [
+      "Sopa",
+      "Mariscos",
+      "Sabroso"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "parmigiana_zucchini",
+    "nombre": "Parmigiana di Zucchine",
+    "imagen-principal": "img/parmigiana_zucchine.jpg",
+    "alt": "Capas de calabacín, queso y salsa gratinadas",
+    "descripcion": "Una variante de la clásica 'Melanzane alla Parmigiana', pero utilizando rodajas de calabacín (zucchine) en lugar de berenjena. El calabacín se fríe o se asa y se gratina con queso mozzarella, Parmesano y una salsa de tomate suave.",
+    "categorias": {
+      "tiempo": "60 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Calabacines",
+      "Mozzarella fresca",
+      "Queso Parmesano rallado",
+      "Salsa de tomate casera",
+      "Albahaca y Aceite de oliva"
+    ],
+    "resumen": [
+      "Corta el calabacín y fríelo/ásalo.",
+      "En un molde, alterna capas de salsa de tomate, calabacín, mozzarella y Parmesano.",
+      "Hornea a 180°C por 30-40 minutos.",
+      "Deja reposar antes de cortar y servir."
+    ],
+    "detallado": "Para evitar que el plato quede acuoso, los calabacines deben estar lo más secos posible después de la cocción. La mozzarella debe escurrirse bien. Es un plato más ligero y suave que la versión con berenjena.",
+    "identificadores": [
+      "Horneado",
+      "Vegetariano",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "castagnole",
+    "nombre": "Castagnole",
+    "imagen-principal": "img/castagnole.jpg",
+    "alt": "Pequeñas bolitas de masa dulce fritas",
+    "descripcion": "Buñuelos pequeños y suaves, populares durante el Carnaval. Son bolitas de masa de harina, huevos, azúcar y un toque de licor (como ron o anís), fritas y espolvoreadas con azúcar glas o bañadas en miel.",
+    "categorias": {
+      "tiempo": "40 minutos",
+      "dificultad": "Fácil",
+      "porciones": "10-12 unidades"
+    },
+    "ingredientes": [
+      "Harina, Huevos, Azúcar",
+      "Mantequilla o aceite",
+      "Ralladura de limón o naranja",
+      "Ron o licor de anís",
+      "Aceite para freír"
+    ],
+    "resumen": [
+      "Mezcla los ingredientes para formar una masa suave y manejable.",
+      "Forma pequeñas bolitas (del tamaño de una castaña).",
+      "Fríe en aceite caliente hasta que estén hinchadas y doradas.",
+      "Escurre el exceso de aceite y espolvorea con azúcar glas."
+    ],
+    "detallado": "La masa debe ser suave, pero no pegajosa. El truco es freírlas en aceite a temperatura media-baja para que se cocinen por dentro sin quemarse por fuera. El aroma cítrico y el licor le dan su sabor festivo.",
+    "identificadores": [
+      "Postre",
+      "Frito",
+      "Rápido"
+    ],
+    "valoracion": 3
+  },
+  {
+    "id": "pasta_salsiccia",
+    "nombre": "Orecchiette con Salsiccia e Broccoletti",
+    "imagen-principal": "img/orecchiette_salsiccia.jpg",
+    "alt": "Pasta Orecchiette con salchicha y brócoli",
+    "descripcion": "Un plato de pasta icónico de Puglia. Las 'orecchiette' (pequeñas orejas) se combinan con salchicha italiana desmenuzada, brócoli (o grelos), ajo y chile, creando un plato rústico y con un sabor fuerte.",
+    "categorias": {
+      "tiempo": "35 minutos",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Orecchiette (pasta fresca)",
+      "Salchicha italiana (sin tripa)",
+      "Broccoletti (grelos o brócoli)",
+      "Ajo, Peperoncino (chile)",
+      "Aceite de oliva virgen extra"
+    ],
+    "resumen": [
+      "Lava y cuece el brócoli/grelos y resérvalo.",
+      "Sofríe el ajo y el chile, y añade la salchicha desmenuzada hasta que esté dorada.",
+      "Cuece la pasta (a menudo con el brócoli) y mézclala con la salsa y el brócoli escurrido.",
+      "Añade un poco de agua de cocción para ligar."
+    ],
+    "detallado": "La tradición de Puglia es cocinar los grelos en la misma agua que luego se usará para cocer la pasta. La salchicha debe estar bien dorada para liberar su sabor. Se puede añadir queso Parmesano o Pecorino al servir.",
+    "identificadores": [
+      "Pasta",
+      "Sabroso",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "tiramisu_pistacho",
+    "nombre": "Tiramisú de Pistacho",
+    "imagen-principal": "img/tiramisu_pistacho.jpg",
+    "alt": "Tiramisú con crema de pistacho y bizcochos verdes",
+    "descripcion": "Una deliciosa variación del clásico Tiramisú, donde la crema de mascarpone se mezcla con pasta de pistacho puro, y los bizcochos se mojan en café o leche con licor. El resultado es un postre cremoso de color verde pálido.",
+    "categorias": {
+      "tiempo": "40 minutos + 6h refrigeración",
+      "dificultad": "Fácil",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Queso Mascarpone",
+      "Pasta de Pistacho (100% pistacho)",
+      "Huevos, Azúcar",
+      "Bizcochos de soletilla",
+      "Leche o Café",
+      "Pistachos picados para decorar"
+    ],
+    "resumen": [
+      "Prepara la crema de Mascarpone con huevos y azúcar.",
+      "Incorpora la pasta de pistacho a la crema.",
+      "Moja los bizcochos en el líquido y arma las capas de bizcocho y crema.",
+      "Refrigera y decora con pistachos picados antes de servir."
+    ],
+    "detallado": "Asegúrate de usar pasta de pistacho de buena calidad, ya que es el sabor principal. No utilices cremas de pistacho azucaradas. Se puede sustituir el café por leche con un toque de ron para mantener el color verde vibrante de la crema.",
+    "identificadores": [
+      "Postre",
+      "Cremoso",
+      "Sin Horno"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "farinata",
+    "nombre": "Farinata Ligure (Torta de Garbanzos)",
+    "imagen-principal": "img/farinata.jpg",
+    "alt": "Pan plano delgado de harina de garbanzos",
+    "descripcion": "Un pan plano muy delgado y crujiente de Liguria, hecho únicamente de harina de garbanzos, agua, aceite y sal. Es naturalmente vegano y sin gluten, y se hornea a alta temperatura en una sartén de cobre. Se come caliente, en porciones.",
+    "categorias": {
+      "tiempo": "60 minutos (incluye reposo)",
+      "dificultad": "Fácil",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Harina de garbanzos",
+      "Agua",
+      "Aceite de oliva virgen extra",
+      "Sal y Pimienta negra"
+    ],
+    "resumen": [
+      "Mezcla la harina de garbanzos, agua y sal, y déjala reposar 30 minutos.",
+      "Retira la espuma de la superficie y añade AOVE.",
+      "Vierte la mezcla en una bandeja engrasada (debe ser muy fina).",
+      "Hornea a 220°C hasta que esté dorada y con una costra crujiente."
+    ],
+    "detallado": "La masa debe ser muy líquida, casi como una crepe. La Farinata debe hornearse a muy alta temperatura para que el exterior quede crujiente y se formen ampollas. Se sirve espolvoreada con pimienta negra, directamente del horno.",
+    "identificadores": [
+      "Aperitivo",
+      "Vegano",
+      "Sin Gluten"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "cappelletti",
+    "nombre": "Cappelletti in Brodo",
+    "imagen-principal": "img/cappelletti.jpg",
+    "alt": "Pasta rellena similar a tortellini en caldo",
+    "descripcion": "Similares a los tortellini, los Cappelletti ('sombreritos') son pasta rellena de Emilia-Romaña, a menudo rellenos de queso y carne. Se sirven tradicionalmente en un caldo de capón para ocasiones especiales.",
+    "categorias": {
+      "tiempo": "180 minutos (caldo) / 30 minutos (pasta)",
+      "dificultad": "Difícil (pasta rellena)",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Cappelletti frescos (rellenos de queso y/o carne)",
+      "Caldo de capón o pollo casero",
+      "Queso Parmesano rallado (para servir)"
+    ],
+    "resumen": [
+      "Prepara un caldo de capón de cocción lenta y cuélalo.",
+      "Cocer los cappelletti en el caldo hirviendo por 3-5 minutos.",
+      "Sirve inmediatamente el caldo con la pasta.",
+      "Acompaña con una generosa ración de Parmesano."
+    ],
+    "detallado": "Aunque son similares, los Cappelletti son ligeramente más grandes que los Tortellini. El relleno es a menudo más enfocado en el queso y especias. Al igual que el Tortellini, el caldo casero de buena calidad es la mitad del plato.",
+    "identificadores": [
+      "Pasta",
+      "Sopa",
+      "Rellena"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "cantucci",
+    "nombre": "Cantucci e Vin Santo",
+    "imagen-principal": "img/cantucci.jpg",
+    "alt": "Galletas de almendra servidas con vino dulce",
+    "descripcion": "Un postre-experiencia típico de la Toscana. Los Cantucci (o Biscotti di Prato) son galletas secas y crujientes de almendra, que se sirven tradicionalmente mojadas en un vaso de 'Vin Santo' (vino dulce de postre).",
+    "categorias": {
+      "tiempo": "70 minutos",
+      "dificultad": "Fácil",
+      "porciones": "20 galletas"
+    },
+    "ingredientes": [
+      "Harina, Azúcar",
+      "Almendras enteras (sin pelar)",
+      "Huevos",
+      "Mantequilla",
+      "Vin Santo (vino dulce de postre)"
+    ],
+    "resumen": [
+      "Prepara la masa con todos los ingredientes y forma un tronco.",
+      "Hornea el tronco a 180°C por 20 minutos (primera cocción).",
+      "Corta el tronco en rebanadas (las galletas).",
+      "Hornea las rebanadas de nuevo por 10 minutos por cada lado (segunda cocción) hasta que estén muy secas.",
+      "Sirve con un vaso de Vin Santo."
+    ],
+    "detallado": "Las galletas se hornean dos veces ('bis-cotti') para que queden muy secas y crujientes, ideales para mojar en el vino. Las almendras no se pican, se añaden enteras a la masa. La textura es firme y crujiente.",
+    "identificadores": [
+      "Postre",
+      "Horneado",
+      "Clásico"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "panettone",
+    "nombre": "Panettone Classico Milanese",
+    "imagen-principal": "img/panettone.jpg",
+    "alt": "Pan dulce alto con fruta confitada",
+    "descripcion": "El pan dulce navideño más famoso de Milán. Un pan alto, de masa madre, suave y muy aireado, relleno de fruta confitada y pasas. La elaboración tradicional es muy larga y compleja.",
+    "categorias": {
+      "tiempo": "24 horas (incluye levado)",
+      "dificultad": "Muy Difícil",
+      "porciones": "10 personas"
+    },
+    "ingredientes": [
+      "Harina de fuerza, Masa Madre",
+      "Mantequilla, Azúcar, Yemas de huevo",
+      "Cáscara de naranja y limón confitada",
+      "Pasas, Vainilla"
+    ],
+    "resumen": [
+      "Refresca la masa madre por varios días.",
+      "Prepara la primera masa con huevos y mantequilla y deja levar.",
+      "Añade más ingredientes a la segunda masa, la fruta confitada y deja levar de nuevo.",
+      "Hornea en un molde alto a 170°C, y cuelga el panettone boca abajo al salir del horno."
+    ],
+    "detallado": "La clave de la textura es la masa madre y el largo levado. Colgarlo boca abajo después de hornear evita que el peso de la fruta y la grasa colapsen la estructura aérea y suave. El sabor es complejo y afrutado.",
+    "identificadores": [
+      "Postre",
+      "Lento",
+      "Clásico"
+    ],
+    "valoracion": 5
+  },
+  {
+    "id": "schiacciata",
+    "nombre": "Schiacciata all'Uva",
+    "imagen-principal": "img/schiacciata.jpg",
+    "alt": "Pan dulce de uvas con aceite y azúcar",
+    "descripcion": "Un postre-pan plano de la Toscana, tradicionalmente preparado durante la época de la vendimia (cosecha de uvas). Es una masa dulce de pan con uvas negras frescas enteras, aceite de oliva y azúcar, que se hornea.",
+    "categorias": {
+      "tiempo": "90 minutos (incluye levado)",
+      "dificultad": "Media",
+      "porciones": "8 personas"
+    },
+    "ingredientes": [
+      "Masa de pan dulce (harina, azúcar, levadura)",
+      "Uvas negras (tipo Concord o Fragola)",
+      "Aceite de oliva virgen extra",
+      "Azúcar (para espolvorear)"
+    ],
+    "resumen": [
+      "Prepara la masa y divídela en dos.",
+      "Extiende la primera mitad, cubre con uvas, azúcar y AOVE.",
+      "Cubre con la segunda masa, decora con más uvas, azúcar y AOVE.",
+      "Hornea a 180°C hasta que la masa esté dorada y las uvas caramelizadas."
+    ],
+    "detallado": "Es esencial usar uvas frescas con semilla y piel, ya que el jugo y la acidez equilibran la dulzura de la masa. La uva se carameliza y estalla al hornear. Se consume preferiblemente el mismo día que se hornea.",
+    "identificadores": [
+      "Postre",
+      "Horneado",
+      "Fresco"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "lampredotto",
+    "nombre": "Lampredotto (Bocadillo Florentino)",
+    "imagen-principal": "img/lampredotto.jpg",
+    "alt": "Bocadillo de callos de ternera con salsa verde",
+    "descripcion": "El plato callejero más famoso de Florencia. Es un tipo de callo (cuarto estómago de la ternera) cocido en un caldo sabroso y servido en un panecillo empapado en el mismo caldo. Se acompaña con 'salsa verde' (perejil) o salsa picante.",
+    "categorias": {
+      "tiempo": "150 minutos (cocción)",
+      "dificultad": "Media",
+      "porciones": "4 personas"
+    },
+    "ingredientes": [
+      "Callo (abomaso) de ternera",
+      "Caldo de carne (con zanahoria, apio, cebolla)",
+      "Panecillos italianos",
+      "Salsa verde (perejil, alcaparras, anchoas) y/o salsa picante"
+    ],
+    "resumen": [
+      "Cuece el callo en caldo aromático a fuego lento por 2-3 horas.",
+      "Pica el callo y el panecillo.",
+      "Moja la tapa del panecillo en el caldo y rellena con el callo.",
+      "Cubre generosamente con salsa verde o picante."
+    ],
+    "detallado": "El pan (spugna) debe mojarse en el caldo caliente para que se ablande, pero no demasiado. El callo debe estar muy tierno. El contraste de la carne blanda, el pan húmedo y las salsas es la clave de este clásico callejero.",
+    "identificadores": [
+      "Carne",
+      "Rápido",
+      "Clásico"
+    ],
+    "valoracion": 3
+  },
+  {
+    "id": "pasta_limone",
+    "nombre": "Spaghetti al Limone",
+    "imagen-principal": "img/spaghetti_limone.jpg",
+    "alt": "Pasta con salsa cremosa de limón",
+    "descripcion": "Un plato rápido y refrescante, especialmente popular en el Sur de Italia (Costa Amalfitana). La salsa se elabora con crema de leche (nata), ralladura y jugo de limón fresco, mantequilla y queso Parmesano.",
+    "categorias": {
+      "tiempo": "20 minutos",
+      "dificultad": "Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Spaghetti o Linguine",
+      "Nata (crema de leche)",
+      "Limones (ralladura y jugo)",
+      "Mantequilla",
+      "Queso Parmesano rallado"
+    ],
+    "resumen": [
+      "Derrite la mantequilla, añade la ralladura de limón y la nata.",
+      "Cocer la pasta al dente.",
+      "Mezcla la pasta escurrida con la salsa, el jugo de limón y el Parmesano.",
+      "Sirve inmediatamente con más ralladura de limón."
+    ],
+    "detallado": "Usa limones orgánicos para asegurar que la ralladura no contenga pesticidas y sea muy aromática. La salsa debe ser ligera y el sabor cítrico fresco es el protagonista. La nata se usa en este plato para evitar que el limón cuaje el queso.",
+    "identificadores": [
+      "Pasta",
+      "Cremoso",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "acqua_sale",
+    "nombre": "Acqua Sala (Bruschetta Húmeda)",
+    "imagen-principal": "img/acqua_sale.jpg",
+    "alt": "Pan duro remojado con tomate, pepino y aceite",
+    "descripcion": "Un plato muy antiguo de Puglia, que significa 'agua y sal'. Utiliza pan duro o biscotti de pan remojado en agua para ablandarlo. Luego se adereza con aceite, tomate, pepino, orégano y, a veces, cebolla, siendo muy refrescante.",
+    "categorias": {
+      "tiempo": "15 minutos",
+      "dificultad": "Muy Fácil",
+      "porciones": "2 personas"
+    },
+    "ingredientes": [
+      "Pan duro (o friselle)",
+      "Tomates frescos (picados)",
+      "Pepino (opcional)",
+      "Cebolla roja (opcional)",
+      "Aceite de oliva virgen extra",
+      "Orégano y sal"
+    ],
+    "resumen": [
+      "Remoja el pan seco o las friselle brevemente en agua con sal.",
+      "Pica el tomate y otros vegetales y mézclalos con aceite y orégano.",
+      "Coloca la mezcla de tomate sobre el pan ablandado.",
+      "Sirve de inmediato."
+    ],
+    "detallado": "El pan debe quedar suave pero no deshecho. Este plato es el epítome de la cocina pobre ('cucina povera') y es perfecto para el verano. La humedad del pan y los jugos del tomate crean un contraste con el aceite de oliva.",
+    "identificadores": [
+      "Aperitivo",
+      "Fresco",
+      "Vegano"
+    ],
+    "valoracion": 3
+  },
+  {
+    "id": "schiacciata_salata",
+    "nombre": "Schiacciata Toscana Salada",
+    "imagen-principal": "img/schiacciata_salata.jpg",
+    "alt": "Pan plano delgado salado y aceitoso",
+    "descripcion": "Un pan plano salado de la Toscana, similar a una focaccia más delgada y crujiente. Tradicionalmente horneado con aceite de oliva, sal gruesa y a veces romero. Es perfecto para rellenar con embutidos (como el Prosciutto).",
+    "categorias": {
+      "tiempo": "90 minutos (incluye levado)",
+      "dificultad": "Media",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Harina, Agua, Levadura",
+      "Aceite de oliva virgen extra",
+      "Sal marina gruesa",
+      "Romero fresco (opcional)"
+    ],
+    "resumen": [
+      "Prepara la masa y deja levar la primera vez.",
+      "Extiende la masa muy fina en una bandeja y presiona los dedos para hacer hoyuelos.",
+      "Rocía con abundante AOVE y sal gruesa.",
+      "Hornea a alta temperatura hasta que esté crujiente y dorado."
+    ],
+    "detallado": "La schiacciata ('aplastada') debe ser más plana y crujiente que una focaccia. La sal gruesa incrustada y el aceite de oliva son los sabores dominantes. Es el pan ideal para acompañar quesos y embutidos.",
+    "identificadores": [
+      "Pan",
+      "Aperitivo",
+      "Rápido"
+    ],
+    "valoracion": 4
+  },
+  {
+    "id": "caponata",
+    "nombre": "Caponata Siciliana",
+    "imagen-principal": "img/caponata.jpg",
+    "alt": "Guiso agridulce de berenjena y vegetales",
+    "descripcion": "Un plato siciliano agridulce (agrodolce) que se sirve a menudo como acompañamiento o antipasto. Consiste en un guiso de berenjena frita, apio, cebolla, aceitunas y alcaparras, aderezado con un toque de vinagre y azúcar.",
+    "categorias": {
+      "tiempo": "60 minutos",
+      "dificultad": "Media",
+      "porciones": "6 personas"
+    },
+    "ingredientes": [
+      "Berenjenas",
+      "Apio, Cebolla",
+      "Tomate pelado",
+      "Aceitunas y Alcaparras",
+      "Vinagre de vino, Azúcar",
+      "Aceite de oliva"
+    ],
+    "resumen": [
+      "Corta y fríe la berenjena en cubos y reserva.",
+      "Sofríe las verduras, añade el tomate y cocina unos minutos.",
+      "Agrega las aceitunas y alcaparras. Por último, añade la mezcla agridulce (vinagre y azúcar).",
+      "Combina la berenjena y cocina 10 minutos más. Se sirve fría o a temperatura ambiente."
+    ],
+    "detallado": "El equilibrio agridulce es la clave: el vinagre debe cortar el sabor de la berenjena. El plato mejora con el reposo, por lo que es ideal para prepararlo con antelación. Se sirve tradicionalmente frío o tibio.",
+    "identificadores": [
+      "Vegetariano",
+      "Umami",
+      "Fresco"
+    ],
+    "valoracion": 4
+  }
+]
